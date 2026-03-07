@@ -1,0 +1,60 @@
+{
+    "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+    "name": "designer-skills",
+    "version": "1.0.0",
+    "description": "Designer Skills Collection: structured AI workflows for better design decisions. Domain-specific skills and chained workflows across 8 design plugins — from research to systems, UI, interaction, and delivery.",
+    "owner": {
+          "name": "MC Dean",
+          "url": "https://marieclairedean.substack.com/"
+    },
+    "plugins": [
+          {
+                  "name": "design-research",
+                  "description": "User research skills for designers: personas, empathy maps, journey maps, interview scripts, usability testing, and card sorting.",
+                  "source": "./design-research",
+                  "category": "design"
+          },
+          {
+                  "name": "design-systems",
+                  "description": "Design system skills: component specs, design tokens, naming conventions, spacing and grid systems, accessibility standards, and documentation.",
+                  "source": "./design-systems",
+                  "category": "design"
+          },
+          {
+                  "name": "ux-strategy",
+                  "description": "UX strategy skills: information architecture, content strategy, navigation patterns, user flows, task analysis, and competitive UX audits.",
+                  "source": "./ux-strategy",
+                  "category": "design"
+          },
+          {
+                  "name": "ui-design",
+                  "description": "UI design skills: color palettes, typography systems, layout grids, responsive breakpoints, dark mode specs, visual hierarchy, and brand alignment.",
+                  "source": "./ui-design",
+                  "category": "design"
+          },
+          {
+                  "name": "interaction-design",
+                  "description": "Interaction design skills: micro-interactions, animation principles, state machines, gesture patterns, error handling UX, and feedback patterns.",
+                  "source": "./interaction-design",
+                  "category": "design"
+          },
+          {
+                  "name": "prototyping-testing",
+                  "description": "Prototyping and testing skills: wireframe specs, usability heuristics, heuristic evaluations, accessibility audits, A/B test design, and benchmark analysis.",
+                  "source": "./prototyping-testing",
+                  "category": "design"
+          },
+          {
+                  "name": "design-ops",
+                  "description": "Design operations skills: handoff specs, design critique facilitation, design sprint planning, asset management, and design debt audits.",
+                  "source": "./design-ops",
+                  "category": "design"
+          },
+          {
+                  "name": "designer-toolkit",
+                  "description": "Designer utility skills: portfolio review, resume building, case study structure, design presentations, stakeholder communication, and design briefs.",
+                  "source": "./designer-toolkit",
+                  "category": "design"
+          }
+    ]
+}
