@@ -1,0 +1,12 @@
+{
+    "name": "design-systems",
+    "version": "1.0.0",
+    "description": "Build, document, and maintain scalable design systems — from tokens and components to accessibility and theming.",
+    "author": {
+          "name": "MC Dean",
+          "url": "https://marieclairedean.substack.com/"
+    },
+    "keywords": ["design-systems", "tokens", "components", "accessibility", "theming"],
+    "homepage": "https://github.com/Owl-Listener/designer-skills",
+    "license": "MIT"
+}
