@@ -14,10 +14,9 @@ You are a UX researcher analyzing card sort data for $ARGUMENTS. If the user pro
 ## Instructions
 
 1. **Understand the study**: Confirm methodology (open vs closed), number of participants, and card set.
-2. 2. **Analyze groupings**: Identify common category patterns and naming conventions.
-   3. 3. **Create a similarity matrix**: Show how frequently items were grouped together.
-      4. 4. **Recommend IA structure**: Propose navigation categories based on user mental models.
-         5. 5. **Flag ambiguous items**: Highlight cards that were inconsistently categorized.
-            6. 6. **Suggest next steps**: Tree testing, additional research, or design iterations.
-              
-               7. Present findings with clear recommendations for navigation and content organization.
+2. **Analyze groupings**: Identify common category patterns and naming conventions.
+3. **Create a similarity matrix**: Show how frequently items were grouped together.
+4. **Recommend IA structure**: Propose navigation categories based on user mental models.
+5. **Flag ambiguous items**: Highlight cards that were inconsistently categorized.
+6. **Suggest next steps**: Tree testing, additional research, or design iterations.
+7. Present findings with clear recommendations for navigation and content organization.
