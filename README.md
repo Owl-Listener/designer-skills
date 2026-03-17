@@ -1,7 +1,72 @@
 # Designer Skills Collection
+
 Agentic skills, commands, and plugins for design — from research to systems, UI, interaction, and delivery.
-**63 skills** and **27 commands** across **8 plugins** for [Claude Code](https://docs.anthropic.com/en/docs/claude-code).
+
+**63 skills** and **27 commands** across **8 plugins** for product designers.
+
+Works with **Claude Code**, **OpenCode**, and **Codex**.
+
+## Installation
+
+### Claude Code
+
+```
+/plugin marketplace add Owl-Listener/designer-skills
+```
+
+Then open `/plugin` and install the plugins you want from the **Discover** tab.
+
+### OpenCode
+
+Add to your `opencode.json`:
+
+```json
+{
+  "plugin": ["designer-skills@git+https://github.com/Owl-Listener/designer-skills.git"]
+}
+```
+
+Restart OpenCode. All 65 skills and 27 commands are registered automatically.
+
+See [.opencode/INSTALL.md](.opencode/INSTALL.md) for details.
+
+### Codex
+
+```bash
+git clone https://github.com/Owl-Listener/designer-skills.git ~/.codex/designer-skills
+bash ~/.codex/designer-skills/scripts/install-codex.sh
+```
+
+Restart Codex. All 65 skills are symlinked to `~/.agents/skills/`.
+
+See [.codex/INSTALL.md](.codex/INSTALL.md) for details.
+
+## Design Pipeline
+
+Skills follow a natural design progression. Use them independently or as a pipeline:
+
+1. **Research** (design-research) — Understand users and context
+2. **Strategy** (ux-strategy) — Frame the problem and define direction
+3. **Systems** (design-systems) — Establish tokens and components
+4. **UI + Interaction** (ui-design, interaction-design) — Design screens and flows
+5. **Prototyping & Testing** (prototyping-testing) — Validate decisions
+6. **Ops & Delivery** (design-ops, designer-toolkit) — Handoff, rationale, case studies
+
+For greenfield projects, use the `design-pipeline` skill for guided end-to-end workflow with quality gates between phases.
+
+## Quick Start
+
+| What you want | Command | Skill |
+|---|---|---|
+| Start with user research | `/discover` | `user-persona`, `empathy-map`, `journey-map` |
+| Define UX strategy | `/strategize` | `north-star-vision`, `competitive-analysis`, ... |
+| Design a screen | `/design-screen` | `layout-grid`, `color-system`, `typography-scale`, ... |
+| Run a heuristic evaluation | `/evaluate` | `heuristic-evaluation` |
+| Create a handoff package | `/handoff` | `handoff-spec`, `design-qa-checklist` |
+| Full pipeline (greenfield) | — | `design-pipeline` |
+
 ## Plugins
+
 | Plugin | Skills | Commands | Description |
 |--------|--------|----------|-------------|
 | [design-research](./design-research) | 10 | 4 | User research: personas, empathy maps, journey maps, interviews, usability testing, and card sorting. |
@@ -12,62 +77,62 @@ Agentic skills, commands, and plugins for design — from research to systems, U
 | [prototyping-testing](./prototyping-testing) | 8 | 4 | Validate designs: prototyping strategies, usability testing, heuristic evaluation, and A/B experiments. |
 | [design-ops](./design-ops) | 7 | 3 | Streamline operations: critique frameworks, handoff specs, sprint planning, and team workflows. |
 | [designer-toolkit](./designer-toolkit) | 6 | 3 | Essential utilities: design rationale, presentations, case studies, UX writing, and system adoption. |
-## Quick Start
 
-### Step 1: Add the Marketplace
-
-In Claude Code, run:
-
-```
-/plugin marketplace add Owl-Listener/designer-skills
-```
-
-This registers the marketplace so you can browse and install individual plugins.
-
-### Step 2: Install Plugins
-
-Open the plugin manager and browse available plugins:
-
-```
-/plugin
-```
-
-Go to the **Discover** tab to see all 8 design plugins, then select and install the ones you want.
+Plus **2 workflow skills** (`using-designer-skills`, `design-pipeline`) that orchestrate the pipeline.
 
 ## What Are Skills and Commands?
-- **Skills** are domain knowledge units (nouns). They teach Claude about a design topic — like creating user personas, defining design tokens, or writing error messages.
-- **Commands** are workflows (verbs). They chain multiple skills together to accomplish a task — like running a full design system audit or planning a usability test.
+
+- **Skills** are domain knowledge units. They teach the agent about a design topic — like creating user personas, defining design tokens, or writing error messages.
+- **Commands** are workflows. They chain multiple skills together to accomplish a task — like running a full design system audit or planning a usability test.
+- **Workflow skills** orchestrate the pipeline. `design-pipeline` walks through all 6 phases with quality gates. `using-designer-skills` provides session-level pipeline awareness.
+
 ## All Commands
-| Command | Plugin | Description |
-|---------|--------|-------------|
-| `/design-research:discover` | design-research | Run a full user research discovery cycle. |
-| `/design-research:interview` | design-research | Prepare and conduct a user interview. |
-| `/design-research:test-plan` | design-research | Create a usability test plan. |
-| `/design-research:synthesize` | design-research | Synthesize research data into insights. |
-| `/design-systems:audit-system` | design-systems | Audit a design system for consistency and accessibility. |
-| `/design-systems:create-component` | design-systems | Scaffold a full component specification. |
-| `/design-systems:tokenize` | design-systems | Extract and organize design tokens. |
-| `/ux-strategy:strategize` | ux-strategy | Develop a complete UX strategy. |
-| `/ux-strategy:benchmark` | ux-strategy | Run a competitive benchmarking analysis. |
-| `/ux-strategy:frame-problem` | ux-strategy | Structure an ambiguous challenge into a clear problem. |
-| `/ui-design:design-screen` | ui-design | Design a complete screen layout. |
-| `/ui-design:color-palette` | ui-design | Generate a full color palette with accessibility checks. |
-| `/ui-design:type-system` | ui-design | Create a complete typography system. |
-| `/ui-design:responsive-audit` | ui-design | Audit a design for responsive behavior. |
-| `/interaction-design:design-interaction` | interaction-design | Design a complete interaction flow. |
-| `/interaction-design:map-states` | interaction-design | Model states and transitions for a component. |
-| `/interaction-design:error-flow` | interaction-design | Design error handling for a feature. |
-| `/prototyping-testing:prototype-plan` | prototyping-testing | Create a prototyping and testing plan. |
-| `/prototyping-testing:evaluate` | prototyping-testing | Run a heuristic evaluation. |
-| `/prototyping-testing:test-plan` | prototyping-testing | Design a complete usability testing plan. |
-| `/prototyping-testing:experiment` | prototyping-testing | Design an A/B experiment. |
-| `/design-ops:plan-sprint` | design-ops | Plan a design sprint. |
-| `/design-ops:handoff` | design-ops | Generate a developer handoff package. |
-| `/design-ops:setup-workflow` | design-ops | Set up a design team workflow. |
-| `/designer-toolkit:write-rationale` | designer-toolkit | Write design rationale for decisions. |
-| `/designer-toolkit:build-presentation` | designer-toolkit | Structure a design presentation. |
-| `/designer-toolkit:write-case-study` | designer-toolkit | Create a portfolio case study. |
+
+Commands work in Claude Code (namespaced as `/plugin:command`) and OpenCode (flat as `/command`).
+
+| Command | Description |
+|---------|-------------|
+| `/discover` | Run a full user research discovery cycle |
+| `/interview` | Prepare or summarize a user interview |
+| `/synthesize` | Synthesize research data into insights |
+| `/research-test-plan` | Create a usability test plan (research-focused) |
+| `/strategize` | Develop a complete UX strategy |
+| `/benchmark` | Run a competitive benchmarking analysis |
+| `/frame-problem` | Structure an ambiguous challenge into a clear problem |
+| `/audit-system` | Audit a design system for consistency and accessibility |
+| `/create-component` | Scaffold a full component specification |
+| `/tokenize` | Extract and organize design tokens |
+| `/design-screen` | Design a complete screen layout |
+| `/color-palette` | Generate a full color palette with accessibility checks |
+| `/type-system` | Create a complete typography system |
+| `/responsive-audit` | Audit a design for responsive behavior |
+| `/design-interaction` | Design a complete interaction flow |
+| `/map-states` | Model states and transitions for a component |
+| `/error-flow` | Design error handling for a feature |
+| `/prototype-plan` | Create a prototyping and testing plan |
+| `/evaluate` | Run a heuristic evaluation |
+| `/test-plan` | Design a complete usability testing plan |
+| `/experiment` | Design an A/B experiment |
+| `/plan-sprint` | Plan a design sprint |
+| `/handoff` | Generate a developer handoff package |
+| `/setup-workflow` | Set up a design team workflow |
+| `/write-rationale` | Write design rationale for decisions |
+| `/build-presentation` | Structure a design presentation |
+| `/write-case-study` | Create a portfolio case study |
+
+## Platform Support
+
+| Feature | Claude Code | OpenCode | Codex |
+|---------|------------|----------|-------|
+| Skills (63 domain + 2 workflow) | Via marketplace plugin | Via JS plugin adapter | Via symlinks to `~/.agents/skills/` |
+| Commands (27) | `/plugin:command` syntax | `/command` syntax | Invoke skills directly with `$skill` |
+| Session bootstrap | Via hooks | Via `experimental.chat.system.transform` | Via `using-designer-skills` skill |
+| Pipeline workflow | `design-pipeline` skill | `design-pipeline` skill | `$design-pipeline` skill |
+
 ## Contributing
+
 See [CONTRIBUTING.md](./CONTRIBUTING.md) for guidelines on adding new skills, commands, and plugins.
+
 ## License
+
 MIT — see [LICENSE](./LICENSE).
