@@ -1,0 +1,9 @@
+{
+  "name": "abstract-design",
+  "version": "1.0.0",
+  "description": "Agentic workflow for designers — from scattered context to evidence-based design brief. Research, competitive analysis, and UX critique run in parallel before you open Figma.",
+  "author": { "name": "rizkiridha", "url": "https://github.com/rizkiridha" },
+  "keywords": ["design-brief", "design-workflow", "ux-research", "competitive-analysis", "design-critique", "agentic"],
+  "homepage": "https://github.com/rizkiridha/designer-skills",
+  "license": "MIT"
+}

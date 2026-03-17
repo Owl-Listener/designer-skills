@@ -1,6 +1,6 @@
 # Designer Skills Collection
 Agentic skills, commands, and plugins for design — from research to systems, UI, interaction, and delivery.
-**63 skills** and **27 commands** across **8 plugins** for [Claude Code](https://docs.anthropic.com/en/docs/claude-code).
+**74 skills** and **33 commands** across **9 plugins** for [Claude Code](https://docs.anthropic.com/en/docs/claude-code).
 ## Plugins
 | Plugin | Skills | Commands | Description |
 |--------|--------|----------|-------------|
@@ -12,6 +12,7 @@ Agentic skills, commands, and plugins for design — from research to systems, U
 | [prototyping-testing](./prototyping-testing) | 8 | 4 | Validate designs: prototyping strategies, usability testing, heuristic evaluation, and A/B experiments. |
 | [design-ops](./design-ops) | 7 | 3 | Streamline operations: critique frameworks, handoff specs, sprint planning, and team workflows. |
 | [designer-toolkit](./designer-toolkit) | 6 | 3 | Essential utilities: design rationale, presentations, case studies, UX writing, and system adoption. |
+| [abstract-design](./abstract-design) | 11 | 6 | Agentic workflow: from scattered context to evidence-based design brief. Research, competitive, and UX critique run in parallel before you open Figma. |
 ## Quick Start
 
 ### Step 1: Add the Marketplace
@@ -32,7 +33,7 @@ Open the plugin manager and browse available plugins:
 /plugin
 ```
 
-Go to the **Discover** tab to see all 8 design plugins, then select and install the ones you want.
+Go to the **Discover** tab to see all 9 design plugins, then select and install the ones you want.
 
 ## What Are Skills and Commands?
 - **Skills** are domain knowledge units (nouns). They teach Claude about a design topic — like creating user personas, defining design tokens, or writing error messages.
@@ -67,6 +68,12 @@ Go to the **Discover** tab to see all 8 design plugins, then select and install 
 | `/designer-toolkit:write-rationale` | designer-toolkit | Write design rationale for decisions. |
 | `/designer-toolkit:build-presentation` | designer-toolkit | Structure a design presentation. |
 | `/designer-toolkit:write-case-study` | designer-toolkit | Create a portfolio case study. |
+| `/design:new` | abstract-design | Create a new design project workspace. |
+| `/design:feed` | abstract-design | Add context to the workspace (MoMs, emails, docs, Slack). |
+| `/design:validate` | abstract-design | Validate problem understanding, stakeholder alignment, and context freshness. |
+| `/design:run` | abstract-design | Fire all agents: research, competitive, critique, ideation, and brief generation. |
+| `/design:brief` | abstract-design | Regenerate the design brief from existing agent outputs. |
+| `/design:status` | abstract-design | Show workspace state and next recommended action. |
 ## Contributing
 See [CONTRIBUTING.md](./CONTRIBUTING.md) for guidelines on adding new skills, commands, and plugins.
 ## License
