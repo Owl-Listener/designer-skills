@@ -1,18 +1,17 @@
 # Designer Skills Collection
 Agentic skills, commands, and plugins for design — from research to systems, UI, interaction, and delivery.
-**74 skills** and **33 commands** across **9 plugins** for [Claude Code](https://docs.anthropic.com/en/docs/claude-code).
+**85 skills** and **36 commands** across **8 plugins** for [Claude Code](https://docs.anthropic.com/en/docs/claude-code).
 ## Plugins
 | Plugin | Skills | Commands | Description |
 |--------|--------|----------|-------------|
-| [design-research](./design-research) | 10 | 4 | User research: personas, empathy maps, journey maps, interviews, usability testing, and card sorting. |
+| [design-research](./design-research) | 19 | 8 | User research: personas, empathy maps, journey maps, interviews, usability testing, card sorting, and agentic context-to-brief workflow. |
 | [design-systems](./design-systems) | 8 | 3 | Build and maintain design systems: tokens, components, accessibility, theming, and documentation. |
 | [ux-strategy](./ux-strategy) | 8 | 3 | Shape product direction: competitive analysis, design principles, experience mapping, and alignment. |
 | [ui-design](./ui-design) | 9 | 4 | Craft polished interfaces: layout grids, color systems, typography, responsive design, and data viz. |
 | [interaction-design](./interaction-design) | 7 | 3 | Design meaningful interactions: micro-animations, state machines, gestures, error handling, and feedback. |
 | [prototyping-testing](./prototyping-testing) | 8 | 4 | Validate designs: prototyping strategies, usability testing, heuristic evaluation, and A/B experiments. |
-| [design-ops](./design-ops) | 7 | 3 | Streamline operations: critique frameworks, handoff specs, sprint planning, and team workflows. |
-| [designer-toolkit](./designer-toolkit) | 6 | 3 | Essential utilities: design rationale, presentations, case studies, UX writing, and system adoption. |
-| [abstract-design](./abstract-design) | 11 | 6 | Agentic workflow: from scattered context to evidence-based design brief. Research, competitive, and UX critique run in parallel before you open Figma. |
+| [design-ops](./design-ops) | 8 | 4 | Streamline operations: critique frameworks, handoff specs, sprint planning, team workflows, and workflow state tracking. |
+| [designer-toolkit](./designer-toolkit) | 7 | 4 | Essential utilities: design rationale, presentations, case studies, UX writing, system adoption, and design brief generation. |
 ## Quick Start
 
 ### Step 1: Add the Marketplace
@@ -33,7 +32,7 @@ Open the plugin manager and browse available plugins:
 /plugin
 ```
 
-Go to the **Discover** tab to see all 9 design plugins, then select and install the ones you want.
+Go to the **Discover** tab to see all 8 design plugins, then select and install the ones you want.
 
 ## What Are Skills and Commands?
 - **Skills** are domain knowledge units (nouns). They teach Claude about a design topic — like creating user personas, defining design tokens, or writing error messages.
@@ -65,15 +64,15 @@ Go to the **Discover** tab to see all 9 design plugins, then select and install 
 | `/design-ops:plan-sprint` | design-ops | Plan a design sprint. |
 | `/design-ops:handoff` | design-ops | Generate a developer handoff package. |
 | `/design-ops:setup-workflow` | design-ops | Set up a design team workflow. |
+| `/design:status` | design-ops | Show agentic workflow state and next recommended action. |
 | `/designer-toolkit:write-rationale` | designer-toolkit | Write design rationale for decisions. |
 | `/designer-toolkit:build-presentation` | designer-toolkit | Structure a design presentation. |
 | `/designer-toolkit:write-case-study` | designer-toolkit | Create a portfolio case study. |
-| `/design:new` | abstract-design | Create a new design project workspace. |
-| `/design:feed` | abstract-design | Add context to the workspace (MoMs, emails, docs, Slack). |
-| `/design:validate` | abstract-design | Validate problem understanding, stakeholder alignment, and context freshness. |
-| `/design:run` | abstract-design | Fire all agents: research, competitive, critique, ideation, and brief generation. |
-| `/design:brief` | abstract-design | Regenerate the design brief from existing agent outputs. |
-| `/design:status` | abstract-design | Show workspace state and next recommended action. |
+| `/design:brief` | designer-toolkit | Regenerate the design brief from existing agent outputs. |
+| `/design:new` | design-research | Create a new design project workspace. |
+| `/design:feed` | design-research | Add context to the workspace (MoMs, emails, docs, Slack). |
+| `/design:validate` | design-research | Validate problem understanding, stakeholder alignment, and context freshness. |
+| `/design:run` | design-research | Fire all agents: research, competitive, critique, ideation, and brief generation. |
 ## Contributing
 See [CONTRIBUTING.md](./CONTRIBUTING.md) for guidelines on adding new skills, commands, and plugins.
 ## License
