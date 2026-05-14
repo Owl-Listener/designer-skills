@@ -1,0 +1,9 @@
+{
+  "name": "visual-critique",
+  "version": "1.0.0",
+  "description": "Visual critique skills for designers: analyse hierarchy, brand consistency, composition, and typography — then compile a prioritised fix list.",
+  "author": { "name": "MC Dean", "url": "https://marieclairedean.substack.com/" },
+  "keywords": ["critique", "visual-hierarchy", "brand", "composition", "typography", "review"],
+  "homepage": "https://github.com/Owl-Listener/designer-skills",
+  "license": "MIT"
+}

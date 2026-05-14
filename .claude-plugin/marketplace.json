@@ -55,6 +55,12 @@
                   "description": "Designer utility skills: portfolio review, resume building, case study structure, design presentations, stakeholder communication, and design briefs.",
                   "source": "./designer-toolkit",
                   "category": "design"
+          },
+          {
+                  "name": "visual-critique",
+                  "description": "Visual critique skills: hierarchy analysis, brand consistency checks against mood/voice/tokens, composition evaluation, and typography audits — with a /critique-screen command that compiles a prioritised fix list.",
+                  "source": "./visual-critique",
+                  "category": "design"
           }
     ]
 }
