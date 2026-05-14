@@ -1,6 +1,6 @@
 # Designer Skills Collection
 Agentic skills, commands, and plugins for design — from research to systems, UI, interaction, and delivery.
-**87 skills** and **27 commands** across **8 plugins** for [Claude Code](https://docs.anthropic.com/en/docs/claude-code).
+**91 skills** and **28 commands** across **9 plugins** for [Claude Code](https://docs.anthropic.com/en/docs/claude-code).
 ## Plugins
 | Plugin | Skills | Commands | Description |
 |--------|--------|----------|-------------|
@@ -12,6 +12,7 @@ Agentic skills, commands, and plugins for design — from research to systems, U
 | [prototyping-testing](./prototyping-testing) | 8 | 4 | Validate designs: prototyping strategies, usability testing, heuristic evaluation, and A/B experiments. |
 | [design-ops](./design-ops) | 9 | 3 | Streamline operations: critique frameworks, handoff specs, sprint planning, team workflows, design debt, and impact reporting. |
 | [designer-toolkit](./designer-toolkit) | 7 | 3 | Essential utilities: design rationale, presentations, case studies, UX writing, system adoption, and design negotiation. |
+| [visual-critique](./visual-critique) | 4 | 1 | Visual critique: hierarchy analysis, brand consistency checks against mood/voice/tokens, composition evaluation, and typography audits. |
 ## Quick Start
 
 ### Claude Code
@@ -28,7 +29,7 @@ Agentic skills, commands, and plugins for design — from research to systems, U
 /plugin
 ```
 
-Go to the **Discover** tab to see all 8 design plugins, then select and install the ones you want.
+Go to the **Discover** tab to see all 9 design plugins, then select and install the ones you want.
 
 ### Gemini CLI
 
@@ -85,6 +86,7 @@ cp -r path/to/designer-skills/.gemini/extensions/design-research ~/.gemini/exten
 | `/designer-toolkit:write-rationale` | designer-toolkit | Write design rationale for decisions. |
 | `/designer-toolkit:build-presentation` | designer-toolkit | Structure a design presentation. |
 | `/designer-toolkit:write-case-study` | designer-toolkit | Create a portfolio case study. |
+| `/visual-critique:critique-screen` | visual-critique | Run all four visual critiques on a screen and output a prioritised fix list. |
 ## Contributing
 See [CONTRIBUTING.md](./CONTRIBUTING.md) for guidelines on adding new skills, commands, and plugins.
 ## License

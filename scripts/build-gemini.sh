@@ -15,6 +15,7 @@ plugins=(
   prototyping-testing
   design-ops
   designer-toolkit
+  visual-critique
 )
 
 echo "Building Gemini extension context files..."

@@ -1,0 +1,6 @@
+{
+  "name": "visual-critique",
+  "version": "1.0.0",
+  "description": "Visual critique skills: hierarchy analysis, brand consistency checks against mood/voice/tokens, composition evaluation, and typography audits — with a /critique-screen command that compiles a prioritised fix list.",
+  "contextFileName": "GEMINI.md"
+}
