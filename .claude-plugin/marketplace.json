@@ -1,66 +1,306 @@
 {
-    "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
-    "name": "designer-skills",
-    "version": "1.0.0",
-    "description": "Designer Skills Collection: structured AI workflows for better design decisions. Domain-specific skills and chained workflows across 8 design plugins — from research to systems, UI, interaction, and delivery.",
-    "owner": {
-          "name": "MC Dean",
-          "url": "https://marieclairedean.substack.com/"
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "designer-skills",
+  "version": "2.0.0",
+  "description": "The Designer Skills suite: agentic skills, commands, and plugins for design in the agent era \u2014 design practice, AI product design, UX program management, design leadership, and inclusive design. One install surfaces every collection; each lives in its own repo.",
+  "owner": {
+    "name": "MC Dean",
+    "url": "https://marieclairedean.substack.com/"
+  },
+  "plugins": [
+    {
+      "name": "design-research",
+      "description": "User research skills for designers: personas, empathy maps, journey maps, interview scripts, usability testing, and card sorting.",
+      "source": "./design-research",
+      "category": "design"
     },
-    "plugins": [
-          {
-                  "name": "design-research",
-                  "description": "User research skills for designers: personas, empathy maps, journey maps, interview scripts, usability testing, and card sorting.",
-                  "source": "./design-research",
-                  "category": "design"
-          },
-          {
-                  "name": "design-systems",
-                  "description": "Design system skills: component specs, design tokens, naming conventions, spacing and grid systems, accessibility standards, and documentation.",
-                  "source": "./design-systems",
-                  "category": "design"
-          },
-          {
-                  "name": "ux-strategy",
-                  "description": "UX strategy skills: information architecture, content strategy, navigation patterns, user flows, task analysis, and competitive UX audits.",
-                  "source": "./ux-strategy",
-                  "category": "design"
-          },
-          {
-                  "name": "ui-design",
-                  "description": "UI design skills: color palettes, typography systems, layout grids, responsive breakpoints, dark mode specs, visual hierarchy, and brand alignment.",
-                  "source": "./ui-design",
-                  "category": "design"
-          },
-          {
-                  "name": "interaction-design",
-                  "description": "Interaction design skills: micro-interactions, animation principles, state machines, gesture patterns, error handling UX, and feedback patterns.",
-                  "source": "./interaction-design",
-                  "category": "design"
-          },
-          {
-                  "name": "prototyping-testing",
-                  "description": "Prototyping and testing skills: wireframe specs, usability heuristics, heuristic evaluations, accessibility audits, A/B test design, and benchmark analysis.",
-                  "source": "./prototyping-testing",
-                  "category": "design"
-          },
-          {
-                  "name": "design-ops",
-                  "description": "Design operations skills: handoff specs, design critique facilitation, design sprint planning, asset management, and design debt audits.",
-                  "source": "./design-ops",
-                  "category": "design"
-          },
-          {
-                  "name": "designer-toolkit",
-                  "description": "Designer utility skills: portfolio review, resume building, case study structure, design presentations, stakeholder communication, and design briefs.",
-                  "source": "./designer-toolkit",
-                  "category": "design"
-          },
-          {
-                  "name": "visual-critique",
-                  "description": "Visual critique skills: hierarchy analysis, brand consistency checks against mood/voice/tokens, composition evaluation, and typography audits — with a /critique-screen command that compiles a prioritised fix list.",
-                  "source": "./visual-critique",
-                  "category": "design"
-          }
-    ]
+    {
+      "name": "design-systems",
+      "description": "Design system skills: component specs, design tokens, naming conventions, spacing and grid systems, accessibility standards, and documentation.",
+      "source": "./design-systems",
+      "category": "design"
+    },
+    {
+      "name": "ux-strategy",
+      "description": "UX strategy skills: information architecture, content strategy, navigation patterns, user flows, task analysis, and competitive UX audits.",
+      "source": "./ux-strategy",
+      "category": "design"
+    },
+    {
+      "name": "ui-design",
+      "description": "UI design skills: color palettes, typography systems, layout grids, responsive breakpoints, dark mode specs, visual hierarchy, and brand alignment.",
+      "source": "./ui-design",
+      "category": "design"
+    },
+    {
+      "name": "interaction-design",
+      "description": "Interaction design skills: micro-interactions, animation principles, state machines, gesture patterns, error handling UX, and feedback patterns.",
+      "source": "./interaction-design",
+      "category": "design"
+    },
+    {
+      "name": "prototyping-testing",
+      "description": "Prototyping and testing skills: wireframe specs, usability heuristics, heuristic evaluations, accessibility audits, A/B test design, and benchmark analysis.",
+      "source": "./prototyping-testing",
+      "category": "design"
+    },
+    {
+      "name": "design-ops",
+      "description": "Design operations skills: handoff specs, design critique facilitation, design sprint planning, asset management, and design debt audits.",
+      "source": "./design-ops",
+      "category": "design"
+    },
+    {
+      "name": "designer-toolkit",
+      "description": "Designer utility skills: portfolio review, resume building, case study structure, design presentations, stakeholder communication, and design briefs.",
+      "source": "./designer-toolkit",
+      "category": "design"
+    },
+    {
+      "name": "visual-critique",
+      "description": "Visual critique skills: hierarchy analysis, brand consistency checks against mood/voice/tokens, composition evaluation, and typography audits \u2014 with a /critique-screen command that compiles a prioritised fix list.",
+      "source": "./visual-critique",
+      "category": "design"
+    },
+    {
+      "name": "program-planning",
+      "description": "Plan and scope UX programs: roadmaps, dependency maps, capacity planning, prioritisation.",
+      "source": {
+        "source": "git-subdir",
+        "url": "Owl-Listener/ux-pgm-skills",
+        "path": "program-planning"
+      },
+      "category": "product"
+    },
+    {
+      "name": "stakeholder-comms",
+      "description": "Stakeholder mapping, status reporting, executive updates, alignment workshops, escalation.",
+      "source": {
+        "source": "git-subdir",
+        "url": "Owl-Listener/ux-pgm-skills",
+        "path": "stakeholder-comms"
+      },
+      "category": "product"
+    },
+    {
+      "name": "delivery-execution",
+      "description": "Cycle orchestration, risk registers, blocker triage, launch readiness, retrospectives.",
+      "source": {
+        "source": "git-subdir",
+        "url": "Owl-Listener/ux-pgm-skills",
+        "path": "delivery-execution"
+      },
+      "category": "product"
+    },
+    {
+      "name": "cross-functional-alignment",
+      "description": "Intake, decision logs, working agreements, RACI, and OKR linkage across functions.",
+      "source": {
+        "source": "git-subdir",
+        "url": "Owl-Listener/ux-pgm-skills",
+        "path": "cross-functional-alignment"
+      },
+      "category": "product"
+    },
+    {
+      "name": "measurement-ops",
+      "description": "Program health: KPIs, dashboards, research ops, design ops metrics, impact reporting.",
+      "source": {
+        "source": "git-subdir",
+        "url": "Owl-Listener/ux-pgm-skills",
+        "path": "measurement-ops"
+      },
+      "category": "product"
+    },
+    {
+      "name": "process-design",
+      "description": "How the team works: workflows, governance, rituals, scaling playbooks, retrospectives.",
+      "source": {
+        "source": "git-subdir",
+        "url": "Owl-Listener/ux-pgm-skills",
+        "path": "process-design"
+      },
+      "category": "product"
+    },
+    {
+      "name": "people-management",
+      "description": "1:1s, feedback, growth plans, performance reviews, career ladders, difficult conversations.",
+      "source": {
+        "source": "git-subdir",
+        "url": "Owl-Listener/design-leadership-skills",
+        "path": "people-management"
+      },
+      "category": "design"
+    },
+    {
+      "name": "team-building",
+      "description": "Hiring loops, job specs, portfolio review, onboarding, team topology, psychological safety.",
+      "source": {
+        "source": "git-subdir",
+        "url": "Owl-Listener/design-leadership-skills",
+        "path": "team-building"
+      },
+      "category": "design"
+    },
+    {
+      "name": "design-strategy",
+      "description": "Design vision, strategy docs, org-level principles, investment cases, portfolio prioritisation.",
+      "source": {
+        "source": "git-subdir",
+        "url": "Owl-Listener/design-leadership-skills",
+        "path": "design-strategy"
+      },
+      "category": "design"
+    },
+    {
+      "name": "org-influence",
+      "description": "Executive narrative, influence mapping, advocacy, securing resources, managing up.",
+      "source": {
+        "source": "git-subdir",
+        "url": "Owl-Listener/design-leadership-skills",
+        "path": "org-influence"
+      },
+      "category": "design"
+    },
+    {
+      "name": "operating-cadence",
+      "description": "Design reviews at scale, planning cadence, decision frameworks, delegation, operating rhythm.",
+      "source": {
+        "source": "git-subdir",
+        "url": "Owl-Listener/design-leadership-skills",
+        "path": "operating-cadence"
+      },
+      "category": "design"
+    },
+    {
+      "name": "leadership-craft",
+      "description": "Self-leadership, change leadership, conflict resolution, mentorship, leadership ethics.",
+      "source": {
+        "source": "git-subdir",
+        "url": "Owl-Listener/design-leadership-skills",
+        "path": "leadership-craft"
+      },
+      "category": "design"
+    },
+    {
+      "name": "model-interaction-design",
+      "description": "Interaction patterns for AI products: mixed-initiative flow, handoff protocols, error personality.",
+      "source": {
+        "source": "git-subdir",
+        "url": "Owl-Listener/ai-design-skills",
+        "path": "claude-plugin/model-interaction-design"
+      },
+      "category": "ai"
+    },
+    {
+      "name": "ai-alignment-reasoning",
+      "description": "Alignment reasoning and harm anticipation translated into practitioner design skills.",
+      "source": {
+        "source": "git-subdir",
+        "url": "Owl-Listener/ai-design-skills",
+        "path": "claude-plugin/ai-alignment-reasoning"
+      },
+      "category": "ai"
+    },
+    {
+      "name": "system-behavior-shaping",
+      "description": "Shape system behaviour: defaults, guardrails, refusals, and behavioural contracts.",
+      "source": {
+        "source": "git-subdir",
+        "url": "Owl-Listener/ai-design-skills",
+        "path": "claude-plugin/system-behavior-shaping"
+      },
+      "category": "ai"
+    },
+    {
+      "name": "evaluation",
+      "description": "Evaluate agentic experiences: behaviour evals, trust calibration, failure analysis.",
+      "source": {
+        "source": "git-subdir",
+        "url": "Owl-Listener/ai-design-skills",
+        "path": "claude-plugin/evaluation"
+      },
+      "category": "ai"
+    },
+    {
+      "name": "design-agent-orchestration",
+      "description": "Design how agents collaborate, hand off, and stay legible to people.",
+      "source": {
+        "source": "git-subdir",
+        "url": "Owl-Listener/ai-design-skills",
+        "path": "claude-plugin/design-agent-orchestration"
+      },
+      "category": "ai"
+    },
+    {
+      "name": "prompt-architecture",
+      "description": "Structure prompts and context as a design material, not an afterthought.",
+      "source": {
+        "source": "git-subdir",
+        "url": "Owl-Listener/ai-design-skills",
+        "path": "claude-plugin/prompt-architecture"
+      },
+      "category": "ai"
+    },
+    {
+      "name": "cognitive-accessibility",
+      "description": "Design for how people actually think: cognitive load, plain language, wayfinding, focus, memory, error recovery.",
+      "source": {
+        "source": "git-subdir",
+        "url": "Owl-Listener/inclusive-design-skills",
+        "path": "cognitive-accessibility"
+      },
+      "category": "accessibility"
+    },
+    {
+      "name": "inclusive-interaction",
+      "description": "Multi-modal interactions that adapt to how people move, perceive, and communicate.",
+      "source": {
+        "source": "git-subdir",
+        "url": "Owl-Listener/inclusive-design-skills",
+        "path": "inclusive-interaction"
+      },
+      "category": "accessibility"
+    },
+    {
+      "name": "accessible-content",
+      "description": "Structure content that works for screen readers, cognitive differences, and diverse literacy levels.",
+      "source": {
+        "source": "git-subdir",
+        "url": "Owl-Listener/inclusive-design-skills",
+        "path": "accessible-content"
+      },
+      "category": "accessibility"
+    },
+    {
+      "name": "inclusive-personas",
+      "description": "User stories, personas, and scenarios that include disability from the start.",
+      "source": {
+        "source": "git-subdir",
+        "url": "Owl-Listener/inclusive-design-skills",
+        "path": "inclusive-personas"
+      },
+      "category": "accessibility"
+    },
+    {
+      "name": "adaptive-interfaces",
+      "description": "Design systems that respect user preferences and adapt to individual needs.",
+      "source": {
+        "source": "git-subdir",
+        "url": "Owl-Listener/inclusive-design-skills",
+        "path": "adaptive-interfaces"
+      },
+      "category": "accessibility"
+    },
+    {
+      "name": "accessibility-decisions",
+      "description": "Document, communicate, and maintain accessibility decisions across teams and time.",
+      "source": {
+        "source": "git-subdir",
+        "url": "Owl-Listener/inclusive-design-skills",
+        "path": "accessibility-decisions"
+      },
+      "category": "accessibility"
+    }
+  ]
 }
