@@ -1,64 +1,85 @@
-# Designer Skills Collection
-Agentic skills, commands, and plugins for design — from research to systems, UI, interaction, and delivery.
-**91 skills** and **28 commands** across **9 plugins** for [Claude Code](https://docs.anthropic.com/en/docs/claude-code).
-## Plugins
-| Plugin | Skills | Commands | Description |
-|--------|--------|----------|-------------|
-| [design-research](./design-research) | 12 | 4 | User research: personas, empathy maps, journey maps, interviews, usability testing, card sorting, surveys, and research repositories. |
-| [design-systems](./design-systems) | 11 | 3 | Build and maintain design systems: tokens, components, accessibility, theming, motion, governance, and localization. |
-| [ux-strategy](./ux-strategy) | 11 | 3 | Shape product direction: competitive analysis, design principles, experience mapping, information architecture, content strategy, and service blueprints. |
-| [ui-design](./ui-design) | 14 | 4 | Craft polished interfaces: layout grids, color systems, typography, responsive design, data viz, and Gestalt/perceptual principles. |
-| [interaction-design](./interaction-design) | 15 | 3 | Design meaningful interactions: micro-animations, state machines, gestures, feedback, cognitive laws, forms, onboarding, navigation, and search. |
-| [prototyping-testing](./prototyping-testing) | 8 | 4 | Validate designs: prototyping strategies, usability testing, heuristic evaluation, and A/B experiments. |
-| [design-ops](./design-ops) | 9 | 3 | Streamline operations: critique frameworks, handoff specs, sprint planning, team workflows, design debt, and impact reporting. |
-| [designer-toolkit](./designer-toolkit) | 7 | 3 | Essential utilities: design rationale, presentations, case studies, UX writing, system adoption, and design negotiation. |
-| [visual-critique](./visual-critique) | 4 | 1 | Visual critique: hierarchy analysis, brand consistency checks against mood/voice/tokens, composition evaluation, and typography audits. |
-## Quick Start
+# The Designer Skills Suite
 
-### Claude Code
+Design skills for the agent era, written so an AI agent can actually use them.
 
-**Step 1: Add the Marketplace**
+**237 skills and 88 commands across 33 plugins, in five collections**, for [Claude Code](https://docs.anthropic.com/en/docs/claude-code) and [Gemini CLI](https://github.com/google-gemini/gemini-cli).
+
+## Getting started (no coding needed)
+
+These skills run inside an AI coding assistant. The easiest place to use them is Claude Code, and it takes three steps. No terminal required.
+
+**1. Get Claude Code.** It's a free app from Anthropic (claude.com). Download it, sign in, and open it. You only do this once.
+
+**2. Add the suite.** In Claude Code, type this and press enter:
 
 ```
 /plugin marketplace add Owl-Listener/designer-skills
 ```
 
-**Step 2: Install Plugins**
+This just tells Claude where the skills live. Nothing installs yet.
+
+**3. Pick what you want.** Type `/plugin` and press enter, then open the **Discover** tab. You'll see all the collections. Move with the arrow keys, press space to tick the ones you want, and enter to install. That's it.
+
+### I only want the design skills, not everything
+
+Same three steps. On the Discover list in step 3, just tick the design ones, design-research, design-systems, ui-design, interaction-design, and so on, and leave the rest. Install as few or as many as you like, and come back for more any time.
+
+### I only want one specific collection
+
+Each collection also has its own door. Swap the command in step 2 for the one you want, for example:
 
 ```
-/plugin
+/plugin marketplace add Owl-Listener/inclusive-design-skills
 ```
 
-Go to the **Discover** tab to see all 9 design plugins, then select and install the ones you want.
+Then do step 3 the same way.
 
-### Gemini CLI
+### Prefer Gemini CLI?
 
-Install individual plugins as workspace-scoped extensions. From your project root:
+Each plugin is also a Gemini CLI extension. From your project root:
 
-```bash
-# Install one plugin (e.g. design-research)
-mkdir -p .gemini/extensions
-cp -r path/to/designer-skills/.gemini/extensions/design-research .gemini/extensions/
-
-# Or clone the repo and symlink all extensions at once
+```
 git clone https://github.com/Owl-Listener/designer-skills /tmp/designer-skills
+mkdir -p .gemini/extensions
 cp -r /tmp/designer-skills/.gemini/extensions/. .gemini/extensions/
 ```
 
-Each extension is a directory under `.gemini/extensions/` containing a `gemini-extension.json` manifest and a `GEMINI.md` context file compiled from all skills in that plugin. Gemini CLI loads the context automatically when you start a session in that workspace.
+## The five collections
 
-To install user-globally (available in all projects):
+| Collection | Plugins | What it covers |
+| --- | --- | --- |
+| Design practice (this repo) | 9 | Research, systems, UX strategy, UI, interaction, prototyping & testing, design ops, the designer's toolkit, visual critique. |
+| [AI product design](https://github.com/Owl-Listener/ai-design-skills) | 6 | Designing agentic experiences: model interaction, alignment reasoning, system behaviour, evaluation, agent orchestration, prompt architecture. |
+| [UX program management](https://github.com/Owl-Listener/ux-pgm-skills) | 6 | Running design programs: planning, stakeholder comms, delivery, alignment, measurement, process design. |
+| [Design leadership](https://github.com/Owl-Listener/design-leadership-skills) | 6 | Leading design: people, teams, strategy, org influence, operating cadence, leadership craft. |
+| [Inclusive design](https://github.com/Owl-Listener/inclusive-design-skills) | 6 | Accessible by default: cognitive accessibility, inclusive interaction, accessible content, inclusive personas, adaptive interfaces, accessibility decisions. |
 
-```bash
-cp -r path/to/designer-skills/.gemini/extensions/design-research ~/.gemini/extensions/
-```
+Each collection also lives in its own repo, with its own stars and full detail. This repo is the front door, and the home of the design-practice collection below.
 
-## What Are Skills and Commands?
-- **Skills** are domain knowledge units (nouns). They teach Claude about a design topic — like creating user personas, defining design tokens, or writing error messages.
-- **Commands** are workflows (verbs). They chain multiple skills together to accomplish a task — like running a full design system audit or planning a usability test.
-## All Commands
+---
+
+## Design practice (this repo)
+
+Agentic skills, commands, and plugins for design, from research to systems, UI, interaction, and delivery. **91 skills and 28 commands across 9 plugins.**
+
+### Plugins
+
+| Plugin | Skills | Commands | Description |
+| --- | --- | --- | --- |
+| design-research | 12 | 4 | User research: personas, empathy maps, journey maps, interviews, usability testing, card sorting, surveys, and research repositories. |
+| design-systems | 11 | 3 | Build and maintain design systems: tokens, components, accessibility, theming, motion, governance, and localization. |
+| ux-strategy | 11 | 3 | Shape product direction: competitive analysis, design principles, experience mapping, information architecture, content strategy, and service blueprints. |
+| ui-design | 14 | 4 | Craft polished interfaces: layout grids, color systems, typography, responsive design, data viz, and Gestalt/perceptual principles. |
+| interaction-design | 15 | 3 | Design meaningful interactions: micro-animations, state machines, gestures, feedback, cognitive laws, forms, onboarding, navigation, and search. |
+| prototyping-testing | 8 | 4 | Validate designs: prototyping strategies, usability testing, heuristic evaluation, and A/B experiments. |
+| design-ops | 9 | 3 | Streamline operations: critique frameworks, handoff specs, sprint planning, team workflows, design debt, and impact reporting. |
+| designer-toolkit | 7 | 3 | Essential utilities: design rationale, presentations, case studies, UX writing, system adoption, and design negotiation. |
+| visual-critique | 4 | 1 | Visual critique: hierarchy analysis, brand consistency checks against mood/voice/tokens, composition evaluation, and typography audits. |
+
+### All commands
+
 | Command | Plugin | Description |
-|---------|--------|-------------|
+| --- | --- | --- |
 | `/design-research:discover` | design-research | Run a full user research discovery cycle. |
 | `/design-research:interview` | design-research | Prepare and conduct a user interview. |
 | `/design-research:test-plan` | design-research | Create a usability test plan. |
@@ -87,7 +108,22 @@ cp -r path/to/designer-skills/.gemini/extensions/design-research ~/.gemini/exten
 | `/designer-toolkit:build-presentation` | designer-toolkit | Structure a design presentation. |
 | `/designer-toolkit:write-case-study` | designer-toolkit | Create a portfolio case study. |
 | `/visual-critique:critique-screen` | visual-critique | Run all four visual critiques on a screen and output a prioritised fix list. |
+
+## What are skills and commands?
+
+- **Skills** are domain knowledge units (nouns). They teach the agent about one topic, like defining design tokens, assessing cognitive load, or writing an error message.
+- **Commands** are workflows (verbs). They chain skills together to do a job, like running a design system audit, planning a usability test, or critiquing a screen.
+
+## Why this exists
+
+Most design knowledge is written for humans to read and interpret. An agent gets none of that nuance. It reads what we wrote literally, and guesses where we left the meaning out, and the guesses pile up into something hollow. This suite writes the judgment down: what a thing is for, when to use it, and what to never do. Taste, made legible.
+
 ## Contributing
-See [CONTRIBUTING.md](./CONTRIBUTING.md) for guidelines on adding new skills, commands, and plugins.
+
+Each collection takes contributions in its own repo. Add a skill, ship its plugin manifest in the same commit, and open a PR.
+
 ## License
-MIT — see [LICENSE](./LICENSE).
+
+MIT.
+
+By MC Dean · [MC Percolates on Substack](https://marieclairedean.substack.com)
