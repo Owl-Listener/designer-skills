@@ -67,7 +67,7 @@
       "description": "Plan and scope UX programs: roadmaps, dependency maps, capacity planning, prioritisation.",
       "source": {
         "source": "git-subdir",
-        "url": "Owl-Listener/ux-pgm-skills",
+        "url": "https://github.com/Owl-Listener/ux-pgm-skills.git",
         "path": "program-planning"
       },
       "category": "product"
@@ -77,7 +77,7 @@
       "description": "Stakeholder mapping, status reporting, executive updates, alignment workshops, escalation.",
       "source": {
         "source": "git-subdir",
-        "url": "Owl-Listener/ux-pgm-skills",
+        "url": "https://github.com/Owl-Listener/ux-pgm-skills.git",
         "path": "stakeholder-comms"
       },
       "category": "product"
@@ -87,7 +87,7 @@
       "description": "Cycle orchestration, risk registers, blocker triage, launch readiness, retrospectives.",
       "source": {
         "source": "git-subdir",
-        "url": "Owl-Listener/ux-pgm-skills",
+        "url": "https://github.com/Owl-Listener/ux-pgm-skills.git",
         "path": "delivery-execution"
       },
       "category": "product"
@@ -97,7 +97,7 @@
       "description": "Intake, decision logs, working agreements, RACI, and OKR linkage across functions.",
       "source": {
         "source": "git-subdir",
-        "url": "Owl-Listener/ux-pgm-skills",
+        "url": "https://github.com/Owl-Listener/ux-pgm-skills.git",
         "path": "cross-functional-alignment"
       },
       "category": "product"
@@ -107,7 +107,7 @@
       "description": "Program health: KPIs, dashboards, research ops, design ops metrics, impact reporting.",
       "source": {
         "source": "git-subdir",
-        "url": "Owl-Listener/ux-pgm-skills",
+        "url": "https://github.com/Owl-Listener/ux-pgm-skills.git",
         "path": "measurement-ops"
       },
       "category": "product"
@@ -117,7 +117,7 @@
       "description": "How the team works: workflows, governance, rituals, scaling playbooks, retrospectives.",
       "source": {
         "source": "git-subdir",
-        "url": "Owl-Listener/ux-pgm-skills",
+        "url": "https://github.com/Owl-Listener/ux-pgm-skills.git",
         "path": "process-design"
       },
       "category": "product"
@@ -127,7 +127,7 @@
       "description": "1:1s, feedback, growth plans, performance reviews, career ladders, difficult conversations.",
       "source": {
         "source": "git-subdir",
-        "url": "Owl-Listener/design-leadership-skills",
+        "url": "https://github.com/Owl-Listener/design-leadership-skills.git",
         "path": "people-management"
       },
       "category": "design"
@@ -137,7 +137,7 @@
       "description": "Hiring loops, job specs, portfolio review, onboarding, team topology, psychological safety.",
       "source": {
         "source": "git-subdir",
-        "url": "Owl-Listener/design-leadership-skills",
+        "url": "https://github.com/Owl-Listener/design-leadership-skills.git",
         "path": "team-building"
       },
       "category": "design"
@@ -147,7 +147,7 @@
       "description": "Design vision, strategy docs, org-level principles, investment cases, portfolio prioritisation.",
       "source": {
         "source": "git-subdir",
-        "url": "Owl-Listener/design-leadership-skills",
+        "url": "https://github.com/Owl-Listener/design-leadership-skills.git",
         "path": "design-strategy"
       },
       "category": "design"
@@ -157,7 +157,7 @@
       "description": "Executive narrative, influence mapping, advocacy, securing resources, managing up.",
       "source": {
         "source": "git-subdir",
-        "url": "Owl-Listener/design-leadership-skills",
+        "url": "https://github.com/Owl-Listener/design-leadership-skills.git",
         "path": "org-influence"
       },
       "category": "design"
@@ -167,7 +167,7 @@
       "description": "Design reviews at scale, planning cadence, decision frameworks, delegation, operating rhythm.",
       "source": {
         "source": "git-subdir",
-        "url": "Owl-Listener/design-leadership-skills",
+        "url": "https://github.com/Owl-Listener/design-leadership-skills.git",
         "path": "operating-cadence"
       },
       "category": "design"
@@ -177,7 +177,7 @@
       "description": "Self-leadership, change leadership, conflict resolution, mentorship, leadership ethics.",
       "source": {
         "source": "git-subdir",
-        "url": "Owl-Listener/design-leadership-skills",
+        "url": "https://github.com/Owl-Listener/design-leadership-skills.git",
         "path": "leadership-craft"
       },
       "category": "design"
@@ -187,7 +187,7 @@
       "description": "Interaction patterns for AI products: mixed-initiative flow, handoff protocols, error personality.",
       "source": {
         "source": "git-subdir",
-        "url": "Owl-Listener/ai-design-skills",
+        "url": "https://github.com/Owl-Listener/ai-design-skills.git",
         "path": "claude-plugin/model-interaction-design"
       },
       "category": "ai"
@@ -197,7 +197,7 @@
       "description": "Alignment reasoning and harm anticipation translated into practitioner design skills.",
       "source": {
         "source": "git-subdir",
-        "url": "Owl-Listener/ai-design-skills",
+        "url": "https://github.com/Owl-Listener/ai-design-skills.git",
         "path": "claude-plugin/ai-alignment-reasoning"
       },
       "category": "ai"
@@ -207,7 +207,7 @@
       "description": "Shape system behaviour: defaults, guardrails, refusals, and behavioural contracts.",
       "source": {
         "source": "git-subdir",
-        "url": "Owl-Listener/ai-design-skills",
+        "url": "https://github.com/Owl-Listener/ai-design-skills.git",
         "path": "claude-plugin/system-behavior-shaping"
       },
       "category": "ai"
@@ -217,7 +217,7 @@
       "description": "Evaluate agentic experiences: behaviour evals, trust calibration, failure analysis.",
       "source": {
         "source": "git-subdir",
-        "url": "Owl-Listener/ai-design-skills",
+        "url": "https://github.com/Owl-Listener/ai-design-skills.git",
         "path": "claude-plugin/evaluation"
       },
       "category": "ai"
@@ -227,7 +227,7 @@
       "description": "Design how agents collaborate, hand off, and stay legible to people.",
       "source": {
         "source": "git-subdir",
-        "url": "Owl-Listener/ai-design-skills",
+        "url": "https://github.com/Owl-Listener/ai-design-skills.git",
         "path": "claude-plugin/design-agent-orchestration"
       },
       "category": "ai"
@@ -237,7 +237,7 @@
       "description": "Structure prompts and context as a design material, not an afterthought.",
       "source": {
         "source": "git-subdir",
-        "url": "Owl-Listener/ai-design-skills",
+        "url": "https://github.com/Owl-Listener/ai-design-skills.git",
         "path": "claude-plugin/prompt-architecture"
       },
       "category": "ai"
@@ -247,7 +247,7 @@
       "description": "Design for how people actually think: cognitive load, plain language, wayfinding, focus, memory, error recovery.",
       "source": {
         "source": "git-subdir",
-        "url": "Owl-Listener/inclusive-design-skills",
+        "url": "https://github.com/Owl-Listener/inclusive-design-skills.git",
         "path": "cognitive-accessibility"
       },
       "category": "accessibility"
@@ -257,7 +257,7 @@
       "description": "Multi-modal interactions that adapt to how people move, perceive, and communicate.",
       "source": {
         "source": "git-subdir",
-        "url": "Owl-Listener/inclusive-design-skills",
+        "url": "https://github.com/Owl-Listener/inclusive-design-skills.git",
         "path": "inclusive-interaction"
       },
       "category": "accessibility"
@@ -267,7 +267,7 @@
       "description": "Structure content that works for screen readers, cognitive differences, and diverse literacy levels.",
       "source": {
         "source": "git-subdir",
-        "url": "Owl-Listener/inclusive-design-skills",
+        "url": "https://github.com/Owl-Listener/inclusive-design-skills.git",
         "path": "accessible-content"
       },
       "category": "accessibility"
@@ -277,7 +277,7 @@
       "description": "User stories, personas, and scenarios that include disability from the start.",
       "source": {
         "source": "git-subdir",
-        "url": "Owl-Listener/inclusive-design-skills",
+        "url": "https://github.com/Owl-Listener/inclusive-design-skills.git",
         "path": "inclusive-personas"
       },
       "category": "accessibility"
@@ -287,7 +287,7 @@
       "description": "Design systems that respect user preferences and adapt to individual needs.",
       "source": {
         "source": "git-subdir",
-        "url": "Owl-Listener/inclusive-design-skills",
+        "url": "https://github.com/Owl-Listener/inclusive-design-skills.git",
         "path": "adaptive-interfaces"
       },
       "category": "accessibility"
@@ -297,7 +297,7 @@
       "description": "Document, communicate, and maintain accessibility decisions across teams and time.",
       "source": {
         "source": "git-subdir",
-        "url": "Owl-Listener/inclusive-design-skills",
+        "url": "https://github.com/Owl-Listener/inclusive-design-skills.git",
         "path": "accessibility-decisions"
       },
       "category": "accessibility"
