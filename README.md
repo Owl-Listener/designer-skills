@@ -111,12 +111,108 @@ Agentic skills, commands, and plugins for design, from research to systems, UI, 
 
 ## What are skills and commands?
 
-- **Skills** are domain knowledge units (nouns). They teach the agent about one topic, like defining design tokens, assessing cognitive load, or writing an error message.
-- **Commands** are workflows (verbs). They chain skills together to do a job, like running a design system audit, planning a usability test, or critiquing a screen.
+**Skills** are domain knowledge units — nouns. They teach Claude about a design topic: how to create a user persona, how to define design tokens, how to write a non-leading interview question.
+
+**Commands** are workflows — verbs. They chain skills together to do a complete job: `/design-research:discover` runs personas, empathy map, and journey map in one go.
+
+You'll mostly reach for commands. The skills run underneath them.
+
+## Pick your starting point
+
+### I'm starting a new product from scratch
+
+Start with research, even if you think you know the users.
+
+```
+/design-research:discover
+```
+
+Tell Claude: what you're building, who you think the users are, and what problem you're solving. It will run a full discovery cycle — personas, empathy map, journey map — and surface the gaps in your assumptions.
+
+From there, move in sequence:
+
+- `/ux-strategy:frame-problem` — structure the design challenge before you start designing
+- `/ui-design:design-screen` — when you're ready to build
+- `/interaction-design:design-interaction` — for any flows that have meaningful state or motion
+- `/design-systems:create-component` — when patterns start repeating and you need to systemise them
+
+**Minimum install for this path:** design-research, ux-strategy, ui-design, interaction-design
+
+### I'm working on an existing product
+
+Start with a critique, not new work.
+
+```
+/visual-critique:critique-screen
+```
+
+Drop a screenshot. Get a prioritised fix list covering hierarchy, brand consistency, composition, and typography. This tells you what's actually broken before you add anything new.
+
+Then:
+
+- `/prototyping-testing:evaluate` — run a heuristic evaluation if you want a fuller audit
+- `/design-ops:handoff` — if you're in a delivery phase and need specs
+- `/design-systems:audit-system` — if you suspect system debt is the root cause
+
+**Minimum install for this path:** visual-critique, prototyping-testing, design-ops
+
+### I have a specific deliverable to produce
+
+Go directly to the plugin that covers it. You don't need everything.
+
+| What you need to produce | Plugin | Command |
+| --- | --- | --- |
+| User personas | design-research | — |
+| Interview script | design-research | `/design-research:interview` |
+| Journey map | design-research | — |
+| Competitive analysis | ux-strategy | `/ux-strategy:benchmark` |
+| Colour palette | ui-design | `/ui-design:color-palette` |
+| Typography system | ui-design | `/ui-design:type-system` |
+| Component spec | design-systems | `/design-systems:create-component` |
+| Design tokens | design-systems | `/design-systems:tokenize` |
+| Usability test plan | prototyping-testing | `/prototyping-testing:test-plan` |
+| Developer handoff | design-ops | `/design-ops:handoff` |
+| Design rationale | designer-toolkit | `/designer-toolkit:write-rationale` |
+| Case study | designer-toolkit | `/designer-toolkit:write-case-study` |
+
+### I'm building with AI and need to design the AI experience
+
+This collection covers conventional design. For designing AI products specifically — model interaction, alignment reasoning, error personality, agent orchestration — use the companion collection:
+
+```
+/plugin marketplace add Owl-Listener/ai-design-skills
+```
+
+The two collections are designed to work alongside each other.
+
+## Recommended install for most designers
+
+If you're not sure where to start, install these four and you'll have coverage across the full design cycle:
+
+```
+/plugin install design-research@designer-skills
+/plugin install ux-strategy@designer-skills
+/plugin install ui-design@designer-skills
+/plugin install design-ops@designer-skills
+```
+
+Add others as you need them. The plugins are lightweight — installing more doesn't slow things down.
+
+## A note on sequence
+
+The plugins aren't a strict pipeline, but there's a natural grain to them:
+
+**design-research → ux-strategy → ui-design / interaction-design → design-systems → design-ops**
+
+Research informs strategy. Strategy shapes UI decisions. Patterns in UI become system components. Systems flow into ops. Working against this grain is fine — but if something feels hard, it's often because a step earlier in the sequence was skipped.
 
 ## Why this exists
 
 Most design knowledge is written for humans to read and interpret. An agent gets none of that nuance. It reads what we wrote literally, and guesses where we left the meaning out, and the guesses pile up into something hollow. This suite writes the judgment down: what a thing is for, when to use it, and what to never do. Taste, made legible.
+
+## Questions?
+
+Open an issue. If something isn't working the way you expected, or if a skill output feels wrong for your context, that's signal worth capturing.
 
 ## Contributing
 
