@@ -216,7 +216,8 @@ Open an issue. If something isn't working the way you expected, or if a skill ou
 
 ## Contributing
 
-Each collection takes contributions in its own repo. Add a skill, ship its plugin manifest in the same commit, and open a PR.
+Each collection takes contributions in its own repo. Add a skill, ship its plugin manifest in the same commit, and open a PR. 
+PRs for new skills or structural changes without a corresponding open issue will be closed without review.
 
 ## Community Integrations
 
