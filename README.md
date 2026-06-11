@@ -1,4 +1,4 @@
-# The Designer Skills Suite
+# The Designer Skills Pack
 
 Design skills for the agent era, written so an AI agent can actually use them.
 
