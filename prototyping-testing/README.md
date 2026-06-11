@@ -2,7 +2,7 @@
 Plan and execute design validation through prototyping strategies, usability testing, heuristic evaluation, and A/B experiments.
 ## Skills (8)
 - **prototype-strategy** — Choose the right prototyping fidelity and method for the design question.
-- **test-scenario** — Write usability test scenarios with tasks, success criteria, and observation guides.
+- **test-scenario** — Write realistic usability test scenarios with tasks, success criteria, and facilitation guidance.
 - **heuristic-evaluation** — Conduct expert heuristic evaluations using Nielsen's heuristics and domain-specific criteria.
 - **a-b-test-design** — Design rigorous A/B tests with hypotheses, variants, metrics, and sample size calculations.
 - **user-flow-diagram** — Create user flow diagrams showing paths, decisions, and branch logic.
