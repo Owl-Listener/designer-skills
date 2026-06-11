@@ -60,7 +60,7 @@ Each collection also lives in its own repo, with its own stars and full detail. 
 
 ## Design practice (this repo)
 
-Agentic skills, commands, and plugins for design, from research to systems, UI, interaction, and delivery. **91 skills and 28 commands across 9 plugins.**
+Agentic skills, commands, and plugins for design, from research to systems, UI, interaction, and delivery. **97 skills and 30 commands across 9 plugins.**
 
 ### Plugins
 
@@ -74,7 +74,7 @@ Agentic skills, commands, and plugins for design, from research to systems, UI, 
 | prototyping-testing | 8 | 4 | Validate designs: prototyping strategies, usability testing, heuristic evaluation, and A/B experiments. |
 | design-ops | 9 | 3 | Streamline operations: critique frameworks, handoff specs, sprint planning, team workflows, design debt, and impact reporting. |
 | designer-toolkit | 7 | 3 | Essential utilities: design rationale, presentations, case studies, UX writing, system adoption, and design negotiation. |
-| visual-critique | 4 | 1 | Visual critique: hierarchy analysis, brand consistency checks against mood/voice/tokens, composition evaluation, and typography audits. |
+| visual-critique | 7 | 2 | Visual critique: hierarchy, brand consistency, composition, typography, colour, affordance, and information density. |
 
 ### All commands
 
@@ -107,7 +107,8 @@ Agentic skills, commands, and plugins for design, from research to systems, UI, 
 | `/designer-toolkit:write-rationale` | designer-toolkit | Write design rationale for decisions. |
 | `/designer-toolkit:build-presentation` | designer-toolkit | Structure a design presentation. |
 | `/designer-toolkit:write-case-study` | designer-toolkit | Create a portfolio case study. |
-| `/visual-critique:critique-screen` | visual-critique | Run all four visual critiques on a screen and output a prioritised fix list. |
+| `/visual-critique:critique-screen` | visual-critique | Run all seven visual critiques on a screen and output a prioritised fix list. |
+| `/visual-critique:critique-ux` | visual-critique | Focused functional critique: hierarchy, affordance, and information density. |
 
 ## What are skills and commands?
 
