@@ -122,6 +122,14 @@ Most design knowledge is written for humans to read and interpret. An agent gets
 
 Each collection takes contributions in its own repo. Add a skill, ship its plugin manifest in the same commit, and open a PR.
 
+## Community Integrations
+
+Tools and plugins built on top of designer-skills:
+
+IntegrationDescriptionMaintainerdesign-library-pluginClaude Code plugin exposing designer-skills via /design-process, with keyword activation across wireframe, prototype, user research, design sprint, and handoff workflows@zeta92
+
+If you've built something on top of this collection and want it listed here, open an issue.
+
 ## License
 
 MIT.
