@@ -1,0 +1,4 @@
+*.md linguist-language=Markdown
+*.md linguist-detectable=true
+*.json linguist-detectable=true
+*.sh linguist-detectable=false
