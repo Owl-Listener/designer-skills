@@ -1,6 +1,6 @@
 ---
 description: Design a complete usability test plan with tasks, metrics, and facilitation guide.
-argument-hint: [product, feature, or prototype to test]
+argument-hint: "[product, feature, or prototype to test]"
 ---
 
 Design a comprehensive usability test plan:

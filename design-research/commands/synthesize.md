@@ -1,6 +1,6 @@
 ---
 description: Synthesize research data into affinity diagrams, themes, and actionable insights.
-argument-hint: [research data, interview notes, or observation notes to synthesize]
+argument-hint: "[research data, interview notes, or observation notes to synthesize]"
 ---
 
 Synthesize qualitative research data into structured insights:

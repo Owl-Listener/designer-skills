@@ -1,6 +1,6 @@
 ---
 description: Prepare an interview script or summarize an interview transcript into structured insights.
-argument-hint: [research goals for script, OR paste/attach transcript to summarize]
+argument-hint: "[research goals for script, OR paste/attach transcript to summarize]"
 ---
 
 Prepare for or synthesize user interviews:
