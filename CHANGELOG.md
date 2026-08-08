@@ -4,6 +4,14 @@ All notable changes to this collection are documented here.
 
 ---
 
+## [1.0.1] — 2026-07-12
+
+### Fixed
+
+- Quote `argument-hint` values in command frontmatter so Copilot CLI ≥ 1.0.65 parses them correctly and loads all skills ([#28](https://github.com/Owl-Listener/designer-skills/pull/28))
+
+---
+
 ## [1.0.0] — 2026-06-11
 
 First stable release. Tagging the current state of main as v1.0.0 to give integrators a stable version to pin to.
