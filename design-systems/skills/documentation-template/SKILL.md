@@ -1,6 +1,6 @@
 ---
 name: documentation-template
-description: Generate structured documentation templates for components, patterns, or guidelines within a design system.
+description: Generate a reusable documentation scaffold for components, patterns, or guidelines. Use when standardising how the system is documented. For the content of one component's spec, use `component-spec`.
 ---
 # Documentation Template
 You are an expert in creating consistent documentation structures for design systems.

@@ -6,7 +6,10 @@
   Rules enforced by the linter (scripts/lint-frontmatter.py):
   - `name` must match the directory name exactly
   - `name` must be kebab-case
-  - `description` must be present and non-empty
+  - `description` must be present, non-empty, and under 400 characters
+  - `description` must contain a "Use when ..." sentence
+  - Any `skill-name` referenced in the description must exist — in this plugin,
+    or written as `skill-name` (owning-plugin) when it lives elsewhere
   - File must contain an H1 heading and at least one H2 section
 
   Rules enforced by the PR template checklist:
@@ -15,7 +18,10 @@
 -->
 ---
 name: <skill-name>
-description: <One sentence — what this skill teaches Claude and when it applies. Under 120 characters.>
+# Three parts: what it produces, when to use it, and how it differs from the
+# nearest skill an agent might pick instead. Drop the boundary if nothing is close.
+# See "Writing descriptions" in CONTRIBUTING.md.
+description: <What this produces>. Use when <situation>. For <adjacent case>, use `<other-skill>`.
 ---
 # <Skill Title in Title Case>
 

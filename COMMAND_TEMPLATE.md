@@ -14,7 +14,9 @@
   - One command per PR (open an issue first for new commands)
 -->
 ---
-description: <One sentence completing "This command will…". Under 100 characters.>
+# Describe the pipeline, not the topic: name the stages and the artifact, so this
+# never reads as a restatement of the skill it wraps. See CONTRIBUTING.md.
+description: <Run/Build/Audit ...> end to end — <stage>, <stage>, and <stage>.
 argument-hint: "[<what the user provides, e.g., 'screen or feature name, e.g., checkout flow'>]"
 ---
 # /<command-name>

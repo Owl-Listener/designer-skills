@@ -14,6 +14,7 @@ Designer Skills Collection is maintained by MC Dean. Contributions are welcome �
 - Every skill needs frontmatter with `name` and `description`.
 - Every command needs `description` and `argument-hint`.
 - Skill name must match its directory name.
+- Every skill description must say **when to use it** and, where a near-neighbour exists, **where the boundary is**.
 - No cross-plugin references in commands.
 - Suggest follow-ups in natural language only.
 - Every contributor will be listed publicly.
@@ -27,12 +28,38 @@ Copy the relevant template and follow the inline instructions:
 
 Delete all HTML comments before opening your PR.
 
+## Writing descriptions
+
+The description is the only thing an agent reads when deciding which skill to fire. It has three parts:
+
+```
+<What it produces>. Use when <situation>. <Boundary against the nearest neighbour>.
+```
+
+For example:
+
+```yaml
+description: Audit an existing interface against WCAG, producing findings with severity
+  ratings and remediation steps. Use when you have a design or build to assess now. Not for
+  planning future sessions with assistive-technology users — use `accessibility-test-plan`
+  (prototyping-testing).
+```
+
+Rules the linter enforces:
+
+- **A "Use when ..." sentence is required.** Without it, two skills on the same topic are indistinguishable at selection time.
+- **A boundary clause is required whenever a near-neighbour exists** — another skill an agent could plausibly pick instead. Name it and say what separates them. If nothing is close, omit the clause.
+- **Reference other skills by name in backticks.** Same plugin: `` `skill-name` ``. Another plugin: `` `skill-name` (plugin-name) `` — the plugin suffix matters because plugins install independently, so a bare cross-plugin name reads as a dangling pointer. The linter rejects references that do not resolve.
+- **Under 400 characters**, so it stays scannable.
+
+Commands follow the same spirit but describe a pipeline: name the stages and the artifact, so a command never reads like a restatement of the skill it wraps.
+
 ## Quality bar for skills
 
 A skill is ready when it passes these tests:
 
-1. **The linter passes** — run `python3 scripts/lint-frontmatter.py` and confirm it reports no errors. The linter checks frontmatter fields, name-directory match, kebab-case, and basic document structure.
-2. **The description is a complete sentence** — it should tell an agent both what the skill covers and when it applies, in under 120 characters.
+1. **The linter passes** — run `python3 scripts/lint-frontmatter.py` and confirm it reports no errors. The linter checks frontmatter fields, name-directory match, kebab-case, document structure, and the description rules below.
+2. **The description follows the three-part shape** — see [Writing descriptions](#writing-descriptions). At 100+ skills the failure mode is not a skill failing to fire, it is the wrong one firing when several overlap.
 3. **"What You Do" is concrete** — it names a specific output, not just a topic. "Design the confirmation strategy for a transactional email" is concrete. "Help with email design" is not.
 4. **Each H2 section teaches a judgment** — not just a fact. A reader should be able to apply the principle to a novel situation after reading it.
 5. **Best Practices includes at least one "do not"** — the anti-pattern is often the highest-value line in the section.

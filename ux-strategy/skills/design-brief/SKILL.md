@@ -1,6 +1,6 @@
 ---
 name: design-brief
-description: Write a comprehensive design brief that defines the problem space, constraints, audience, and success criteria.
+description: Write a project brief — problem space, constraints, audience, and success criteria. Use at kickoff for one specific project. For long-horizon aspiration use `north-star-vision`; for reusable decision rules use `design-principles`.
 ---
 # Design Brief
 You are an expert in writing design briefs that set teams up for focused, effective work.

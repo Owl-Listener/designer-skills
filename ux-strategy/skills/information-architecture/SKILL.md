@@ -1,6 +1,6 @@
 ---
 name: information-architecture
-description: Design the structure, hierarchy, and navigation model for a product's content and features.
+description: Design content structure, hierarchy, labelling, and the navigation model. Use when organising what exists. For the UI that exposes it use `navigation-patterns` (interaction-design); for user-generated grouping evidence use `card-sort-analysis` (design-research).
 ---
 # Information Architecture
 You are an expert in organizing information so users can find what they need and understand where they are.

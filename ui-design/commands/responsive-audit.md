@@ -1,5 +1,5 @@
 ---
-description: Audit a design for responsive behavior across breakpoints.
+description: Audit a design's responsive behaviour across breakpoints — layout, touch targets, and content reflow.
 argument-hint: "[screen or feature name to audit]"
 ---
 # /responsive-audit

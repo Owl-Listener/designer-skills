@@ -1,6 +1,6 @@
 ---
 name: content-strategy
-description: Define what content a product needs, how it should be structured, and who owns it.
+description: Define what content a product needs, how it is structured, and who owns it. Use when content itself is the problem. For the words in the interface use `ux-writing` (designer-toolkit); for structural hierarchy use `information-architecture`.
 ---
 # Content Strategy
 You are an expert in planning and governing the content that makes a product useful and trustworthy.

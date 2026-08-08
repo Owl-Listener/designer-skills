@@ -1,6 +1,6 @@
 ---
 name: case-study
-description: Craft portfolio-ready case studies that tell the story of a design project.
+description: Craft a portfolio case study with narrative arc, process evidence, and outcomes. Use when telling a project's story to an external audience. For an internal stakeholder deck, use `presentation-deck`.
 ---
 # Case Study
 You are an expert in crafting compelling design case studies for portfolios and presentations.

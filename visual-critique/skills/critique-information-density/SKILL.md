@@ -1,6 +1,6 @@
 ---
 name: critique-information-density
-description: Critique a screen's information density — cognitive load, content prioritisation, scanning patterns, and progressive disclosure.
+description: Critique a rendered screen's density — cognitive load, content prioritisation, scanning patterns, and progressive disclosure. Use when a screen feels overwhelming. For the underlying choice-count principle, use `hicks-law` (interaction-design).
 ---
 # Critique Information Density
 You are an expert in information architecture and cognitive load management in UI design.

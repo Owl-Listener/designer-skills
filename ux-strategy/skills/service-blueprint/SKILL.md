@@ -1,6 +1,6 @@
 ---
 name: service-blueprint
-description: Map the end-to-end service delivery system including frontstage actions, backstage processes, and supporting infrastructure.
+description: Map service delivery across frontstage actions, backstage processes, and supporting systems. Use when staff and operations are part of the experience. For the customer-visible layer only, use `experience-map`.
 ---
 # Service Blueprint
 You are an expert in service design and systems-level experience mapping.

@@ -133,6 +133,57 @@ def lint_commands() -> None:
                     line=_line_of_key(cmd_md, "argument-hint"))
 
 
+MAX_DESC = 400
+
+# A skill reference inside a description: `skill-name` for a skill in the same
+# plugin, or `skill-name` (plugin-name) when pointing at another plugin.
+_REF = re.compile(r"`([a-z][a-z0-9-]+)`(?:\s+\(([a-z][a-z0-9-]+)\))?")
+
+
+def _skill_exists(plugin: str, name: str) -> bool:
+    return (ROOT / plugin / "skills" / name / "SKILL.md").is_file()
+
+
+def lint_descriptions() -> None:
+    """Every skill must say when it applies and point only at skills that exist."""
+    for skill_md in sorted(ROOT.glob("*/skills/*/SKILL.md")):
+        plugin = skill_md.parent.parent.parent.name
+        fm = _parse_frontmatter(skill_md)
+        if fm is None:
+            continue
+        desc = fm.get("description", "")
+        if not desc:
+            continue
+        line = _line_of_key(skill_md, "description")
+
+        if len(desc) > MAX_DESC:
+            _report(skill_md,
+                    f"`description` is {len(desc)} characters — keep it under "
+                    f"{MAX_DESC} so it stays scannable at selection time",
+                    line=line)
+
+        # Without a "Use when ..." clause an agent cannot tell near-neighbours apart.
+        if not re.search(r"(?:^|\.\s)Use\s", desc):
+            _report(skill_md,
+                    '`description` must contain a "Use when ..." sentence naming '
+                    "the situation this skill applies to",
+                    line=line)
+
+        for ref, ref_plugin in _REF.findall(desc):
+            if ref_plugin:
+                if not _skill_exists(ref_plugin, ref):
+                    _report(skill_md,
+                            f"description points at `{ref}` ({ref_plugin}) "
+                            "but no such skill exists",
+                            line=line)
+            elif not _skill_exists(plugin, ref):
+                _report(skill_md,
+                        f"description points at `{ref}`, which is not in the "
+                        f"`{plugin}` plugin — write it as `{ref}` (owning-plugin) "
+                        "or fix the name",
+                        line=line)
+
+
 def lint_cross_plugin_refs() -> None:
     """Check that commands only reference skills from their own plugin."""
     for cmd_md in sorted(ROOT.glob("*/commands/*.md")):
@@ -157,6 +208,7 @@ def lint_cross_plugin_refs() -> None:
 
 def main() -> None:
     lint_skills()
+    lint_descriptions()
     lint_commands()
     lint_cross_plugin_refs()
 

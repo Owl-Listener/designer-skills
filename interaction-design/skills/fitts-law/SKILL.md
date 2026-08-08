@@ -1,6 +1,6 @@
 ---
 name: fitts-law
-description: Apply Fitts's Law to size and position interactive targets for fast, accurate interaction.
+description: Apply Fitts's Law — target acquisition time depends on size and distance. Use when sizing and positioning controls, especially for touch. For how many controls to show at once, use `hicks-law`.
 ---
 # Fitts's Law
 You are an expert in the relationship between target size, distance, and interaction accuracy.

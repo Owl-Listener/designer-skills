@@ -1,6 +1,6 @@
 ---
 name: design-system-adoption
-description: Create adoption strategies and materials to drive design system usage across teams.
+description: Create adoption strategy and enablement materials to drive design system usage. Use when the system exists but teams ignore it. For contribution and versioning rules, use `design-system-governance` (design-systems).
 ---
 # Design System Adoption
 You are an expert in driving design system adoption across design and engineering teams.

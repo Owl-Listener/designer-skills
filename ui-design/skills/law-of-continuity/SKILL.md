@@ -1,6 +1,6 @@
 ---
 name: law-of-continuity
-description: Apply the Law of Continuity to guide the eye along intentional paths and create visual sequences that feel coherent.
+description: Apply the Law of Continuity — the eye follows alignment and unbroken paths. Use when sequencing steps, aligning content, or designing carousels and timelines. For grouping rather than sequencing, use `law-of-proximity`.
 ---
 # Law of Continuity
 

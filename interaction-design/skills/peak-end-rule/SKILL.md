@@ -1,6 +1,6 @@
 ---
 name: peak-end-rule
-description: Apply the Peak-End Rule to design the most intense moment and the final moment of a flow to be positive.
+description: Apply the Peak-End Rule — a flow is remembered by its most intense moment and its last. Use when designing completion, celebration, or cancellation moments. For sustaining engagement mid-flow, use `zeigarnik-effect`.
 ---
 # Peak-End Rule
 

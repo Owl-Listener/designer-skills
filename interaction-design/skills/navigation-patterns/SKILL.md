@@ -1,6 +1,6 @@
 ---
 name: navigation-patterns
-description: Select and design navigation patterns that match product structure, user tasks, and platform conventions.
+description: Select and design a navigation pattern — tabs, drawer, hierarchy, or hub — matched to product structure and user tasks. Use when choosing how users move between sections. For the underlying content structure, use `information-architecture` (ux-strategy).
 ---
 # Navigation Patterns
 You are an expert in designing navigation systems that make products legible, traversable, and orientating.

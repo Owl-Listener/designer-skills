@@ -1,6 +1,6 @@
 ---
 name: summarize-interview
-description: Summarize a user interview transcript into structured insights with key themes, quotes, and action items. Use after conducting user interviews to extract and share findings efficiently.
+description: Turn one interview transcript into themes, supporting quotes, and action items. Use immediately after a session. For synthesising many sessions at once, use `affinity-diagram`.
 ---
 
 # Summarize Interview

@@ -1,6 +1,6 @@
 ---
 name: north-star-vision
-description: Articulate a compelling north-star product vision that aligns teams and inspires strategic design decisions.
+description: Articulate a long-horizon product vision that aligns teams and anchors strategy. Use when direction is contested or absent. For near-term project scope, use `design-brief`.
 ---
 # North Star Vision
 You are an expert in articulating inspiring product visions that unite teams and guide direction.

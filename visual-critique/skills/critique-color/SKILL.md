@@ -1,6 +1,6 @@
 ---
 name: critique-color
-description: Critique a screen's colour usage — contrast ratios, palette coherence, semantic meaning, and colour accessibility.
+description: Critique a rendered screen's colour — contrast ratios, palette coherence, and semantic meaning. Use when reviewing one screen. For a product-wide WCAG audit use `accessibility-audit` (design-systems); for building the palette use `color-system` (ui-design).
 ---
 # Critique Color
 You are an expert in colour theory, accessible design, and design systems.

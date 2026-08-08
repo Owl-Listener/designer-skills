@@ -1,5 +1,5 @@
 ---
-description: Run a heuristic evaluation of an existing design.
+description: Run a heuristic evaluation end to end — expert review against heuristics with severity ratings and recommended fixes.
 argument-hint: "[design, screen, or flow to evaluate]"
 ---
 # /evaluate

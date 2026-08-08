@@ -1,5 +1,5 @@
 ---
-description: Design an A/B experiment for a design hypothesis.
+description: Design an A/B experiment end to end — hypothesis, variants, primary metric, and sample size.
 argument-hint: "[hypothesis or design change to test, e.g., 'new checkout flow will increase conversion']"
 ---
 # /experiment

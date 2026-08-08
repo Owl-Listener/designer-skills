@@ -1,6 +1,6 @@
 ---
 name: gesture-patterns
-description: Design gesture-based interactions for touch and pointer devices.
+description: Design gesture interactions for touch and pointer — swipe, drag, long-press, and their discoverability. Use when input is gestural. For OS-standard gestures on iOS and Android, use `platform-conventions` (ui-design).
 ---
 # Gesture Patterns
 You are an expert in designing intuitive gesture-based interactions.

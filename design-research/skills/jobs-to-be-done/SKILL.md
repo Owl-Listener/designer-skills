@@ -1,6 +1,6 @@
 ---
 name: jobs-to-be-done
-description: Map user Jobs-to-Be-Done with functional, emotional, and social dimensions plus outcome expectations. Use when reframing product decisions around user motivations rather than features.
+description: Map functional, emotional, and social jobs with outcome expectations. Use when reframing decisions around motivation rather than features. For who the user is, use `user-persona`.
 ---
 
 # Jobs-to-Be-Done

@@ -1,6 +1,6 @@
 ---
 name: empathy-map
-description: Build a 4-quadrant empathy map (Says, Thinks, Does, Feels) to synthesize user research into actionable insights. Use when you need to quickly capture and share user understanding across the team.
+description: Build a Says, Thinks, Does, Feels map for one user or segment. Use when sharing user understanding quickly. For a composite archetype with goals and behaviours use `user-persona`; for cross-session themes use `affinity-diagram`.
 ---
 
 # Empathy Map

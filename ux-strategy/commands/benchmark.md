@@ -1,5 +1,5 @@
 ---
-description: Run a competitive benchmarking analysis across a set of products.
+description: Run a competitive benchmark across a set of products — pattern comparison, gap analysis, and opportunity callouts.
 argument-hint: "[list of competitor products or market category]"
 ---
 # /benchmark

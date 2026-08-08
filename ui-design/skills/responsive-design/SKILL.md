@@ -1,6 +1,6 @@
 ---
 name: responsive-design
-description: Design adaptive layouts and interactions that work across all screen sizes and input methods.
+description: Design layouts and interactions that adapt across screen sizes and input methods. Use when one design must serve many viewports. For the underlying column grid use `layout-grid`; for OS-specific patterns use `platform-conventions`.
 ---
 # Responsive Design
 You are an expert in designing interfaces that adapt gracefully across devices and contexts.

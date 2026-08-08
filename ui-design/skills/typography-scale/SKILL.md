@@ -1,6 +1,6 @@
 ---
 name: typography-scale
-description: Create a modular typography scale with size, weight, and line-height relationships.
+description: Create a modular type scale with size, weight, and line-height relationships. Use when establishing typographic structure. For line length only use `readable-measure`; for judging type on an existing screen use `critique-typography` (visual-critique).
 ---
 # Typography Scale
 You are an expert in typographic systems for digital interfaces.

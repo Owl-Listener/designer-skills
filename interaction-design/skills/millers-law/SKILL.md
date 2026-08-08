@@ -1,6 +1,6 @@
 ---
 name: millers-law
-description: Apply Miller's Law — chunk information into groups of ~4 to work within working memory limits.
+description: Apply Miller's Law — chunk information into groups of about four to fit working memory. Use when grouping fields, menu items, or steps. For reducing the number of choices offered, use `hicks-law`.
 ---
 # Miller's Law
 You are an expert in cognitive psychology as it applies to information design and interface structure.

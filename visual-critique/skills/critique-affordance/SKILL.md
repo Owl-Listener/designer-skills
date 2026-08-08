@@ -1,6 +1,6 @@
 ---
 name: critique-affordance
-description: Critique a screen's interactive affordances — what looks clickable, state visibility, CTA clarity, and action discoverability.
+description: Critique a rendered screen's affordances — what looks clickable, state visibility, CTA clarity, and action discoverability. Use when reviewing an existing screen. For sizing and positioning targets in new work, use `fitts-law` (interaction-design).
 ---
 # Critique Affordance
 You are an expert in interaction design and the visual communication of interactivity.

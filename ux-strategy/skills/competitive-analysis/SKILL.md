@@ -1,6 +1,6 @@
 ---
 name: competitive-analysis
-description: Conduct a structured competitive analysis comparing UX patterns, features, strengths, and gaps across rival products.
+description: Compare UX patterns, features, strengths, and gaps across rival products. Use when you need to know what others actually do. For deliberately adopting their conventions, use `jakobs-law` (interaction-design).
 ---
 # Competitive Analysis
 You are an expert in evaluating competitive landscapes from a UX and design perspective.

@@ -1,6 +1,6 @@
 ---
 name: jakobs-law
-description: Apply Jakob's Law to design interfaces that match users' existing mental models from other products.
+description: Apply Jakob's Law — users expect your product to work like the others they already use. Use when deciding whether to innovate on a familiar pattern. For OS-mandated conventions specifically, use `platform-conventions` (ui-design).
 ---
 # Jakob's Law
 

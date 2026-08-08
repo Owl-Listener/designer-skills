@@ -1,6 +1,6 @@
 ---
 name: journey-map
-description: Create an end-to-end user journey map with stages, touchpoints, emotions, pain points, and opportunity areas. Use when mapping the full user experience for a product, feature, or service.
+description: Map one persona's end-to-end experience with stages, touchpoints, emotions, and pain points. Use when improving an existing experience. For the multi-channel ecosystem use `experience-map` (ux-strategy); for screen-level paths use `user-flow-diagram` (prototyping-testing).
 ---
 
 # Journey Map

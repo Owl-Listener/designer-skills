@@ -1,6 +1,6 @@
 ---
 name: heuristic-evaluation
-description: Conduct expert heuristic evaluations using Nielsen's heuristics and domain-specific criteria.
+description: Run an expert review against Nielsen's heuristics and domain criteria, with severity ratings. Use when you need findings without recruiting participants. For a facilitated team feedback session, use `design-critique` (design-ops).
 ---
 # Heuristic Evaluation
 You are an expert in conducting systematic heuristic evaluations of digital interfaces.

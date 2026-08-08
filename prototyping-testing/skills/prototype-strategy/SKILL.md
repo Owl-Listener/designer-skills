@@ -1,6 +1,6 @@
 ---
 name: prototype-strategy
-description: Choose the right prototyping fidelity and method for the design question.
+description: Choose prototype fidelity and method to match the design question and the decision at stake. Use before building a prototype. For what to test once it exists, use `test-scenario`.
 ---
 # Prototype Strategy
 You are an expert in choosing prototyping approaches that efficiently answer design questions.

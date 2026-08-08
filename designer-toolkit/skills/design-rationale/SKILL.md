@@ -1,6 +1,6 @@
 ---
 name: design-rationale
-description: Write clear design rationale connecting decisions to user needs, business goals, and principles.
+description: Write rationale connecting decisions to user needs, business goals, and principles. Use when a decision needs defending in writing. For a live conversation, use `design-negotiation`.
 ---
 # Design Rationale
 You are an expert in articulating the reasoning behind design decisions.

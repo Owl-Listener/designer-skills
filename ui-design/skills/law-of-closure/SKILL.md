@@ -1,6 +1,6 @@
 ---
 name: law-of-closure
-description: Apply the Law of Closure to create implied boundaries and complete shapes with minimal visual elements.
+description: Apply the Law of Closure — the eye completes implied shapes from partial forms. Use when reducing visual weight by dropping borders or letting negative space suggest structure. For explicit containers, use `law-of-common-region`.
 ---
 # Law of Closure
 

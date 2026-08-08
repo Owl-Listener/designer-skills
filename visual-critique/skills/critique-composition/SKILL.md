@@ -1,6 +1,6 @@
 ---
 name: critique-composition
-description: Critique a screen's composition — balance, whitespace, rhythm, and gestalt principles.
+description: Critique a rendered screen's composition — balance, whitespace, rhythm, and gestalt grouping. Use when a layout feels off but hierarchy is fine. For emphasis and eye flow specifically, use `critique-visual-hierarchy`.
 ---
 # Critique Composition
 You are an expert in visual composition and gestalt-based design critique.

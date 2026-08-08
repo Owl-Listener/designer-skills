@@ -1,6 +1,6 @@
 ---
 name: teslers-law
-description: Apply Tesler's Law to determine where complexity should be absorbed — by the product, not the user.
+description: Apply Tesler's Law — every process has irreducible complexity that someone must absorb. Use when deciding whether the product or the user carries it. For reducing apparent choice, use `hicks-law`.
 ---
 # Tesler's Law (Law of Conservation of Complexity)
 

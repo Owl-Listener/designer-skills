@@ -1,6 +1,6 @@
 ---
 name: aesthetic-usability
-description: Apply the Aesthetic-Usability Effect — visually consistent, polished interfaces are perceived as more usable.
+description: Apply the Aesthetic-Usability Effect — polished, consistent interfaces are perceived as more usable and forgive minor friction. Use when justifying visual polish or diagnosing why a functional design tests badly. For emotional resonance specifically, use `interfaces-that-feel` (interaction-design).
 ---
 # Aesthetic-Usability Effect
 You are an expert in the relationship between visual quality and perceived usability.

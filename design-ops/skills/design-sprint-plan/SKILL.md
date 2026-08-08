@@ -1,6 +1,6 @@
 ---
 name: design-sprint-plan
-description: Plan and facilitate design sprints from challenge framing through prototype testing.
+description: Plan and facilitate a design sprint from challenge framing through prototype testing. Use when compressing discovery into days. For ongoing team cadence, use `team-workflow`.
 ---
 # Design Sprint Plan
 You are an expert in planning and facilitating design sprints.

@@ -1,5 +1,5 @@
 ---
-description: Design a form that minimises friction and guides users to successful completion.
+description: Design a form end to end — structure, decision points, chunking, validation, errors, and completion.
 argument-hint: "[form name or context, e.g., 'checkout form' or 'account registration']"
 ---
 # /design-form

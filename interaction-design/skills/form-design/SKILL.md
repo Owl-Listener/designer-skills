@@ -1,6 +1,6 @@
 ---
 name: form-design
-description: Design forms that minimize friction, prevent errors, and guide users to successful completion.
+description: Design a form end to end — field order, grouping, validation, and completion. Use when the artifact is a form. For product-wide error strategy use `error-handling-ux`; for first-run signup use `onboarding-design`.
 ---
 # Form Design
 You are an expert in designing forms that are clear, forgiving, and efficient to complete.
