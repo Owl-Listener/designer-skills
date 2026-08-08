@@ -7,6 +7,8 @@ Checks applied to every */skills/*/SKILL.md:
   - `description` field present and non-empty
   - `name` value matches the skill's directory name
   - `name` is kebab-case (lowercase letters, digits, hyphens)
+  - body contains an H1 heading (# Title)
+  - body contains at least one H2 section (## Section)
 
 Checks applied to every */commands/*.md:
   - frontmatter block present
@@ -50,6 +52,13 @@ def _parse_frontmatter(path: Path) -> dict[str, str] | None:
     return fields
 
 
+def _body_after_frontmatter(path: Path) -> str:
+    """Return the file content after the closing --- of the frontmatter block."""
+    text = path.read_text(encoding="utf-8")
+    m = re.match(r"^---\n.*?\n---\n(.*)", text, re.DOTALL)
+    return m.group(1) if m else ""
+
+
 def _line_of_key(path: Path, key: str) -> int | None:
     """Return the 1-based line number of `key:` inside the frontmatter, or None."""
     for i, line in enumerate(path.read_text(encoding="utf-8").splitlines(), start=1):
@@ -87,6 +96,15 @@ def lint_skills() -> None:
                     f"`name: {name}` must be kebab-case "
                     "(lowercase letters, digits, and hyphens only)",
                     line=_line_of_key(skill_md, "name"))
+
+        body = _body_after_frontmatter(skill_md)
+        body_lines = body.splitlines()
+        has_h1 = any(re.match(r"^# [^#]", ln) for ln in body_lines)
+        has_h2 = any(re.match(r"^## [^#]", ln) for ln in body_lines)
+        if not has_h1:
+            _report(skill_md, "body must contain an H1 heading (# Title)")
+        if not has_h2:
+            _report(skill_md, "body must contain at least one H2 section (## Section)")
 
 
 def lint_commands() -> None:
