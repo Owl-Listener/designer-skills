@@ -1,6 +1,6 @@
 ---
 description: Run a full user research cycle — persona creation, empathy mapping, and journey mapping for a product or feature.
-argument-hint: [product or feature to research]
+argument-hint: "[product or feature to research]"
 ---
 
 Run a full user research discovery cycle by chaining these steps:
