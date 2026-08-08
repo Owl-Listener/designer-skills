@@ -1,6 +1,6 @@
 # ui-design
 Craft polished user interfaces with layout grids, color systems, typography scales, responsive patterns, and visual hierarchy.
-## Skills (14)
+## Skills (18)
 - **layout-grid** — Define responsive layout grid systems with columns, gutters, margins, and breakpoints.
 - **color-system** — Build a comprehensive color system with palette generation and accessibility compliance.
 - **typography-scale** — Create a modular typography scale with size, weight, and line-height relationships.
@@ -15,6 +15,10 @@ Craft polished user interfaces with layout grids, color systems, typography scal
 - **von-restorff-effect** — Apply the Von Restorff Effect to make the most important element distinctly different from its surroundings.
 - **law-of-proximity** — Apply the Law of Proximity to group related elements through spatial relationships.
 - **law-of-common-region** — Apply the Law of Common Region to group elements using containers, backgrounds, and boundaries.
+- **law-of-similarity** — Apply the Law of Similarity to signal relationships between elements through shared visual characteristics.
+- **law-of-closure** — Apply the Law of Closure to create implied boundaries and complete shapes with minimal visual elements.
+- **law-of-continuity** — Apply the Law of Continuity to guide the eye along intentional paths and create visual sequences that feel coherent.
+- **law-of-figure-ground** — Apply the Law of Figure-Ground to design clear foreground/background relationships so users know what to act on.
 ## Commands (4)
 - `/design-screen` — Design a complete screen layout from a description or requirements.
 - `/color-palette` — Generate a full color palette with semantic mapping and accessibility checks.
