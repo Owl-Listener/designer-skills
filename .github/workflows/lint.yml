@@ -23,3 +23,12 @@ jobs:
             echo "::error::Run 'python3 scripts/generate-readmes.py' locally and commit the result."
             exit 1
           }
+
+      - name: Check the skill index is up to date
+        run: |
+          python3 scripts/generate-index.py
+          git diff --exit-code || {
+            echo "::error::INDEX.md is out of date."
+            echo "::error::Run 'python3 scripts/generate-index.py' locally and commit the result."
+            exit 1
+          }
