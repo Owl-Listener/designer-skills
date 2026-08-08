@@ -80,38 +80,38 @@ Agentic skills, commands, and plugins for design, from research to systems, UI, 
 
 | Command | Plugin | Description |
 | --- | --- | --- |
-| `/design-research:discover` | design-research | Run a full user research discovery cycle. |
-| `/design-research:interview` | design-research | Prepare and conduct a user interview. |
-| `/design-research:test-plan` | design-research | Create a usability test plan. |
-| `/design-research:synthesize` | design-research | Synthesize research data into insights. |
-| `/design-systems:audit-system` | design-systems | Audit a design system for consistency and accessibility. |
-| `/design-systems:create-component` | design-systems | Scaffold a full component specification. |
-| `/design-systems:tokenize` | design-systems | Extract and organize design tokens. |
-| `/ux-strategy:strategize` | ux-strategy | Develop a complete UX strategy. |
-| `/ux-strategy:benchmark` | ux-strategy | Run a competitive benchmarking analysis. |
-| `/ux-strategy:frame-problem` | ux-strategy | Structure an ambiguous challenge into a clear problem. |
-| `/ui-design:design-screen` | ui-design | Design a complete screen layout. |
-| `/ui-design:color-palette` | ui-design | Generate a full color palette with accessibility checks. |
-| `/ui-design:type-system` | ui-design | Create a complete typography system. |
-| `/ui-design:responsive-audit` | ui-design | Audit a design for responsive behavior. |
-| `/ui-design:platform-audit` | ui-design | Audit a design for platform convention compliance across iOS and Android. |
-| `/interaction-design:design-interaction` | interaction-design | Design a complete interaction flow. |
-| `/interaction-design:map-states` | interaction-design | Model states and transitions for a component. |
-| `/interaction-design:error-flow` | interaction-design | Design error handling for a feature. |
+| `/design-ops:handoff` | design-ops | Generate a developer handoff package for a design. |
+| `/design-ops:plan-sprint` | design-ops | Plan a design sprint for a specific challenge. |
+| `/design-ops:setup-workflow` | design-ops | Set up a design team workflow and rituals. |
+| `/design-research:discover` | design-research | Run a full user research cycle — persona creation, empathy mapping, and journey mapping for a product or feature. |
+| `/design-research:interview` | design-research | Prepare an interview script or summarize an interview transcript into structured insights. |
+| `/design-research:synthesize` | design-research | Synthesize research data into affinity diagrams, themes, and actionable insights. |
+| `/design-research:test-plan` | design-research | Design a complete usability test plan with tasks, metrics, and facilitation guide. |
+| `/design-systems:audit-system` | design-systems | Run a comprehensive audit of an existing design system for consistency, completeness, and accessibility. |
+| `/design-systems:create-component` | design-systems | Scaffold a full component specification from a name or description. |
+| `/design-systems:tokenize` | design-systems | Extract and organize design tokens from an existing design or stylesheet. |
+| `/designer-toolkit:build-presentation` | designer-toolkit | Structure a design presentation for a specific audience. |
+| `/designer-toolkit:write-case-study` | designer-toolkit | Create a portfolio case study from a project summary. |
+| `/designer-toolkit:write-rationale` | designer-toolkit | Write design rationale for a set of design decisions. |
 | `/interaction-design:design-form` | interaction-design | Design a form that minimises friction and guides users to successful completion. |
+| `/interaction-design:design-interaction` | interaction-design | Design a complete interaction flow for a feature or component. |
 | `/interaction-design:design-onboarding` | interaction-design | Design a first-run experience that gets users to value quickly without overwhelming them. |
-| `/prototyping-testing:prototype-plan` | prototyping-testing | Create a prototyping and testing plan. |
-| `/prototyping-testing:evaluate` | prototyping-testing | Run a heuristic evaluation. |
+| `/interaction-design:error-flow` | interaction-design | Design a complete error handling flow for a feature. |
+| `/interaction-design:map-states` | interaction-design | Model the states and transitions for a complex UI component. |
+| `/prototyping-testing:evaluate` | prototyping-testing | Run a heuristic evaluation of an existing design. |
+| `/prototyping-testing:experiment` | prototyping-testing | Design an A/B experiment for a design hypothesis. |
+| `/prototyping-testing:prototype-plan` | prototyping-testing | Create a prototyping and testing plan for a design initiative. |
 | `/prototyping-testing:test-plan` | prototyping-testing | Design a complete usability testing plan. |
-| `/prototyping-testing:experiment` | prototyping-testing | Design an A/B experiment. |
-| `/design-ops:plan-sprint` | design-ops | Plan a design sprint. |
-| `/design-ops:handoff` | design-ops | Generate a developer handoff package. |
-| `/design-ops:setup-workflow` | design-ops | Set up a design team workflow. |
-| `/designer-toolkit:write-rationale` | designer-toolkit | Write design rationale for decisions. |
-| `/designer-toolkit:build-presentation` | designer-toolkit | Structure a design presentation. |
-| `/designer-toolkit:write-case-study` | designer-toolkit | Create a portfolio case study. |
+| `/ui-design:color-palette` | ui-design | Generate a full color palette with semantic mapping and accessibility checks. |
+| `/ui-design:design-screen` | ui-design | Design a complete screen layout from a description or requirements. |
+| `/ui-design:platform-audit` | ui-design | Audit a design for platform convention compliance across iOS and Android. |
+| `/ui-design:responsive-audit` | ui-design | Audit a design for responsive behavior across breakpoints. |
+| `/ui-design:type-system` | ui-design | Create a complete typography system from brand fonts or requirements. |
+| `/ux-strategy:benchmark` | ux-strategy | Run a competitive benchmarking analysis across a set of products. |
+| `/ux-strategy:frame-problem` | ux-strategy | Structure an ambiguous design challenge into a clear problem definition with constraints and criteria. |
+| `/ux-strategy:strategize` | ux-strategy | Develop a complete UX strategy for a product or feature area. |
 | `/visual-critique:critique-screen` | visual-critique | Run all seven visual critiques on a screen and output a prioritised fix list. |
-| `/visual-critique:critique-ux` | visual-critique | Focused functional critique: hierarchy, affordance, and information density. |
+| `/visual-critique:critique-ux` | visual-critique | Run a focused UX critique on a screen — affordances, information density, and hierarchy — and output a prioritised fix list. |
 
 ## What are skills and commands?
 

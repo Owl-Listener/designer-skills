@@ -1,4 +1,4 @@
-name: Lint frontmatter
+name: Lint
 
 on:
   push:
@@ -7,10 +7,19 @@ on:
 
 jobs:
   lint:
-    name: Skill & command frontmatter
+    name: Skill & command checks
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
 
       - name: Check SKILL.md and command frontmatter
         run: python3 scripts/lint-frontmatter.py
+
+      - name: Check README counts and tables are up to date
+        run: |
+          python3 scripts/generate-readmes.py
+          git diff --exit-code || {
+            echo "::error::README counts or tables are out of date."
+            echo "::error::Run 'python3 scripts/generate-readmes.py' locally and commit the result."
+            exit 1
+          }

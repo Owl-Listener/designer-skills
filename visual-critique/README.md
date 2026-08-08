@@ -3,23 +3,17 @@
 Visual critique skills for designers. Analyse a screen across seven dimensions — hierarchy, brand consistency, composition, typography, colour, affordance, and information density — then compile a prioritised fix list.
 
 ## Skills (7)
-
-| Skill | What it does |
-|---|---|
-| `critique-visual-hierarchy` | Audits entry point, eye flow, weight distribution, and emphasis |
-| `critique-brand-consistency` | Checks against `mood.md`, `voice.md`, and `tokens.md` |
-| `critique-composition` | Evaluates balance, whitespace, rhythm, and gestalt principles |
-| `critique-typography` | Reviews scale usage, readability, consistency, and token compliance |
-| `critique-color` | Audits contrast ratios, palette coherence, semantic colour use, and colour accessibility |
-| `critique-affordance` | Evaluates clickability signals, state visibility, CTA clarity, and action discoverability |
-| `critique-information-density` | Assesses cognitive load, content priority, scanning patterns, and progressive disclosure |
+- **critique-affordance** — Critique a screen's interactive affordances — what looks clickable, state visibility, CTA clarity, and action discoverability.
+- **critique-brand-consistency** — Critique a screen's brand consistency against mood.md, voice.md, and tokens.md.
+- **critique-color** — Critique a screen's colour usage — contrast ratios, palette coherence, semantic meaning, and colour accessibility.
+- **critique-composition** — Critique a screen's composition — balance, whitespace, rhythm, and gestalt principles.
+- **critique-information-density** — Critique a screen's information density — cognitive load, content prioritisation, scanning patterns, and progressive disclosure.
+- **critique-typography** — Critique a screen's typography — scale usage, readability, consistency, and token compliance.
+- **critique-visual-hierarchy** — Critique a screen's visual hierarchy — entry point, eye flow, weight distribution, and emphasis.
 
 ## Commands (2)
-
-| Command | What it does |
-|---|---|
-| `/critique-screen` | Runs all seven critiques in sequence and outputs a prioritised fix list |
-| `/critique-ux` | Focused functional critique: hierarchy, affordance, and information density — for quick loops and PM-led reviews |
+- `/critique-screen` — Run all seven visual critiques on a screen and output a prioritised fix list.
+- `/critique-ux` — Run a focused UX critique on a screen — affordances, information density, and hierarchy — and output a prioritised fix list.
 
 ## Usage
 

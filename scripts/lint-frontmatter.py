@@ -15,6 +15,8 @@ Checks applied to every */commands/*.md:
   - `description` field present and non-empty
   - `argument-hint` field present and non-empty
   - `argument-hint` is a bracketed placeholder, e.g. "[what to pass]"
+  - no cross-plugin skill references (backtick-quoted `name` skill patterns
+    where `name` does not exist in the same plugin's skills directory)
 """
 
 import os
@@ -131,9 +133,32 @@ def lint_commands() -> None:
                     line=_line_of_key(cmd_md, "argument-hint"))
 
 
+def lint_cross_plugin_refs() -> None:
+    """Check that commands only reference skills from their own plugin."""
+    for cmd_md in sorted(ROOT.glob("*/commands/*.md")):
+        plugin = cmd_md.parent.parent.name
+        own_skills = {
+            p.parent.name
+            for p in (ROOT / plugin / "skills").glob("*/SKILL.md")
+        }
+        for line_num, line in enumerate(
+            cmd_md.read_text(encoding="utf-8").splitlines(), start=1
+        ):
+            for m in re.finditer(r"`([a-z][a-z0-9-]+)` skill", line):
+                ref = m.group(1)
+                if ref not in own_skills:
+                    _report(
+                        cmd_md,
+                        f"cross-plugin skill reference `{ref}` — "
+                        f"this skill is not in the `{plugin}` plugin",
+                        line=line_num,
+                    )
+
+
 def main() -> None:
     lint_skills()
     lint_commands()
+    lint_cross_plugin_refs()
 
     skills_count = len(list(ROOT.glob("*/skills/*/SKILL.md")))
     commands_count = len(list(ROOT.glob("*/commands/*.md")))

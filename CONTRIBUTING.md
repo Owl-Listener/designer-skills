@@ -49,11 +49,16 @@ A command is ready when:
 
 ## Verifying your work
 
+Run both scripts before every commit:
+
 ```
 python3 scripts/lint-frontmatter.py
+python3 scripts/generate-readmes.py
 ```
 
-Run this before every commit. It will report any frontmatter errors with file and line references.
+`lint-frontmatter.py` reports frontmatter errors with file and line references.
+
+`generate-readmes.py` rebuilds all plugin README skill/command lists and the root README table from the actual files on disk — so counts stay in sync automatically. Commit whatever it changes. CI runs both scripts and fails if either produces an error or leaves any README out of date.
 
 ## License
 
