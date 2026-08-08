@@ -1,6 +1,6 @@
 # interaction-design
 Design meaningful interactions with micro-animations, state machines, gestures, error handling, and feedback patterns.
-## Skills (16)
+## Skills (21)
 - **micro-interaction-spec** — Specify micro-interactions with trigger, rules, feedback, and loop/mode definitions.
 - **animation-principles** — Apply animation principles to UI motion for purposeful, polished interactions.
 - **state-machine** — Model complex UI behavior as finite state machines with states and transitions.
@@ -12,6 +12,11 @@ Design meaningful interactions with micro-animations, state machines, gestures, 
 - **millers-law** — Apply Miller's Law — chunk information into groups of ~4 to work within working memory limits.
 - **fitts-law** — Apply Fitts's Law to size and position interactive targets for fast, accurate interaction.
 - **doherty-threshold** — Apply the Doherty Threshold — keep system response times under 400ms to maintain user flow.
+- **jakobs-law** — Apply Jakob's Law to design interfaces that match users' existing mental models from other products.
+- **teslers-law** — Apply Tesler's Law to determine where complexity should be absorbed — by the product, not the user.
+- **peak-end-rule** — Apply the Peak-End Rule to design the most intense moment and the final moment of a flow to be positive.
+- **zeigarnik-effect** — Apply the Zeigarnik Effect to use incomplete tasks as motivational hooks that keep users engaged and returning.
+- **serial-position-effect** — Apply the Serial Position Effect to place the most important items at the beginning and end of lists, menus, and sequences.
 - **form-design** — Design forms that minimize friction, prevent errors, and guide users to successful completion.
 - **onboarding-design** — Design first-run experiences that get users to value quickly without overwhelming them.
 - **navigation-patterns** — Select and design navigation patterns that match product structure, user tasks, and platform conventions.
