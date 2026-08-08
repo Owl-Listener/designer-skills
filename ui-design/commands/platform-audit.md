@@ -8,7 +8,7 @@ Audit a design for platform convention compliance across iOS and Android.
 1. **Platform patterns** — Identify which elements follow or depart from native conventions using `platform-conventions` skill.
 2. **Navigation** — Review back navigation, tab structure, and gesture zones for each platform using `platform-conventions` skill.
 3. **Controls** — Check that components match platform-native equivalents (toggles, pickers, dialogs) using `platform-conventions` skill.
-4. **Gestures** — Verify gesture assignments do not conflict with system gestures using `gesture-patterns` skill.
+4. **Typography** — Verify system font usage and dynamic type scale compliance for each platform using `platform-conventions` skill.
 5. **Responsive** — Confirm layout adapts across screen sizes and orientations using `responsive-design` skill.
 6. **Report** — Document findings as platform-mandated patterns, intentional departures, and unintended conflicts.
 ## Output
