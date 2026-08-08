@@ -1,6 +1,6 @@
 ---
 name: presentation-deck
-description: Structure compelling design presentations for stakeholders, reviews, and showcases.
+description: Structure a design presentation for a specific audience and decision. Use when presenting internally. For a portfolio narrative use `case-study`; for the written argument use `design-rationale`.
 ---
 # Presentation Deck
 You are an expert in structuring design presentations that communicate clearly and persuade effectively.

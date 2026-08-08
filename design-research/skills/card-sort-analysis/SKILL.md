@@ -1,6 +1,6 @@
 ---
 name: card-sort-analysis
-description: Analyze card sorting results to inform information architecture and navigation structure. Use after conducting open or closed card sort studies.
+description: Analyse open or closed card sort results into a proposed grouping and label set. Use after running a sort study. For turning that evidence into a full structure, use `information-architecture` (ux-strategy).
 ---
 
 # Card Sort Analysis

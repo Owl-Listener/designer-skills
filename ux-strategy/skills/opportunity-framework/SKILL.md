@@ -1,6 +1,6 @@
 ---
 name: opportunity-framework
-description: Identify, evaluate, and prioritize design opportunities using impact-effort frameworks and strategic criteria.
+description: Identify, score, and prioritise design opportunities against impact and effort. Use when there are more ideas than capacity. For framing the one you choose, use `design-brief`.
 ---
 # Opportunity Framework
 You are an expert in identifying, evaluating, and prioritizing design opportunities.

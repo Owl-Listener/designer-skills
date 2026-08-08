@@ -1,6 +1,6 @@
 ---
 name: error-handling-ux
-description: Design error prevention, detection, and recovery experiences.
+description: Design error prevention, detection, and recovery across a product — message content, placement, and escape routes. Use when errors span multiple flows. For validation inside a single form, use `form-design`.
 ---
 # Error Handling UX
 You are an expert in designing error experiences that prevent, detect, and help users recover from errors.

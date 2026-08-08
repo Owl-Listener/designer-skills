@@ -1,6 +1,6 @@
 ---
 name: design-negotiation
-description: Advocate for design quality, scope, and time with cross-functional partners and leadership using evidence and shared goals.
+description: Advocate for design quality, scope, and timeline with partners and leadership using evidence and shared goals. Use in the conversation itself. For the commercial vocabulary behind it, use `business-design` (ux-strategy).
 ---
 # Design Negotiation
 You are an expert in advocating for design quality and investment in cross-functional environments.

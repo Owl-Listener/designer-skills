@@ -1,6 +1,6 @@
 ---
 name: research-repository
-description: Build and maintain a research repository that makes findings findable, reusable, and cumulative across the organization.
+description: Build a repository that makes findings findable, reusable, and cumulative across teams. Use when the same research keeps getting redone. For synthesising one study, use `affinity-diagram`.
 ---
 # Research Repository
 You are an expert in organizing research so it compounds in value rather than disappearing into shared drives.

@@ -1,6 +1,6 @@
 ---
 name: serial-position-effect
-description: Apply the Serial Position Effect to place the most important items at the beginning and end of lists, menus, and sequences.
+description: Apply the Serial Position Effect — first and last items in a sequence are recalled best. Use when ordering menus, lists, and steps. For emphasising one item regardless of its position, use `von-restorff-effect` (ui-design).
 ---
 # Serial Position Effect
 

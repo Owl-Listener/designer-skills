@@ -1,6 +1,6 @@
 ---
 name: search-ux
-description: Design search experiences that help users find what they need, recover from failure, and refine results.
+description: Design search — query input, zero results, refinement, and result presentation. Use when users retrieve rather than browse. For browse structure, use `navigation-patterns`.
 ---
 # Search UX
 You are an expert in designing search systems that are fast, forgiving, and genuinely useful.

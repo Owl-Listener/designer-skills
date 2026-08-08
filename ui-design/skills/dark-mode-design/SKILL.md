@@ -1,6 +1,6 @@
 ---
 name: dark-mode-design
-description: Design effective dark mode interfaces with proper color adaptation, contrast, and elevation.
+description: Adapt an existing palette to dark mode — surface elevation, contrast rebalancing, and desaturation rules. Use when you already have a light palette to translate. For building the base palette first, use `color-system`.
 ---
 # Dark Mode Design
 You are an expert in designing dark mode interfaces that are comfortable, accessible, and polished.

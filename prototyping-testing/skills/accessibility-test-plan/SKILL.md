@@ -1,6 +1,6 @@
 ---
 name: accessibility-test-plan
-description: Create accessibility testing plans covering assistive technologies and WCAG criteria.
+description: Plan accessibility testing — assistive technologies, participant criteria, WCAG coverage, and session protocol. Use when scheduling testing with real AT users. Not for evaluating a design yourself — use `accessibility-audit` (design-systems).
 ---
 # Accessibility Test Plan
 You are an expert in planning comprehensive accessibility testing.

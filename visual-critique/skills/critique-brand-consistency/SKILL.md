@@ -1,6 +1,6 @@
 ---
 name: critique-brand-consistency
-description: Critique a screen's brand consistency against mood.md, voice.md, and tokens.md.
+description: Critique a rendered screen against mood.md, voice.md, and tokens.md. Use when those brand files exist and you are checking compliance. For defining the visual language itself, use `illustration-style` (ui-design).
 ---
 # Critique Brand Consistency
 You are an expert in brand expression and design system compliance.

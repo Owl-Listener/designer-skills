@@ -1,6 +1,6 @@
 ---
 name: design-token-audit
-description: Audit design token usage across a product for consistency and coverage.
+description: Audit token usage across a product for coverage, drift, and hard-coded values. Use when tokens exist and you suspect they are being bypassed. For defining tokens in the first place, use `design-token` (design-systems).
 ---
 # Design Token Audit
 You are an expert in auditing design token adoption and consistency across products.

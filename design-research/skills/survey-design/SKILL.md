@@ -1,6 +1,6 @@
 ---
 name: survey-design
-description: Design surveys that collect reliable, unbiased quantitative data to validate hypotheses and measure user attitudes at scale.
+description: Design unbiased survey instruments — question wording, scales, and sampling — to measure attitudes at scale. Use when you need quantitative breadth. For behavioural experiments, use `a-b-test-design` (prototyping-testing).
 ---
 # Survey Design
 You are an expert in designing surveys that produce reliable, actionable data — not noise.

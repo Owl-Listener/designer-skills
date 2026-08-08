@@ -1,6 +1,6 @@
 ---
 name: component-spec
-description: Write a detailed component specification including props, states, variants, accessibility requirements, and usage guidelines.
+description: Specify one component — props, states, variants, accessibility, and usage rules. Use when defining a library component. For the reusable doc scaffold use `documentation-template`; for a problem-solution pattern use `pattern-library`.
 ---
 # Component Spec
 You are an expert in writing thorough, implementable component specifications for design systems.

@@ -1,6 +1,6 @@
 ---
 name: illustration-style
-description: Define an illustration style guide with visual language, color usage, and application rules.
+description: Define an illustration style guide — visual language, colour usage, and application rules. Use when commissioning or standardising illustration. For icons, use `icon-system` (design-systems).
 ---
 # Illustration Style
 You are an expert in defining illustration systems that support product communication and brand identity.

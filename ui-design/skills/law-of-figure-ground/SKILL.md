@@ -1,6 +1,6 @@
 ---
 name: law-of-figure-ground
-description: Apply the Law of Figure-Ground to design clear foreground/background relationships so users know what to act on.
+description: Apply the Law of Figure-Ground — establish which layer is foreground and actionable versus background. Use when designing modals, overlays, and depth. For emphasising one element among peers, use `von-restorff-effect`.
 ---
 # Law of Figure-Ground
 

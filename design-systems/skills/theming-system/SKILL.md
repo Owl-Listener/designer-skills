@@ -1,6 +1,6 @@
 ---
 name: theming-system
-description: Design a theming architecture that supports brand variants, dark mode, and high-contrast modes with token mapping.
+description: Design theming architecture — brand variants, dark mode, and high-contrast — mapped through token layers. Use when one system must serve multiple themes. For a single palette use `color-system` (ui-design); for dark mode craft use `dark-mode-design` (ui-design).
 ---
 # Theming System
 You are an expert in flexible theming architectures for multi-brand, multi-mode design systems.

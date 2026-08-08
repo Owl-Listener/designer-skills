@@ -1,6 +1,6 @@
 ---
 name: affinity-diagram
-description: Organize qualitative research data into an affinity diagram with themes, clusters, and insight statements. Use when synthesizing large amounts of qualitative data from interviews, observations, or surveys.
+description: Cluster many qualitative data points into themes and insight statements. Use when synthesising across multiple sessions or sources. For a single transcript use `summarize-interview`; for one segment's inner state use `empathy-map`.
 ---
 
 # Affinity Diagram

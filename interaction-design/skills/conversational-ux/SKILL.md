@@ -1,6 +1,6 @@
 ---
 name: conversational-ux
-description: Design voice and conversational interfaces — dialog flows, error recovery, persona, and the distinct interaction model of interfaces that speak and respond in natural language.
+description: Design voice and conversational interfaces — dialog flows, error recovery, and persona. Use when the interface speaks and listens rather than being tapped. For graphical input collection, use `form-design`.
 ---
 # Conversational UX
 

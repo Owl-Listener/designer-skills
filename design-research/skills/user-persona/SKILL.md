@@ -1,6 +1,6 @@
 ---
 name: user-persona
-description: Create refined user personas from research data with demographics, goals, frustrations, and behavioral patterns. Use when synthesizing user research into actionable persona profiles for design decisions.
+description: Build research-grounded personas with goals, frustrations, and behavioural patterns. Use when decisions need a consistent user reference. For one session's emotional snapshot use `empathy-map`; for motivation framing use `jobs-to-be-done`.
 ---
 
 # User Persona

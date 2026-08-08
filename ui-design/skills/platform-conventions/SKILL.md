@@ -1,6 +1,6 @@
 ---
 name: platform-conventions
-description: Design for iOS and Android platform conventions — knowing which patterns each OS mandates, where they differ, and when to follow each vs. build a unified cross-platform experience.
+description: Design to iOS and Android conventions — what each OS mandates, where they diverge, and when to unify. Use when shipping native apps. For breakpoint adaptation use `responsive-design`; for matching competitor patterns use `jakobs-law` (interaction-design).
 ---
 # Platform Conventions
 

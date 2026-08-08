@@ -1,20 +1,20 @@
 # design-systems
 Build, document, and maintain scalable design systems — from tokens and components to accessibility and theming.
 ## Skills (11)
-- **accessibility-audit** — Conduct a comprehensive accessibility audit against WCAG guidelines with severity ratings and remediation steps.
-- **component-spec** — Write a detailed component specification including props, states, variants, accessibility requirements, and usage guidelines.
-- **design-system-governance** — Define how a design system evolves — contribution models, versioning, change management, and deprecation.
-- **design-token** — Define and organize design tokens (color, spacing, typography, elevation) with naming conventions and usage guidance.
-- **documentation-template** — Generate structured documentation templates for components, patterns, or guidelines within a design system.
-- **icon-system** — Create an icon system specification covering grid, sizing, naming, categories, and implementation guidance.
-- **localization-design** — Design interfaces that adapt gracefully to multiple languages, writing directions, and cultural contexts.
-- **motion-system** — Define a motion system with duration tokens, easing vocabulary, and reduced-motion handling for consistent animation across a product.
-- **naming-convention** — Establish a naming convention system for design elements, components, and tokens with clear rules and examples.
-- **pattern-library** — Structure a pattern library entry with problem context, solution pattern, usage examples, and related patterns.
-- **theming-system** — Design a theming architecture that supports brand variants, dark mode, and high-contrast modes with token mapping.
+- **accessibility-audit** — Audit an existing interface against WCAG, producing findings with severity ratings and remediation steps. Use when you have a design or build to assess now. Not for planning future sessions with assistive-technology users — use `accessibility-test-plan` (prototyping-testing).
+- **component-spec** — Specify one component — props, states, variants, accessibility, and usage rules. Use when defining a library component. For the reusable doc scaffold use `documentation-template`; for a problem-solution pattern use `pattern-library`.
+- **design-system-governance** — Define how the system evolves — contribution model, versioning, deprecation, and change management. Use when multiple teams contribute. For driving uptake use `design-system-adoption` (designer-toolkit); for design file history use `version-control-strategy` (design-ops).
+- **design-token** — Define and organise tokens for colour, spacing, type, and elevation with naming and usage rules. Use when establishing the token layer. For auditing existing usage use `design-token-audit` (designer-toolkit); for multi-brand mapping use `theming-system`.
+- **documentation-template** — Generate a reusable documentation scaffold for components, patterns, or guidelines. Use when standardising how the system is documented. For the content of one component's spec, use `component-spec`.
+- **icon-system** — Specify an icon system — grid, sizing, stroke weight, naming, categories, and implementation. Use when standardising iconography. For broader illustration, use `illustration-style` (ui-design).
+- **localization-design** — Design for multiple languages, writing directions, and cultural contexts — text expansion, RTL mirroring, and locale formats. Use when shipping beyond one locale. For the words themselves, use `ux-writing` (designer-toolkit).
+- **motion-system** — Define motion tokens — durations, easing vocabulary, and reduced-motion handling — for consistency product-wide. Use when standardising motion across a system. For crafting one specific animation, use `animation-principles` (interaction-design).
+- **naming-convention** — Establish naming rules for components, tokens, and layers with patterns and worked examples. Use when names are inconsistent or being set. For what the tokens actually contain, use `design-token`.
+- **pattern-library** — Structure a pattern entry — problem context, solution, usage examples, and related patterns. Use when documenting a recurring solution rather than a component. For a single component's API, use `component-spec`.
+- **theming-system** — Design theming architecture — brand variants, dark mode, and high-contrast — mapped through token layers. Use when one system must serve multiple themes. For a single palette use `color-system` (ui-design); for dark mode craft use `dark-mode-design` (ui-design).
 
 ## Commands (3)
 - `/audit-system` — Run a comprehensive audit of an existing design system for consistency, completeness, and accessibility.
-- `/create-component` — Scaffold a full component specification from a name or description.
-- `/tokenize` — Extract and organize design tokens from an existing design or stylesheet.
+- `/create-component` — Scaffold a full component specification end to end — props, states, variants, accessibility, and documentation.
+- `/tokenize` — Extract tokens from an existing design or stylesheet and organise them — naming, structure, and theme mapping.
 

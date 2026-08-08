@@ -1,6 +1,6 @@
 ---
 name: naming-convention
-description: Establish a naming convention system for design elements, components, and tokens with clear rules and examples.
+description: Establish naming rules for components, tokens, and layers with patterns and worked examples. Use when names are inconsistent or being set. For what the tokens actually contain, use `design-token`.
 ---
 # Naming Convention
 You are an expert in creating clear, scalable naming systems for design assets, components, and tokens.

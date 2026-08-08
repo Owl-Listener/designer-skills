@@ -1,5 +1,5 @@
 ---
-description: Audit a design for platform convention compliance across iOS and Android.
+description: Audit a design for iOS and Android convention compliance — navigation, controls, typography, and platform-specific gaps.
 argument-hint: "[screen or feature to audit, e.g., 'settings screen' or 'navigation structure']"
 ---
 # /platform-audit

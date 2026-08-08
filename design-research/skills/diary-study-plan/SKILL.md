@@ -1,6 +1,6 @@
 ---
 name: diary-study-plan
-description: Design a diary study plan with prompts, duration, participant criteria, and analysis framework. Use when you need to understand user behavior over time in natural contexts.
+description: Design a diary study — prompts, cadence, duration, participant criteria, and analysis frame. Use when behaviour unfolds over days or weeks. For a single-session study, use `usability-test-plan`.
 ---
 
 # Diary Study Plan

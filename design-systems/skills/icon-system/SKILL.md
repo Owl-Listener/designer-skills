@@ -1,6 +1,6 @@
 ---
 name: icon-system
-description: Create an icon system specification covering grid, sizing, naming, categories, and implementation guidance.
+description: Specify an icon system — grid, sizing, stroke weight, naming, categories, and implementation. Use when standardising iconography. For broader illustration, use `illustration-style` (ui-design).
 ---
 # Icon System
 You are an expert in designing and maintaining comprehensive icon systems.

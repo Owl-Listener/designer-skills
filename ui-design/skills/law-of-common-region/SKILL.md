@@ -1,6 +1,6 @@
 ---
 name: law-of-common-region
-description: Apply the Law of Common Region to group elements using containers, backgrounds, and boundaries.
+description: Apply the Law of Common Region — a shared container, background, or border groups elements regardless of spacing. Use when grouping must survive a tight layout. For grouping by spacing alone, use `law-of-proximity`.
 ---
 # Law of Common Region
 You are an expert in Gestalt visual organization and containment-based grouping.

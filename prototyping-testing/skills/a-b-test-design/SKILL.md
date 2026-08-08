@@ -1,6 +1,6 @@
 ---
 name: a-b-test-design
-description: Design rigorous A/B tests with hypotheses, variants, metrics, and sample size calculations.
+description: Design an A/B experiment — hypothesis, variants, primary metric, and sample size. Use when a change can be measured quantitatively at scale. For observing behaviour qualitatively, use `test-scenario`.
 ---
 # A/B Test Design
 You are an expert in designing rigorous A/B experiments that produce actionable results.

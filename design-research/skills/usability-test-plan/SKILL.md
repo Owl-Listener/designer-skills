@@ -1,6 +1,6 @@
 ---
 name: usability-test-plan
-description: Design a usability test plan with tasks, success metrics, participant criteria, and facilitation guide. Use when planning moderated or unmoderated usability testing sessions.
+description: Design a usability study — research questions, methodology, participant criteria, metrics, and facilitation guide. Use when planning the study as a whole. For writing the task scenarios inside it, use `test-scenario` (prototyping-testing).
 ---
 
 # Usability Test Plan

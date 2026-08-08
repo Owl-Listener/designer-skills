@@ -1,6 +1,6 @@
 ---
 name: test-scenario
-description: Generates structured usability test scenarios with realistic tasks, success criteria, and facilitation notes — ready to run with real participants or in a moderated session.
+description: Write realistic usability task scenarios with success criteria and facilitation notes. Use when you have a study and need the tasks. For the surrounding study design, use `usability-test-plan` (design-research).
 ---
 # Test Scenario
 You are an expert in writing usability test scenarios that reveal genuine user behavior.

@@ -80,34 +80,34 @@ Agentic skills, commands, and plugins for design, from research to systems, UI, 
 
 | Command | Plugin | Description |
 | --- | --- | --- |
-| `/design-ops:handoff` | design-ops | Generate a developer handoff package for a design. |
-| `/design-ops:plan-sprint` | design-ops | Plan a design sprint for a specific challenge. |
-| `/design-ops:setup-workflow` | design-ops | Set up a design team workflow and rituals. |
+| `/design-ops:handoff` | design-ops | Run the full handoff workflow — specs, measurements, assets, states, and a QA checklist — and output a developer-ready package. |
+| `/design-ops:plan-sprint` | design-ops | Run a design sprint end to end — challenge framing, schedule, exercises, and prototype test plan. |
+| `/design-ops:setup-workflow` | design-ops | Set up a team's operating rhythm end to end — rituals, task flow, tooling, review gates, and version control. |
 | `/design-research:discover` | design-research | Run a full user research cycle — persona creation, empathy mapping, and journey mapping for a product or feature. |
 | `/design-research:interview` | design-research | Prepare an interview script or summarize an interview transcript into structured insights. |
 | `/design-research:synthesize` | design-research | Synthesize research data into affinity diagrams, themes, and actionable insights. |
-| `/design-research:test-plan` | design-research | Design a complete usability test plan with tasks, metrics, and facilitation guide. |
+| `/design-research:test-plan` | design-research | Run the full usability study workflow — research questions, participant criteria, tasks, metrics, and facilitation guide. |
 | `/design-systems:audit-system` | design-systems | Run a comprehensive audit of an existing design system for consistency, completeness, and accessibility. |
-| `/design-systems:create-component` | design-systems | Scaffold a full component specification from a name or description. |
-| `/design-systems:tokenize` | design-systems | Extract and organize design tokens from an existing design or stylesheet. |
-| `/designer-toolkit:build-presentation` | designer-toolkit | Structure a design presentation for a specific audience. |
-| `/designer-toolkit:write-case-study` | designer-toolkit | Create a portfolio case study from a project summary. |
-| `/designer-toolkit:write-rationale` | designer-toolkit | Write design rationale for a set of design decisions. |
-| `/interaction-design:design-form` | interaction-design | Design a form that minimises friction and guides users to successful completion. |
+| `/design-systems:create-component` | design-systems | Scaffold a full component specification end to end — props, states, variants, accessibility, and documentation. |
+| `/design-systems:tokenize` | design-systems | Extract tokens from an existing design or stylesheet and organise them — naming, structure, and theme mapping. |
+| `/designer-toolkit:build-presentation` | designer-toolkit | Build a design presentation end to end — audience framing, narrative structure, and supporting rationale. |
+| `/designer-toolkit:write-case-study` | designer-toolkit | Build a portfolio case study end to end — project framing, process narrative, outcomes, and visuals. |
+| `/designer-toolkit:write-rationale` | designer-toolkit | Write design rationale for a set of decisions, linking each to user needs, business goals, and principles. |
+| `/interaction-design:design-form` | interaction-design | Design a form end to end — structure, decision points, chunking, validation, errors, and completion. |
 | `/interaction-design:design-interaction` | interaction-design | Design a complete interaction flow for a feature or component. |
-| `/interaction-design:design-onboarding` | interaction-design | Design a first-run experience that gets users to value quickly without overwhelming them. |
-| `/interaction-design:error-flow` | interaction-design | Design a complete error handling flow for a feature. |
-| `/interaction-design:map-states` | interaction-design | Model the states and transitions for a complex UI component. |
-| `/prototyping-testing:evaluate` | prototyping-testing | Run a heuristic evaluation of an existing design. |
-| `/prototyping-testing:experiment` | prototyping-testing | Design an A/B experiment for a design hypothesis. |
+| `/interaction-design:design-onboarding` | interaction-design | Design a first-run experience end to end — activation path, progressive disclosure, and time to first value. |
+| `/interaction-design:error-flow` | interaction-design | Design an error flow end to end — prevention, detection, messaging, and recovery paths. |
+| `/interaction-design:map-states` | interaction-design | Model a component's states and transitions end to end — states, events, guards, and edge cases. |
+| `/prototyping-testing:evaluate` | prototyping-testing | Run a heuristic evaluation end to end — expert review against heuristics with severity ratings and recommended fixes. |
+| `/prototyping-testing:experiment` | prototyping-testing | Design an A/B experiment end to end — hypothesis, variants, primary metric, and sample size. |
 | `/prototyping-testing:prototype-plan` | prototyping-testing | Create a prototyping and testing plan for a design initiative. |
-| `/prototyping-testing:test-plan` | prototyping-testing | Design a complete usability testing plan. |
-| `/ui-design:color-palette` | ui-design | Generate a full color palette with semantic mapping and accessibility checks. |
+| `/prototyping-testing:test-plan` | prototyping-testing | Choose a testing method and build the plan around it — method selection, task scenarios, click tests, and accessibility coverage. |
+| `/ui-design:color-palette` | ui-design | Run the full colour workflow — tonal scales, semantic mapping, contrast checks, dark mode, and chart colours — and output a documented palette. |
 | `/ui-design:design-screen` | ui-design | Design a complete screen layout from a description or requirements. |
-| `/ui-design:platform-audit` | ui-design | Audit a design for platform convention compliance across iOS and Android. |
-| `/ui-design:responsive-audit` | ui-design | Audit a design for responsive behavior across breakpoints. |
-| `/ui-design:type-system` | ui-design | Create a complete typography system from brand fonts or requirements. |
-| `/ux-strategy:benchmark` | ux-strategy | Run a competitive benchmarking analysis across a set of products. |
+| `/ui-design:platform-audit` | ui-design | Audit a design for iOS and Android convention compliance — navigation, controls, typography, and platform-specific gaps. |
+| `/ui-design:responsive-audit` | ui-design | Audit a design's responsive behaviour across breakpoints — layout, touch targets, and content reflow. |
+| `/ui-design:type-system` | ui-design | Build a typography system end to end — scale, weights, line heights, measure, and responsive behaviour. |
+| `/ux-strategy:benchmark` | ux-strategy | Run a competitive benchmark across a set of products — pattern comparison, gap analysis, and opportunity callouts. |
 | `/ux-strategy:frame-problem` | ux-strategy | Structure an ambiguous design challenge into a clear problem definition with constraints and criteria. |
 | `/ux-strategy:strategize` | ux-strategy | Develop a complete UX strategy for a product or feature area. |
 | `/visual-critique:critique-screen` | visual-critique | Run all seven visual critiques on a screen and output a prioritised fix list. |

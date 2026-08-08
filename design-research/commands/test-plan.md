@@ -1,5 +1,5 @@
 ---
-description: Design a complete usability test plan with tasks, metrics, and facilitation guide.
+description: Run the full usability study workflow — research questions, participant criteria, tasks, metrics, and facilitation guide.
 argument-hint: "[product, feature, or prototype to test]"
 ---
 

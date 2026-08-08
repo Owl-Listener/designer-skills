@@ -1,6 +1,6 @@
 ---
 name: business-design
-description: A practitioner's toolkit for thinking and communicating as a designer in a business context — reading financials, mapping competitive landscapes, and defending design decisions in the language of value.
+description: Read financials, map competitive landscapes, and argue design decisions in the language of value. Use when defending design to commercial stakeholders. For the live negotiation itself, use `design-negotiation` (designer-toolkit).
 ---
 # Business Design
 

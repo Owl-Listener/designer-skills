@@ -1,6 +1,6 @@
 ---
 name: law-of-similarity
-description: Apply the Law of Similarity to signal relationships between elements through shared visual characteristics.
+description: Apply the Law of Similarity — shared colour, shape, or size signals that elements belong to one category. Use when signalling relationships across distance. For grouping by position, use `law-of-proximity`.
 ---
 # Law of Similarity
 

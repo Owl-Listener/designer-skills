@@ -1,6 +1,6 @@
 ---
 name: click-test-plan
-description: Design click/first-click tests to evaluate navigation and information findability.
+description: Design first-click and click tests for findability and navigation. Use when testing whether people can locate something. For full task-based observation, use `test-scenario`.
 ---
 # Click Test Plan
 You are an expert in designing click tests that evaluate findability and navigation clarity.

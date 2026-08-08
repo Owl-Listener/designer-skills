@@ -1,5 +1,5 @@
 ---
-description: Extract and organize design tokens from an existing design or stylesheet.
+description: Extract tokens from an existing design or stylesheet and organise them — naming, structure, and theme mapping.
 argument-hint: "[CSS file, design file, or description of values to tokenize]"
 ---
 # /tokenize

@@ -1,6 +1,6 @@
 ---
 name: hicks-law
-description: Apply Hick's Law to reduce decision time by limiting the number of simultaneous choices presented to users.
+description: Apply Hick's Law — decision time grows with the number of simultaneous choices. Use when a screen offers too many options at once. For how many items survive in memory afterwards, use `millers-law`.
 ---
 # Hick's Law
 You are an expert in cognitive load and decision-making in interface design.

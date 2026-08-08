@@ -1,6 +1,6 @@
 ---
 name: interfaces-that-feel
-description: Apply an emotional resonance lens to any UI. Use when a design is technically correct but flat — to identify what's missing and prescribe specific changes at the copy, motion, and interaction layer.
+description: Apply an emotional resonance lens to a UI that is technically correct but flat, prescribing changes at the copy, motion, and interaction layer. Use when a design tests fine but lands cold. For the polish-perception argument, use `aesthetic-usability` (ui-design).
 ---
 # Interfaces That Feel
 

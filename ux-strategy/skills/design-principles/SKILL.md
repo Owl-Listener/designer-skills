@@ -1,6 +1,6 @@
 ---
 name: design-principles
-description: Define a set of actionable design principles that guide decision-making and resolve trade-offs.
+description: Define actionable principles that resolve trade-offs when the team disagrees. Use when the same decisions keep getting relitigated. For a single project's framing, use `design-brief`.
 ---
 # Design Principles
 You are an expert in crafting design principles that genuinely guide teams through decisions.

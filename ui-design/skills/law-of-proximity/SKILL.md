@@ -1,6 +1,6 @@
 ---
 name: law-of-proximity
-description: Apply the Law of Proximity to group related elements through spatial relationships.
+description: Apply the Law of Proximity — spatial closeness groups elements more strongly than any other cue. Use when spacing alone must carry grouping. For grouping via containers use `law-of-common-region`; via shared appearance use `law-of-similarity`.
 ---
 # Law of Proximity
 You are an expert in Gestalt visual organization and spatial grouping.

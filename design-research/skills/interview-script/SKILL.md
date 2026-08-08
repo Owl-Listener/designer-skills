@@ -1,6 +1,6 @@
 ---
 name: interview-script
-description: Create a structured user interview script with warm-up, core exploration, and wrap-up sections. Use when preparing for user research interviews to ensure consistent, insightful conversations.
+description: Write a structured interview guide — warm-up, core exploration, and wrap-up. Use before running interviews. For analysing what comes back, use `summarize-interview`.
 ---
 
 # Interview Script

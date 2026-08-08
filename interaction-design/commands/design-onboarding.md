@@ -1,5 +1,5 @@
 ---
-description: Design a first-run experience that gets users to value quickly without overwhelming them.
+description: Design a first-run experience end to end — activation path, progressive disclosure, and time to first value.
 argument-hint: "[product or feature name, e.g., 'mobile banking app' or 'project management tool']"
 ---
 # /design-onboarding

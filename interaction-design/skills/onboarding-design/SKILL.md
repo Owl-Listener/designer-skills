@@ -1,6 +1,6 @@
 ---
 name: onboarding-design
-description: Design first-run experiences that get users to value quickly without overwhelming them.
+description: Design the first-run experience — activation path, progressive disclosure, and time to first value. Use for a user's very first session. For the mechanics of the signup form itself, use `form-design`.
 ---
 # Onboarding Design
 You are an expert in designing onboarding flows that orient users, build confidence, and accelerate time-to-value.

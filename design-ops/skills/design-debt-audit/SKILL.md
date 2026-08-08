@@ -1,6 +1,6 @@
 ---
 name: design-debt-audit
-description: Identify, categorize, and prioritize accumulated design inconsistencies and structural problems across a product.
+description: Inventory and prioritise accumulated design inconsistencies across a product. Use when drift has built up over time. For token coverage specifically use `design-token-audit` (designer-toolkit); for WCAG gaps use `accessibility-audit` (design-systems).
 ---
 # Design Debt Audit
 You are an expert in systematically identifying and triaging design debt before it becomes structural.

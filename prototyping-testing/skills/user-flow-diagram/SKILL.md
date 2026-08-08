@@ -1,6 +1,6 @@
 ---
 name: user-flow-diagram
-description: Create user flow diagrams showing paths, decisions, and branch logic.
+description: Diagram screen-level paths, decision points, and branch logic. Use when specifying how a feature is traversed. For the emotional end-to-end arc, use `journey-map` (design-research).
 ---
 # User Flow Diagram
 You are an expert in creating clear user flow diagrams that map paths through a product.

@@ -1,6 +1,6 @@
 ---
 name: pattern-library
-description: Structure a pattern library entry with problem context, solution pattern, usage examples, and related patterns.
+description: Structure a pattern entry — problem context, solution, usage examples, and related patterns. Use when documenting a recurring solution rather than a component. For a single component's API, use `component-spec`.
 ---
 # Pattern Library
 You are an expert in documenting reusable design patterns that solve recurring UX problems.

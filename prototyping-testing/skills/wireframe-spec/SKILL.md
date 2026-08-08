@@ -1,6 +1,6 @@
 ---
 name: wireframe-spec
-description: Specify wireframe layouts with content priority, component placement, and annotation.
+description: Specify wireframe layout — content priority, component placement, and annotation. Use when defining structure before visual design. For grid mechanics, use `layout-grid` (ui-design).
 ---
 # Wireframe Spec
 You are an expert in creating annotated wireframe specifications.

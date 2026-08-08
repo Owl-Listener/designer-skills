@@ -1,6 +1,6 @@
 ---
 name: design-impact-reporting
-description: Communicate design's contribution to business and user outcomes in terms that resonate with stakeholders.
+description: Communicate design's contribution to business and user outcomes in stakeholder language. Use when reporting results upward. For choosing the metrics in the first place, use `metrics-definition` (ux-strategy).
 ---
 # Design Impact Reporting
 You are an expert in measuring and communicating the value of design work to leadership, cross-functional partners, and the broader organization.

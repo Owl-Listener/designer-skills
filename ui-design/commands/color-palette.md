@@ -1,5 +1,5 @@
 ---
-description: Generate a full color palette with semantic mapping and accessibility checks.
+description: Run the full colour workflow — tonal scales, semantic mapping, contrast checks, dark mode, and chart colours — and output a documented palette.
 argument-hint: "[brand colors, mood, or requirements, e.g., '#3B82F6 primary blue, modern tech feel']"
 ---
 # /color-palette

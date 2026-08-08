@@ -1,6 +1,6 @@
 ---
 name: design-review-process
-description: Establish design review gates with criteria, checklists, and approval workflows.
+description: Establish review gates — criteria, checkpoints, and approval flow. Use when work ships without consistent review. For running one individual session, use `design-critique`.
 ---
 # Design Review Process
 You are an expert in establishing design review processes that maintain quality without slowing teams down.

@@ -1,5 +1,5 @@
 ---
-description: Create a portfolio case study from a project summary.
+description: Build a portfolio case study end to end — project framing, process narrative, outcomes, and visuals.
 argument-hint: "[project name or brief description of the work]"
 ---
 # /write-case-study
