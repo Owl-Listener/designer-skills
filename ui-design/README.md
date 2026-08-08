@@ -1,6 +1,6 @@
 # ui-design
 Craft polished user interfaces with layout grids, color systems, typography scales, responsive patterns, and visual hierarchy.
-## Skills (18)
+## Skills (19)
 - **layout-grid** — Define responsive layout grid systems with columns, gutters, margins, and breakpoints.
 - **color-system** — Build a comprehensive color system with palette generation and accessibility compliance.
 - **typography-scale** — Create a modular typography scale with size, weight, and line-height relationships.
@@ -19,6 +19,7 @@ Craft polished user interfaces with layout grids, color systems, typography scal
 - **law-of-closure** — Apply the Law of Closure to create implied boundaries and complete shapes with minimal visual elements.
 - **law-of-continuity** — Apply the Law of Continuity to guide the eye along intentional paths and create visual sequences that feel coherent.
 - **law-of-figure-ground** — Apply the Law of Figure-Ground to design clear foreground/background relationships so users know what to act on.
+- **platform-conventions** — Design for iOS and Android platform conventions — knowing which patterns each OS mandates, where they differ, and when to follow each vs. build a unified cross-platform experience.
 ## Commands (4)
 - `/design-screen` — Design a complete screen layout from a description or requirements.
 - `/color-palette` — Generate a full color palette with semantic mapping and accessibility checks.
