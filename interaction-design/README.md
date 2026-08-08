@@ -1,6 +1,6 @@
 # interaction-design
 Design meaningful interactions with micro-animations, state machines, gestures, error handling, and feedback patterns.
-## Skills (15)
+## Skills (16)
 - **micro-interaction-spec** — Specify micro-interactions with trigger, rules, feedback, and loop/mode definitions.
 - **animation-principles** — Apply animation principles to UI motion for purposeful, polished interactions.
 - **state-machine** — Model complex UI behavior as finite state machines with states and transitions.
@@ -16,6 +16,7 @@ Design meaningful interactions with micro-animations, state machines, gestures, 
 - **onboarding-design** — Design first-run experiences that get users to value quickly without overwhelming them.
 - **navigation-patterns** — Select and design navigation patterns that match product structure, user tasks, and platform conventions.
 - **search-ux** — Design search experiences that help users find what they need, recover from failure, and refine results.
+- **interfaces-that-feel** — Apply an emotional resonance lens to any UI — identify what's missing and prescribe specific changes at the copy, motion, and interaction layer.
 ## Commands (3)
 - `/design-interaction` — Design a complete interaction flow for a feature or component.
 - `/map-states` — Model the states and transitions for a complex UI component.

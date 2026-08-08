@@ -2,7 +2,7 @@
 
 Visual critique skills for designers. Analyse a screen across seven dimensions — hierarchy, brand consistency, composition, typography, colour, affordance, and information density — then compile a prioritised fix list.
 
-## Skills
+## Skills (7)
 
 | Skill | What it does |
 |---|---|
@@ -14,7 +14,7 @@ Visual critique skills for designers. Analyse a screen across seven dimensions �
 | `critique-affordance` | Evaluates clickability signals, state visibility, CTA clarity, and action discoverability |
 | `critique-information-density` | Assesses cognitive load, content priority, scanning patterns, and progressive disclosure |
 
-## Commands
+## Commands (2)
 
 | Command | What it does |
 |---|---|
