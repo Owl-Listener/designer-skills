@@ -206,11 +206,60 @@ def lint_cross_plugin_refs() -> None:
                     )
 
 
+def lint_index() -> None:
+    """Check the hand-written parts of INDEX.md point at things that exist.
+
+    The tables between the markers are generated and always correct. The
+    "Start here" map and "Frequently confused" list above them are prose,
+    so a renamed or deleted skill would leave a dead pointer behind.
+    """
+    index = ROOT / "INDEX.md"
+    if not index.exists():
+        _report(index, "INDEX.md is missing — run scripts/generate-index.py")
+        return
+
+    text = index.read_text(encoding="utf-8")
+    begin, end = "<!-- BEGIN GENERATED INDEX -->", "<!-- END GENERATED INDEX -->"
+    if begin not in text or end not in text:
+        _report(index, f"missing the {begin} / {end} markers that "
+                       "scripts/generate-index.py writes between")
+        return
+
+    all_skills = {p.parent.name for p in ROOT.glob("*/skills/*/SKILL.md")}
+    all_commands = {
+        f"{p.parent.parent.name}:{p.stem}" for p in ROOT.glob("*/commands/*.md")
+    }
+
+    generated = False
+    for i, line in enumerate(text.splitlines(), start=1):
+        if begin in line:
+            generated = True
+            continue
+        if end in line:
+            generated = False
+            continue
+        if generated:
+            continue
+        for m in _REF.finditer(line):
+            if m.group(1) not in all_skills:
+                _report(index,
+                        f"points at `{m.group(1)}`, which is not a skill "
+                        "in this repo",
+                        line=i)
+        for m in re.finditer(r"`/([a-z][a-z0-9-]*:[a-z][a-z0-9-]*)`", line):
+            if m.group(1) not in all_commands:
+                _report(index,
+                        f"points at `/{m.group(1)}`, which is not a "
+                        "command in this repo",
+                        line=i)
+
+
 def main() -> None:
     lint_skills()
     lint_descriptions()
     lint_commands()
     lint_cross_plugin_refs()
+    lint_index()
 
     skills_count = len(list(ROOT.glob("*/skills/*/SKILL.md")))
     commands_count = len(list(ROOT.glob("*/commands/*.md")))

@@ -4,6 +4,8 @@ Design skills for the agent era, written so an AI agent can actually use them.
 
 **241 skills and 91 commands across 33 plugins, in five collections**, for [Claude Code](https://docs.anthropic.com/en/docs/claude-code) and [Gemini CLI](https://github.com/google-gemini/gemini-cli).
 
+**Not sure which skill you need? Start with the [skill index](./INDEX.md)** — every skill in this repo arranged by the situation you're in, plus the pairs most often mistaken for each other.
+
 ## Getting started (no coding needed)
 
 These skills run inside an AI coding assistant. The easiest place to use them is Claude Code, and it takes three steps. No terminal required.
@@ -178,6 +180,8 @@ Go directly to the plugin that covers it. You don't need everything.
 | Developer handoff | design-ops | `/design-ops:handoff` |
 | Design rationale | designer-toolkit | `/designer-toolkit:write-rationale` |
 | Case study | designer-toolkit | `/designer-toolkit:write-case-study` |
+
+That covers the most common asks. For all 107 skills — including the ones without a command in front of them — see the [skill index](./INDEX.md).
 
 ### I'm building with AI and need to design the AI experience
 

@@ -76,16 +76,32 @@ A command is ready when:
 
 ## Verifying your work
 
-Run both scripts before every commit:
+Run all three scripts before every commit:
 
 ```
 python3 scripts/lint-frontmatter.py
 python3 scripts/generate-readmes.py
+python3 scripts/generate-index.py
 ```
 
 `lint-frontmatter.py` reports frontmatter errors with file and line references.
 
-`generate-readmes.py` rebuilds all plugin README skill/command lists and the root README table from the actual files on disk — so counts stay in sync automatically. Commit whatever it changes. CI runs both scripts and fails if either produces an error or leaves any README out of date.
+`generate-readmes.py` rebuilds all plugin README skill/command lists and the root README table from the actual files on disk — so counts stay in sync automatically.
+
+`generate-index.py` rebuilds the tables in [`INDEX.md`](./INDEX.md) from each skill's `description`. Your skill appears there automatically once it has a `Use when ...` clause — there is no separate list to add yourself to.
+
+Commit whatever the generators change. CI runs all three and fails if any produces an error or leaves a generated file out of date.
+
+## Editing INDEX.md
+
+Everything between the `BEGIN GENERATED INDEX` and `END GENERATED INDEX` markers is rebuilt from the skills themselves. Don't edit it by hand — change the skill's `description` and re-run the generator.
+
+The two sections above the markers are hand-written and worth extending:
+
+- **Start here** — a situation a newcomer would recognise, pointing at two or three skills. Add one when you notice people asking for something the map doesn't answer.
+- **Frequently confused** — add a row when you add a skill that sits close to an existing one. If you found yourself writing a boundary clause into your description, that pair probably belongs here too.
+
+The linter checks that every skill and command named in those sections actually exists, so a rename can't leave a dead pointer behind.
 
 ## License
 
