@@ -20,8 +20,9 @@ Craft polished user interfaces with layout grids, color systems, typography scal
 - **law-of-continuity** — Apply the Law of Continuity to guide the eye along intentional paths and create visual sequences that feel coherent.
 - **law-of-figure-ground** — Apply the Law of Figure-Ground to design clear foreground/background relationships so users know what to act on.
 - **platform-conventions** — Design for iOS and Android platform conventions — knowing which patterns each OS mandates, where they differ, and when to follow each vs. build a unified cross-platform experience.
-## Commands (4)
+## Commands (5)
 - `/design-screen` — Design a complete screen layout from a description or requirements.
 - `/color-palette` — Generate a full color palette with semantic mapping and accessibility checks.
 - `/type-system` — Create a complete typography system from brand fonts or requirements.
 - `/responsive-audit` — Audit a design for responsive behavior across breakpoints.
+- `/platform-audit` — Audit a design for platform convention compliance across iOS and Android.

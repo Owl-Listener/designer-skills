@@ -23,7 +23,9 @@ Design meaningful interactions with micro-animations, state machines, gestures, 
 - **search-ux** — Design search experiences that help users find what they need, recover from failure, and refine results.
 - **interfaces-that-feel** — Apply an emotional resonance lens to any UI — identify what's missing and prescribe specific changes at the copy, motion, and interaction layer.
 - **conversational-ux** — Design voice and conversational interfaces — dialog flows, error recovery, persona, and the distinct interaction model of interfaces that speak and respond in natural language.
-## Commands (3)
+## Commands (5)
 - `/design-interaction` — Design a complete interaction flow for a feature or component.
 - `/map-states` — Model the states and transitions for a complex UI component.
 - `/error-flow` — Design a complete error handling flow for a feature.
+- `/design-form` — Design a form that minimises friction and guides users to successful completion.
+- `/design-onboarding` — Design a first-run experience that gets users to value quickly without overwhelming them.

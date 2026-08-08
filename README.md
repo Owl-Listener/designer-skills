@@ -2,7 +2,7 @@
 
 Design skills for the agent era, written so an AI agent can actually use them.
 
-**241 skills and 88 commands across 33 plugins, in five collections**, for [Claude Code](https://docs.anthropic.com/en/docs/claude-code) and [Gemini CLI](https://github.com/google-gemini/gemini-cli).
+**241 skills and 91 commands across 33 plugins, in five collections**, for [Claude Code](https://docs.anthropic.com/en/docs/claude-code) and [Gemini CLI](https://github.com/google-gemini/gemini-cli).
 
 ## Getting started (no coding needed)
 
@@ -60,7 +60,7 @@ Each collection also lives in its own repo, with its own stars and full detail. 
 
 ## Design practice (this repo)
 
-Agentic skills, commands, and plugins for design, from research to systems, UI, interaction, and delivery. **107 skills and 29 commands across 9 plugins.**
+Agentic skills, commands, and plugins for design, from research to systems, UI, interaction, and delivery. **107 skills and 32 commands across 9 plugins.**
 
 ### Plugins
 
@@ -69,8 +69,8 @@ Agentic skills, commands, and plugins for design, from research to systems, UI, 
 | design-research | 12 | 4 | User research: personas, empathy maps, journey maps, interviews, usability testing, card sorting, surveys, and research repositories. |
 | design-systems | 11 | 3 | Build and maintain design systems: tokens, components, accessibility, theming, motion, governance, and localization. |
 | ux-strategy | 12 | 3 | Shape product direction: competitive analysis, design principles, experience mapping, information architecture, content strategy, and service blueprints. |
-| ui-design | 19 | 4 | Craft polished interfaces: layout grids, color systems, typography, responsive design, data viz, Gestalt/perceptual principles, and platform conventions. |
-| interaction-design | 22 | 3 | Design meaningful interactions: micro-animations, state machines, gestures, feedback, cognitive laws, forms, onboarding, navigation, search, and conversational UX. |
+| ui-design | 19 | 5 | Craft polished interfaces: layout grids, color systems, typography, responsive design, data viz, Gestalt/perceptual principles, and platform conventions. |
+| interaction-design | 22 | 5 | Design meaningful interactions: micro-animations, state machines, gestures, feedback, cognitive laws, forms, onboarding, navigation, search, and conversational UX. |
 | prototyping-testing | 8 | 4 | Validate designs: prototyping strategies, usability testing, heuristic evaluation, and A/B experiments. |
 | design-ops | 9 | 3 | Streamline operations: critique frameworks, handoff specs, sprint planning, team workflows, design debt, and impact reporting. |
 | designer-toolkit | 7 | 3 | Essential utilities: design rationale, presentations, case studies, UX writing, system adoption, and design negotiation. |
@@ -94,9 +94,12 @@ Agentic skills, commands, and plugins for design, from research to systems, UI, 
 | `/ui-design:color-palette` | ui-design | Generate a full color palette with accessibility checks. |
 | `/ui-design:type-system` | ui-design | Create a complete typography system. |
 | `/ui-design:responsive-audit` | ui-design | Audit a design for responsive behavior. |
+| `/ui-design:platform-audit` | ui-design | Audit a design for platform convention compliance across iOS and Android. |
 | `/interaction-design:design-interaction` | interaction-design | Design a complete interaction flow. |
 | `/interaction-design:map-states` | interaction-design | Model states and transitions for a component. |
 | `/interaction-design:error-flow` | interaction-design | Design error handling for a feature. |
+| `/interaction-design:design-form` | interaction-design | Design a form that minimises friction and guides users to successful completion. |
+| `/interaction-design:design-onboarding` | interaction-design | Design a first-run experience that gets users to value quickly without overwhelming them. |
 | `/prototyping-testing:prototype-plan` | prototyping-testing | Create a prototyping and testing plan. |
 | `/prototyping-testing:evaluate` | prototyping-testing | Run a heuristic evaluation. |
 | `/prototyping-testing:test-plan` | prototyping-testing | Design a complete usability testing plan. |
