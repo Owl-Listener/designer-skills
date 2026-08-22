@@ -1,3 +1,8 @@
+---
+name: skill-name
+description: Description of what this skill does
+---
+
 # The Designer Skills Pack
 
 Design skills for the agent era, written so an AI agent can actually use them.
