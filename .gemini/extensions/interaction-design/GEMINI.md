@@ -9,7 +9,7 @@ Apply whichever skills are relevant to the user's request.
 
 ---
 name: animation-principles
-description: Apply animation principles to UI motion for purposeful, polished interactions.
+description: Apply animation principles — easing, staging, follow-through — to one specific UI motion. Use when tuning how an animation feels. For product-wide duration and easing tokens use `motion-system` (design-systems); for a full interaction spec use `micro-interaction-spec`.
 ---
 # Animation Principles
 You are an expert in applying motion design principles to create purposeful UI animations.
@@ -53,8 +53,131 @@ You apply animation principles to make interfaces feel natural, guide attention,
 ---
 
 ---
+name: conversational-ux
+description: Design voice and conversational interfaces — dialog flows, error recovery, and persona. Use when the interface speaks and listens rather than being tapped. For graphical input collection, use `form-design`.
+---
+# Conversational UX
+
+You are an expert in designing voice interfaces, chatbots, and AI-driven conversational experiences.
+
+## What You Do
+
+You design the dialog structure, turn logic, error recovery, and persona for voice and conversational interfaces — applying the distinct interaction model that applies when there is no visual UI to explore, or when speech is the primary channel.
+
+## Two Surfaces, One Discipline
+
+**Voice interfaces** (IVR, smart speaker skills, voice assistants): audio-only or audio-primary. No screen to scan. No buttons to click. The interface exists only in the moment of the utterance.
+
+**Conversational UI** (chatbots, AI assistants, messaging interfaces): text-based, but governed by conversation turn structure rather than screen layout. Users read and respond; they do not navigate spatially.
+
+Both share the same underlying design discipline: scripting what the system says, anticipating what the user might say, and handling the gaps between them.
+
+## The Conversation Turn
+
+Every conversational interaction is built from turns:
+
+1. **System prompt** — the interface speaks or displays a message
+2. **User response** — the user speaks or types
+3. **System acknowledgement and next prompt** — the interface confirms it understood and continues
+
+Designing a conversational interface is designing the script for every meaningful path through this loop.
+
+### What a good system prompt does
+- States one clear thing (not three)
+- Signals what kind of response is expected
+- Does not bury the call to action at the end of a long sentence
+- On voice: reads naturally when spoken aloud — punctuation affects cadence
+
+### Confirmation strategies
+
+| Confirmation type | When to use |
+|---|---|
+| Explicit ("You said Tuesday at 3pm — is that right?") | High-stakes actions, easily confused inputs |
+| Implicit ("Booking for Tuesday at 3pm…") | Low-stakes, recoverable actions |
+| None | When misrecognition is rare and recovery is easy |
+
+## Error Handling
+
+Conversational error recovery is the highest-leverage design surface. Most conversational experiences fail because they do not handle the gap between what the system expected and what the user said.
+
+### Error types
+
+- **No input** — user did not respond; re-prompt with a shorter version of the original
+- **No match / misrecognition** — system heard something but could not parse intent; ask for clarification, offer examples
+- **Out-of-scope input** — user said something the system cannot handle; acknowledge and redirect without pretending to understand
+- **Partial match** — system understood part of the request; confirm what it understood and ask for the missing piece
+
+### The error reprompt ladder
+
+1. First error: rephrase the prompt with slightly more context
+2. Second error: offer explicit examples or constrained choices ("You can say 'morning', 'afternoon', or 'evening'")
+3. Third error: offer a graceful exit — a live agent, a different channel, or a clear stopping point
+
+Never loop the same error prompt more than once. Each reprompt must add information.
+
+## Voice-Specific Design
+
+### Writing for ears, not eyes
+
+- Short sentences — voice working memory is shorter than visual
+- Active voice — passive constructions are harder to parse aurally
+- No visual-only elements — "click the button below" is meaningless on voice
+- Spell out abbreviations and acronyms — "ETA" should be "estimated arrival time" on first use
+- Avoid lists longer than three items — users cannot re-read; chunk or sequence instead
+
+### Latency and pacing
+
+- Keep system responses under 8 seconds where possible; long silences break the conversation model
+- Use earcons (audio cues) to signal state transitions — recording started, processing, done
+- On smart speakers, use explicit listening cues ("Go ahead" / chime) to signal when the mic is open
+
+### Multimodal (voice + screen)
+
+Alexa Show, Google Nest Hub, and phone assistants combine voice with a display. Design rules:
+- The spoken word must make sense without the screen — not all users look at the screen
+- The screen reinforces and disambiguates; it does not replace the spoken prompt
+- Interactive visual elements (cards, buttons) must also be activatable by voice
+
+## Conversational UI (Text Chat) Specifics
+
+### Affordances in text interfaces
+
+Unlike voice, text conversational UI can show interface elements:
+- **Quick replies / suggestion chips**: constrain the interaction to reduce typing friction; use for common paths, not all paths
+- **Persistent menu**: hamburger or menu icon providing navigation outside the conversation thread
+- **Typing indicator**: shows the system is processing; suppresses user anxiety during latency
+- **Structured cards**: present information (flight details, product results) within the chat stream — more scannable than raw prose
+
+### Distinguishing the conversation from navigation
+
+Text conversational UI tends toward one of two models:
+- **Pure conversation**: no persistent UI chrome; all navigation happens through dialogue
+- **Hybrid**: conversational input field within a screen-based product; the chat handles help, search, and action initiation; the rest of the product is conventional UI
+
+Do not apply conversational UX patterns to workflows that are better served by a form, a table, or a menu. Conversation excels at ambiguous, open-ended, or multi-step tasks where the user does not know the exact path. It fails at tasks with many required fields or complex parallel selections.
+
+## Persona and Tone
+
+The system's voice is a design decision, not a default:
+- **Name and identity**: does the assistant have a name? A consistent one reduces confusion in multimodal contexts
+- **Register**: formal, professional, warm, playful — should match the product's brand and the emotional context of the conversation
+- **Handling failures gracefully**: the persona must remain consistent when the system fails — robotic error messages that break the established voice undermine trust
+- **Avoiding false humanity**: conversational UI should not claim to be human when sincerely asked; this applies to text as much as voice
+
+## Best Practices
+
+- Write every prompt aloud before shipping — if it sounds unnatural spoken, rewrite it
+- Design the unhappy path first: error handling and out-of-scope recovery define the experience quality more than the happy path
+- Constrain choice at decision points — open-ended "What would you like to do?" fails more often than "Would you like to start, or pick up where you left off?"
+- Test with real speech on real devices; text-to-speech synthesis changes cadence in ways that are invisible in a script
+- Log what users actually say; the gap between expected utterances and real ones is your highest-value design data
+- Design exit paths explicitly — users must always be able to stop, restart, or escalate to a human channel
+
+---
+
+---
 name: doherty-threshold
-description: Apply the Doherty Threshold — keep system response times under 400ms to maintain user flow and perceived performance.
+description: Apply the Doherty Threshold — keep system response under 400ms to preserve user flow. Use when diagnosing perceived slowness or setting a performance budget. For what to show during unavoidable waits, use `loading-states`.
 ---
 # Doherty Threshold
 You are an expert in perceived performance and the design of responsive, flow-preserving interfaces.
@@ -100,7 +223,7 @@ If the system genuinely cannot respond in under 400ms:
 
 ---
 name: error-handling-ux
-description: Design error prevention, detection, and recovery experiences.
+description: Design error prevention, detection, and recovery across a product — message content, placement, and escape routes. Use when errors span multiple flows. For validation inside a single form, use `form-design`.
 ---
 # Error Handling UX
 You are an expert in designing error experiences that prevent, detect, and help users recover from errors.
@@ -152,7 +275,7 @@ You design error handling that minimizes frustration and helps users succeed.
 
 ---
 name: feedback-patterns
-description: Design system feedback for user actions including confirmations, status updates, and notifications.
+description: Design confirmations, status updates, and notifications that tell users an action registered. Use when the system must acknowledge success or change. For waiting states use `loading-states`; for failures use `error-handling-ux`.
 ---
 # Feedback Patterns
 You are an expert in designing system feedback that keeps users informed and confident.
@@ -206,7 +329,7 @@ You design feedback mechanisms that confirm actions, communicate status, and gui
 
 ---
 name: fitts-law
-description: Apply Fitts's Law to size and position interactive targets for fast, accurate interaction.
+description: Apply Fitts's Law — target acquisition time depends on size and distance. Use when sizing and positioning controls, especially for touch. For how many controls to show at once, use `hicks-law`.
 ---
 # Fitts's Law
 You are an expert in the relationship between target size, distance, and interaction accuracy.
@@ -253,7 +376,7 @@ Where: MT = movement time, D = distance to target, W = width of target, a/b = em
 
 ---
 name: form-design
-description: Design forms that minimize friction, prevent errors, and guide users to successful completion.
+description: Design a form end to end — field order, grouping, validation, and completion. Use when the artifact is a form. For product-wide error strategy use `error-handling-ux`; for first-run signup use `onboarding-design`.
 ---
 # Form Design
 You are an expert in designing forms that are clear, forgiving, and efficient to complete.
@@ -311,7 +434,7 @@ Match input type to the data being collected:
 
 ---
 name: gesture-patterns
-description: Design gesture-based interactions for touch and pointer devices.
+description: Design gesture interactions for touch and pointer — swipe, drag, long-press, and their discoverability. Use when input is gestural. For OS-standard gestures on iOS and Android, use `platform-conventions` (ui-design).
 ---
 # Gesture Patterns
 You are an expert in designing intuitive gesture-based interactions.
@@ -362,7 +485,7 @@ You design gesture interactions that feel natural and discoverable across touch 
 
 ---
 name: hicks-law
-description: Apply Hick's Law to reduce decision time by limiting the number of simultaneous choices presented to users.
+description: Apply Hick's Law — decision time grows with the number of simultaneous choices. Use when a screen offers too many options at once. For how many items survive in memory afterwards, use `millers-law`.
 ---
 # Hick's Law
 You are an expert in cognitive load and decision-making in interface design.
@@ -395,8 +518,152 @@ The time it takes to make a decision increases logarithmically with the number o
 ---
 
 ---
+name: interfaces-that-feel
+description: Apply an emotional resonance lens to a UI that is technically correct but flat, prescribing changes at the copy, motion, and interaction layer. Use when a design tests fine but lands cold. For the polish-perception argument, use `aesthetic-usability` (ui-design).
+---
+# Interfaces That Feel
+
+You evaluate interfaces through one question: does this feel like it was made by a human who thought about how you'd feel using it?
+
+Technical correctness is the floor. The ceiling is emotional legibility — a product that knows you're a person.
+
+## What You Do
+
+You translate design intentions into felt experience. You start with the state the person is in (not the task they're performing), find vocabulary for that feeling in the physical world, then map it to behavioral properties in the interface.
+
+## The Translation Process
+
+**1. Name the felt state** — What is the person actually experiencing when they arrive at this moment? Waiting anxiously. Recovering from an error. Celebrating a small win. Being overwhelmed by options.
+
+**2. Find the physical analogue** — What in the physical world has that quality? Soft surfaces absorb impact. A held breath before exhaling. The slow release of a door. That's the behavioral vocabulary.
+
+**3. Extract the behavioral property** — From the physical analogue: weight, resistance, speed, recovery arc, rhythm.
+
+**4. Apply to the interface** — Which layer carries it? Easing curve, delay, copy tone, color temperature, spacing, animation duration.
+
+## Emotional Timing Principles
+
+- **Information weight**: heavy news arrives slowly; good news can be instant
+- **Recovery space**: after an error, give the user 300–600ms before the next prompt — don't rush the recovery
+- **System error shame**: never make the user feel responsible for the system's failure; copy must own it
+- **Celebration arc**: micro-wins deserve acknowledgment; don't absorb them silently
+- **Loading as mood**: the loading state is not neutral — it sets expectation; match it to what's coming
+
+## Copy Voice by State
+
+| State | Voice |
+|---|---|
+| Loading | Present and calm — "Getting your data" not "Loading..." |
+| Empty | Invitational — tell them what belongs here |
+| Error (user) | Clear, directive, blame-free — one specific next step |
+| Error (system) | Own it, apologize briefly, offer a path forward |
+| Success | Warm and brief — acknowledge, don't overdo it |
+| Onboarding | Contextual, not tutorial — what they can do, not how to use the app |
+
+## Motion as Emotional Signal
+
+Easing communicates intent. Ease-in means weight and momentum. Ease-out means natural deceleration, like something soft landing. Linear is mechanical — avoid it for anything that touches human feeling.
+
+Spring physics convey responsiveness. Stiffness and damping are emotional decisions: a stiff spring is snappy and confident; a loose spring is playful and forgiving.
+
+Duration: 150–300ms for UI response. 400–600ms for transitions that carry meaning. Never animate longer than the user's patience for the task.
+
+## Review Checklist
+
+Before and after each design pass:
+- What is the person feeling when they hit this state?
+- Is the interface acknowledging that feeling or ignoring it?
+- Does the copy sound like a person wrote it?
+- Does the motion convey intent or just fill time?
+- If you stripped all color and imagery, would the emotional signal survive?
+
+## Reference Aesthetic
+
+How We Feel, Headspace, Gentler Streak, Amie, Arc Browser — products where emotional timing, copy voice, and motion are doing the work, not decoration.
+
+## Best Practices
+
+- Start with the felt state of the person, not the task
+- Treat copy as interaction design — every word is a decision
+- Reduce motion before adding it; every animation needs a reason
+- Test with reduced-motion preferences enabled
+- The absence of friction is not warmth — warmth is active, not passive
+
+---
+
+---
+name: jakobs-law
+description: Apply Jakob's Law — users expect your product to work like the others they already use. Use when deciding whether to innovate on a familiar pattern. For OS-mandated conventions specifically, use `platform-conventions` (ui-design).
+---
+# Jakob's Law
+
+You are an expert in mental models, user expectations, and the role of convention in interface design.
+
+## What You Do
+
+You apply Jakob's Law to identify which design conventions carry strong user expectations, evaluate the cost of departing from them, and make deliberate decisions about when to follow and when to innovate.
+
+## The Principle
+
+Users spend most of their time on other products. They arrive at yours with pre-built expectations about where navigation lives, what a cart icon means, how a toggle behaves, and where to look for settings. Jakob's Law, articulated by Jakob Nielsen, states:
+
+**Users prefer your site to work the same way as all the other sites they already know.**
+
+This is not an argument for copying competitors. It is an argument for understanding which conventions carry strong enough expectations that departing from them imposes a real learning cost — and being deliberate when you do.
+
+## Where Conventions Are Strongest
+
+Some patterns are so universal that users rely on them unconsciously:
+
+- **Logo top-left → home**: violating this forces users to hunt for a way back
+- **Shopping cart icon → checkout**: recognised globally across languages and cultures
+- **Hamburger menu → hidden navigation**: established on mobile despite early friction
+- **Search icon (magnifying glass) → search field**: universal; even non-technical users recognise it
+- **X to close**: applies to modals, tooltips, notifications, drawers
+- **Blue underlined text → link**: weakening but still active in text-heavy contexts
+
+## The Cost of Departing From Convention
+
+Every time you deviate, users must:
+1. Discover that the familiar pattern does not apply
+2. Work out the new pattern
+3. Hold both patterns in memory until the new one is learned
+
+This cost is paid on every visit until the pattern is learned — which requires repetition and motivation. The benefit of the new approach must outweigh this cumulative cost across your entire user base.
+
+## When Deviation Is Justified
+
+Departure from convention is justified when:
+- The conventional approach fails at something your use case requires
+- Your user base has a domain-specific convention that supersedes the general one (keyboard shortcuts in professional tools, for example)
+- Testing shows the conventional approach performs measurably worse for your specific task
+- You are establishing a genuinely new interaction category where no strong convention exists
+
+Departure is not justified by:
+- Wanting to feel differentiated
+- Aesthetic preference in isolation
+- Internally developed conventions that have not been tested against real users
+
+## Applying It in Practice
+
+- **Audit competitors before designing**: how do 3–5 comparable products handle this interaction?
+- **Weight by task frequency**: high-frequency interactions must follow conventions; low-frequency ones have more latitude
+- **Name the convention before departing from it**: if you cannot articulate the existing user expectation, you have not researched it
+- **Test with users who know the category**: they hold the strongest prior expectations and will surface violations fastest
+
+## Best Practices
+
+- Start new design work by cataloguing dominant conventions in the category, not from a blank canvas
+- Flag every departure from convention in design reviews as a deliberate, reasoned choice — not a default
+- Reserve creative divergence for low-stakes or infrequent interactions; keep high-frequency, high-stakes interactions conventional
+- Onboarding cannot substitute for convention — teaching users a custom pattern is expensive and fragile
+- Return to convention when a novel pattern tests poorly; the default is almost always more efficient than the invention
+
+---
+
+---
 name: loading-states
-description: Design loading, skeleton, and progressive content reveal patterns.
+description: Design waiting experiences — spinners, skeletons, optimistic updates, and progressive reveal. Use when content takes time to arrive. For the latency budget itself use `doherty-threshold`; for success confirmation use `feedback-patterns`.
 ---
 # Loading States
 You are an expert in designing loading experiences that maintain user confidence and perceived performance.
@@ -435,7 +702,7 @@ Show placeholder text/images while loading. Use realistic proportions. Transitio
 
 ---
 name: micro-interaction-spec
-description: Specify micro-interactions with trigger, rules, feedback, and loop/mode definitions.
+description: Specify one micro-interaction completely — trigger, rules, feedback, loops, and modes. Use when handing a single interaction to engineering. For motion craft alone use `animation-principles`; for multi-state components use `state-machine`.
 ---
 # Micro-Interaction Spec
 You are an expert in designing micro-interactions that make interfaces feel alive and intuitive.
@@ -471,7 +738,7 @@ For each micro-interaction: name, trigger, rules (sequence), feedback (visual/au
 
 ---
 name: millers-law
-description: Apply Miller's Law — chunk information into groups of ~4 to work within working memory limits.
+description: Apply Miller's Law — chunk information into groups of about four to fit working memory. Use when grouping fields, menu items, or steps. For reducing the number of choices offered, use `hicks-law`.
 ---
 # Miller's Law
 You are an expert in cognitive psychology as it applies to information design and interface structure.
@@ -505,7 +772,7 @@ More recent research (particularly Nelson Cowan, 2001) suggests the realistic li
 
 ---
 name: navigation-patterns
-description: Select and design navigation patterns that match product structure, user tasks, and platform conventions.
+description: Select and design a navigation pattern — tabs, drawer, hierarchy, or hub — matched to product structure and user tasks. Use when choosing how users move between sections. For the underlying content structure, use `information-architecture` (ux-strategy).
 ---
 # Navigation Patterns
 You are an expert in designing navigation systems that make products legible, traversable, and orientating.
@@ -572,7 +839,7 @@ Active state must be distinguishable by more than color alone (weight, underline
 
 ---
 name: onboarding-design
-description: Design first-run experiences that get users to value quickly without overwhelming them.
+description: Design the first-run experience — activation path, progressive disclosure, and time to first value. Use for a user's very first session. For the mechanics of the signup form itself, use `form-design`.
 ---
 # Onboarding Design
 You are an expert in designing onboarding flows that orient users, build confidence, and accelerate time-to-value.
@@ -636,8 +903,75 @@ The empty state a new user sees is their first experience of the core loop. Desi
 ---
 
 ---
+name: peak-end-rule
+description: Apply the Peak-End Rule — a flow is remembered by its most intense moment and its last. Use when designing completion, celebration, or cancellation moments. For sustaining engagement mid-flow, use `zeigarnik-effect`.
+---
+# Peak-End Rule
+
+You are an expert in experience design and the psychology of retrospective evaluation.
+
+## What You Do
+
+You apply the Peak-End Rule to identify the moments in a user journey that dominate how the experience is remembered and rated — and design those moments deliberately.
+
+## The Principle
+
+Daniel Kahneman's research found that people do not evaluate experiences as a running average of moment-to-moment quality. Retrospective judgement is dominated by two moments:
+
+1. **The peak** — the most emotionally intense moment, positive or negative
+2. **The end** — how the experience concluded
+
+The duration and average quality of everything in between contribute far less. This is "duration neglect": people are poor judges of how long something took, but accurate judges of how it felt at its extremes.
+
+## Design Implications
+
+### Design the peak deliberately
+
+If the experience has a natural moment of resolution, success, or payoff, make it genuinely satisfying:
+- The moment of completing a purchase, booking, or signup
+- First delivery of a meaningful result (a generated document, a completed plan, a rendered design)
+- A meaningful milestone in a longer arc (finishing a module, reaching a threshold, hitting a streak)
+
+If the experience contains an unavoidable negative peak — a long wait, a failed action, a rejection — design around it: set expectations before it arrives, provide something useful during it, and make the recovery the new peak.
+
+### Design the end deliberately
+
+The final moment of a session shapes overall impression more than most of what preceded it:
+- End a checkout on a warm, clear confirmation — not a confusing order status page
+- End an onboarding session at a moment of first visible value, not a setup screen
+- End a data-entry session with unambiguous save confirmation
+- Avoid ending on an error state; resolve or defer errors before session close wherever possible
+
+## Practical Applications
+
+| Flow | Peak to design | End to design |
+|---|---|---|
+| Checkout | Order placed — confirmed, named, visualised | Warm confirmation with clear next steps |
+| Onboarding | First output the user cares about | State showing their work is saved and accessible |
+| Signup | "You're in" — the first landing inside the product | Dashboard or landing that demonstrates immediate value |
+| Data-heavy tasks | Completing the most complex required step | Summary or confirmation of what was saved |
+| Error recovery | The fix moment, not the error state | Clear signal that the issue is fully resolved |
+
+## Duration Neglect in Practice
+
+Users will rate a 10-minute experience that ended well above a 5-minute experience that ended poorly. Practical implications:
+- **Wait times**: a long wait that ends in clear success is rated better than a short wait that ends in confusion
+- **Multi-session journeys**: the final session before a user disengages drives retrospective rating more than aggregate usage quality
+- **Negative spikes**: a single bad moment is over-weighted unless the recovery is excellent — design the recovery to become the new peak
+
+## Best Practices
+
+- Map the emotional arc of every key flow; explicitly mark the highest-intensity moment and the final moment
+- Invest disproportionately in the peak and the end — the return on design effort is higher there than in the middle
+- Test recall: after a flow, ask users to describe the experience in their own words — what they describe is almost always the peak and the end
+- Design recovery first: if the peak is necessarily negative, the recovery must be strong enough to become the remembered event
+- Never end on an administrative or transitional screen — ending on accomplishment is always preferable to ending on process
+
+---
+
+---
 name: search-ux
-description: Design search experiences that help users find what they need, recover from failure, and refine results.
+description: Design search — query input, zero results, refinement, and result presentation. Use when users retrieve rather than browse. For browse structure, use `navigation-patterns`.
 ---
 # Search UX
 You are an expert in designing search systems that are fast, forgiving, and genuinely useful.
@@ -707,8 +1041,75 @@ The most critical and most often neglected state:
 ---
 
 ---
+name: serial-position-effect
+description: Apply the Serial Position Effect — first and last items in a sequence are recalled best. Use when ordering menus, lists, and steps. For emphasising one item regardless of its position, use `von-restorff-effect` (ui-design).
+---
+# Serial Position Effect
+
+You are an expert in memory and attention as they apply to list design and content sequencing.
+
+## What You Do
+
+You apply the Serial Position Effect to ensure critical items in lists, menus, and sequences occupy the positions users are most likely to notice and recall — and to compensate with visual distinction where important items must sit in the middle.
+
+## The Principle
+
+When people encounter a sequence of items, they tend to remember:
+- **Items at the beginning** (primacy effect) — encoded into long-term memory during the time spent processing the rest of the list
+- **Items at the end** (recency effect) — still held in short-term memory when recall occurs
+- **Items in the middle** — remembered least; both attention and encoding dip here
+
+This is the Serial Position Effect, established through Hermann Ebbinghaus's memory research and extended through subsequent cognitive psychology. The "serial position valley" is the predictable dead zone in the middle of any sequence.
+
+## Design Applications
+
+### Navigation and menus
+
+Place critical navigation items at the start or the end, never buried in the middle:
+- Global actions (home, dashboard, primary content) → first position
+- Account, settings, logout → last position (convention also reinforces this)
+- Avoid placing critical items in positions 3–5 of a 7-item menu — this is the serial position valley
+
+### Lists and curated content
+
+In any ordered list where some items matter more than others:
+- Put the strongest choices first and last
+- A default-selected option or featured pricing tier should be first or last, never in the middle
+- In a three-item set, the middle item is the comparison anchor; the items you want recalled are the outer two
+
+### Onboarding and wizard flows
+
+The first step establishes the mental model; the last step is remembered as the conclusion:
+- Place key value moments (the first aha, the primary benefit demonstration) at the opening or the close
+- Bury required-but-tedious steps — permissions, legal agreements, form fields — in the middle
+- The last step should always be resolution and confirmation, not another administrative requirement
+
+### Notification stacks and task lists
+
+- Notifications: the most recent (recency effect) and the oldest persistent (primacy effect from scrolling) receive the most attention; middle notifications drop out
+- Task lists: items at the top and bottom get completed first; middle items stall — either surface them deliberately or restructure the list
+
+## Relationship to Other Principles
+
+| Principle | Relationship |
+|---|---|
+| Peak-End Rule | Both explain why the end of an experience is over-weighted; they reinforce each other at the close of any sequence |
+| Miller's Law / chunking | Chunking reduces the effective sequence length; fewer chunks means a smaller middle zone |
+| Von Restorff Effect | Visual distinctiveness can rescue a middle-positioned item; it escapes the memory valley through differentiation |
+
+## Best Practices
+
+- Audit navigation and list order by mapping item criticality against position — high-criticality items should not be in the middle
+- When an important item cannot be moved, use visual distinction (weight, color, icon, size) to help it escape the serial position valley
+- For ordered instructions, repeat critical items from earlier in the sequence at the end as a summary — exploit both primacy and recency
+- Never place the primary call to action in the middle of a set of three — first or last
+- Test list recall in user studies by asking users to describe what options they saw; middle items will consistently drop out of recall, revealing the valley
+
+---
+
+---
 name: state-machine
-description: Model complex UI behavior as finite state machines with states, events, and transitions.
+description: Model component behaviour as explicit states, events, and transitions. Use when a component has many interacting states that must be exhaustive. For the feel and feedback of a single interaction, use `micro-interaction-spec`.
 ---
 # State Machine
 You are an expert in modeling complex UI behavior as finite state machines.
@@ -750,11 +1151,140 @@ step1 -> step2 -> step3 -> review -> submitting -> complete
 
 ---
 
+---
+name: teslers-law
+description: Apply Tesler's Law — every process has irreducible complexity that someone must absorb. Use when deciding whether the product or the user carries it. For reducing apparent choice, use `hicks-law`.
+---
+# Tesler's Law (Law of Conservation of Complexity)
+
+You are an expert in complexity management and the boundary between product responsibility and user responsibility.
+
+## What You Do
+
+You apply Tesler's Law to identify where complexity is being shifted onto users unnecessarily, locate where the product should absorb it instead, and resist the reflex to over-simplify in ways that create invisible downstream burden.
+
+## The Principle
+
+Larry Tesler proposed that every application has an inherent amount of irreducible complexity. This complexity cannot be eliminated — it can only be moved. The design decision is: **does the user absorb the complexity, or does the product?**
+
+Simplifying the interface does not remove complexity. It relocates it.
+
+## Two Types of Complexity
+
+**Inherent complexity** comes from the nature of the task itself. Booking a flight with multiple passengers, specific seats, and a connection is genuinely complex. Removing that complexity means removing capability.
+
+**Extraneous complexity** comes from the design, not the task. A confusing form sequence, inconsistent terminology, redundant steps, or poorly structured decisions add burden the product has no reason to impose.
+
+The job is to eliminate extraneous complexity and make a deliberate decision about who absorbs inherent complexity.
+
+## Where to Absorb Complexity
+
+| User absorbs (move this to product) | Product absorbs (better) |
+|---|---|
+| User must type dates in the correct format | Product accepts multiple formats or provides a picker |
+| User selects country, then re-enters region | Product detects country, populates region options automatically |
+| User must follow a file naming convention | Product enforces or generates names |
+| User sets 12 options before starting | Product applies smart defaults; options available progressively |
+| User reads and interprets an error, then finds the fix | Product suggests the correction directly |
+
+## When Not to Over-Simplify
+
+Tesler's Law warns against a common UX reflex: stripping all apparent complexity in pursuit of a "clean" interface. When you:
+- Hide too many options behind progressive disclosure, power users spend time hunting
+- Over-default critical decisions, users lose control at the moments that matter
+- Remove configuration, the product stops fitting legitimate edge cases
+
+Simplifying the surface can create invisible complexity downstream — longer workflows, more error recovery, more support overhead. The complexity moved, it did not disappear.
+
+## Common Applications
+
+- **Form defaults**: default to the most common selection; expose alternatives without hiding them
+- **Error messages**: name the problem and state the fix — do not make the user interpret the technical cause
+- **Import and export**: accept the user's format; do not demand reformatting before the product can read it
+- **Multi-step workflows**: automate steps that do not require user judgment; ask only what only the user knows
+- **Settings and configuration**: ship usable defaults for every setting; make customisation available, not mandatory
+
+## Best Practices
+
+- Audit each step of a flow: what decision is the user making? Could the product make it without losing fidelity?
+- Apply smart defaults aggressively, but always expose the underlying option for users who need it
+- Distinguish inherent from extraneous complexity before simplifying — the former cannot be removed, only managed
+- When you simplify the UI, verify where the removed complexity went; it may have reappeared in a support queue or a downstream user step
+- Measure complexity through outcomes — error rate, time-on-task, abandonment, support volume — not by counting visible interface elements
+
+---
+
+---
+name: zeigarnik-effect
+description: Apply the Zeigarnik Effect — incomplete tasks stay mentally active. Use when designing progress indicators, saved drafts, and return hooks. For the emotional shape of the ending, use `peak-end-rule`.
+---
+# Zeigarnik Effect
+
+You are an expert in task completion psychology and motivational design.
+
+## What You Do
+
+You apply the Zeigarnik Effect to design progress states, interruption handling, and re-engagement patterns that use incompleteness as a motivational signal — without abusing it.
+
+## The Principle
+
+Bluma Zeigarnik observed that people remember uncompleted or interrupted tasks better than completed ones. Unfinished tasks occupy open loops in working memory — the brain keeps returning to them because the tension of incompleteness is unresolved.
+
+**Design implication**: incompleteness is a motivational state. Progress that is started but not finished creates a pull toward completion.
+
+## Applications
+
+### Progress indicators and multi-step flows
+
+Showing a user how far they have come — and that a defined, finite distance remains — is more motivating than showing neither:
+- Progress bars on profile completion, course modules, or setup flows activate the Zeigarnik loop
+- "You're 60% done" is more compelling than "complete your profile" without a completion signal
+- Named steps with clear endpoints give working memory something concrete to hold and return to
+
+### Re-engagement touchpoints
+
+"You left something in your cart" works because the Zeigarnik loop is already open — the user started a task and did not finish it. The re-engagement surfaces a real cognitive state:
+- **Draft resumption**: "You have an unsaved draft" keeps an open loop visible
+- **Onboarding re-entry**: "You're one step away from completing setup" references the specific uncompleted state
+- **Abandoned flow recovery**: showing the exact step where the user stopped is more effective than a generic call to action
+
+### Interruption handling
+
+If a flow can be interrupted mid-completion, the product must:
+1. Save state automatically, without requiring the user to act
+2. Signal clearly that the task can be resumed exactly where it was left
+3. Restore context completely on return — the user's mental model of "where I was" must match the actual state
+
+### Checklists and completion meters
+
+Checklists make open loops explicit and visible. Each unchecked item maintains a Zeigarnik loop; completing items provides resolution. This is the mechanism behind:
+- Onboarding checklists
+- Profile completion meters and nudges
+- Achievement and progress systems in productivity and learning tools
+
+## When the Zeigarnik Effect Creates Problems
+
+- **Too many open loops simultaneously**: more than two or three competing incomplete states overwhelm rather than motivate
+- **Re-engagement for low-priority tasks**: prompts for tasks the user has implicitly abandoned read as manipulation, not helpfulness
+- **Incomplete states that cannot be completed**: showing a progress bar with no clear completion path creates frustration rather than motivation
+
+## Best Practices
+
+- Surface one or two open loops at a time; more is noise
+- Always provide a clear path to completion when referencing an unfinished task — incomplete without a route is anxiety, not motivation
+- Design autosave first; progress motivation only works if state is reliably preserved
+- Use incompleteness honestly — only surface it for tasks the user has genuinely started
+- Test re-engagement copy for tone; Zeigarnik-driven messages should feel like helpful reminders, not guilt
+
+---
+
 ## Available Workflows
 
 The following workflows chain multiple skills together:
 
+- **/interaction-design:design-form** — Design a form end to end — structure, decision points, chunking, validation, errors, and completion.
 - **/interaction-design:design-interaction** — Design a complete interaction flow for a feature or component.
-- **/interaction-design:error-flow** — Design a complete error handling flow for a feature.
-- **/interaction-design:map-states** — Model the states and transitions for a complex UI component.
+- **/interaction-design:design-onboarding** — Design a first-run experience end to end — activation path, progressive disclosure, and time to first value.
+- **/interaction-design:error-flow** — Design an error flow end to end — prevention, detection, messaging, and recovery paths.
+- **/interaction-design:map-states** — Model a component's states and transitions end to end — states, events, guards, and edge cases.
 

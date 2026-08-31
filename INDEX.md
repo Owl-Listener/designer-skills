@@ -1,6 +1,6 @@
 # Skill Index
 
-**107 skills**, arranged by the situation you're in rather than the folder they live in.
+**109 skills**, arranged by the situation you're in rather than the folder they live in.
 
 Three ways to use this page: read **Start here** if you know your situation but not the vocabulary, check **Frequently confused** if two skills look interchangeable, or search the full tables at the bottom with Ctrl-F.
 
@@ -35,6 +35,9 @@ One session, `summarize-interview`. Many sessions at once, `affinity-diagram`. L
 **I have to defend this work.**
 `design-rationale` to write the reasoning down, `design-negotiation` for the conversation itself, `business-design` for the commercial vocabulary, `design-impact-reporting` to show what it earned.
 
+**I only have one idea and I don't trust it.**
+`parallel-concepts` to build a spread that differs in what the user actually does, `concept-selection` to close it out on criteria you fixed beforehand. `/prototyping-testing:explore-options` runs both ends.
+
 ## Frequently confused
 
 The pairs most likely to fire in each other's place. Every skill's own description carries these boundaries too — this is just the collision list in one view.
@@ -52,6 +55,9 @@ The pairs most likely to fire in each other's place. Every skill's own descripti
 | `form-design` / `error-handling-ux` | The artifact is a form | You need a product-wide error strategy |
 | `design-brief` / `north-star-vision` | Kickoff for one specific project | Long-horizon aspiration across many projects |
 | `design-critique` / `heuristic-evaluation` | Running a session with people in the room | One expert evaluating against known heuristics |
+| `parallel-concepts` / `prototype-strategy` | Deciding how many directions to carry and how they differ | Deciding the fidelity and method for building one |
+| `concept-selection` / `opportunity-framework` | Choosing between solutions to the same problem | Choosing which problem is worth solving at all |
+| `concept-selection` / `a-b-test-design` | Deciding before build, on criteria you set in advance | The change can ship and production traffic can decide |
 
 ## Every skill by phase
 
@@ -163,7 +169,7 @@ Turn repeated decisions into components, tokens, and rules.
 | When documenting a recurring solution rather than a component | `pattern-library` | design-systems |
 | When one system must serve multiple themes | `theming-system` | design-systems |
 
-### Validate (15)
+### Validate (17)
 
 Check it works — with users, against heuristics, and by eye.
 
@@ -172,6 +178,7 @@ Check it works — with users, against heuristics, and by eye.
 | When a change can be measured quantitatively at scale | `a-b-test-design` | prototyping-testing |
 | When scheduling testing with real AT users | `accessibility-test-plan` | prototyping-testing |
 | When testing whether people can locate something | `click-test-plan` | prototyping-testing |
+| When several directions are alive and one has to win | `concept-selection` | prototyping-testing |
 | When reviewing an existing screen | `critique-affordance` | visual-critique |
 | When those brand files exist and you are checking compliance | `critique-brand-consistency` | visual-critique |
 | When reviewing one screen | `critique-color` | visual-critique |
@@ -180,6 +187,7 @@ Check it works — with users, against heuristics, and by eye.
 | When reviewing type on a screen | `critique-typography` | visual-critique |
 | When attention lands in the wrong place | `critique-visual-hierarchy` | visual-critique |
 | When you need findings without recruiting participants | `heuristic-evaluation` | prototyping-testing |
+| When one direction is on the table and the team is about to refine it by default | `parallel-concepts` | prototyping-testing |
 | Before building a prototype | `prototype-strategy` | prototyping-testing |
 | When you have a study and need the tasks | `test-scenario` | prototyping-testing |
 | When specifying how a feature is traversed | `user-flow-diagram` | prototyping-testing |
