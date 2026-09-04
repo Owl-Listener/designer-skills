@@ -9,8 +9,9 @@ Essential designer utilities for writing rationale, building presentations, craf
 - **presentation-deck** — Structure a design presentation for a specific audience and decision. Use when presenting internally. For a portfolio narrative use `case-study`; for the written argument use `design-rationale`.
 - **ux-writing** — Write interface copy — microcopy, error messages, empty states, and CTAs. Use when the words are the deliverable. For content structure and ownership, use `content-strategy` (ux-strategy).
 
-## Commands (3)
+## Commands (4)
 - `/build-presentation` — Build a design presentation end to end — audience framing, narrative structure, and supporting rationale.
+- `/start-here` — Find where to start in the collection — name what you're working on and get routed to one command, the two that follow it, and the stages you can skip.
 - `/write-case-study` — Build a portfolio case study end to end — project framing, process narrative, outcomes, and visuals.
 - `/write-rationale` — Write design rationale for a set of decisions, linking each to user needs, business goals, and principles.
 
