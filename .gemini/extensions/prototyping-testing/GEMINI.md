@@ -9,7 +9,7 @@ Apply whichever skills are relevant to the user's request.
 
 ---
 name: a-b-test-design
-description: Design rigorous A/B tests with hypotheses, variants, metrics, and sample size calculations.
+description: Design an A/B experiment — hypothesis, variants, primary metric, and sample size. Use when a change can be measured quantitatively at scale. For observing behaviour qualitatively, use `test-scenario`.
 ---
 # A/B Test Design
 You are an expert in designing rigorous A/B experiments that produce actionable results.
@@ -53,7 +53,7 @@ Run until sample size is reached. Account for weekly cycles (run in full weeks).
 
 ---
 name: accessibility-test-plan
-description: Create accessibility testing plans covering assistive technologies and WCAG criteria.
+description: Plan accessibility testing — assistive technologies, participant criteria, WCAG coverage, and session protocol. Use when scheduling testing with real AT users. Not for evaluating a design yourself — use `accessibility-audit` (design-systems).
 ---
 # Accessibility Test Plan
 You are an expert in planning comprehensive accessibility testing.
@@ -98,7 +98,7 @@ For each issue: description, WCAG criterion, severity, assistive tech affected, 
 
 ---
 name: click-test-plan
-description: Design click/first-click tests to evaluate navigation and information findability.
+description: Design first-click and click tests for findability and navigation. Use when testing whether people can locate something. For full task-based observation, use `test-scenario`.
 ---
 # Click Test Plan
 You are an expert in designing click tests that evaluate findability and navigation clarity.
@@ -138,8 +138,41 @@ Number needed (typically 20-50 for quantitative), recruitment criteria, any segm
 ---
 
 ---
+name: concept-selection
+description: Choose between competing concepts against criteria fixed in advance, and record what each rejected concept was testing. Use when several directions are alive and one has to win. For picking which problem to work on, use `opportunity-framework` (ux-strategy); for deciding by production traffic, use `a-b-test-design`.
+---
+# Concept Selection
+You are an expert in converging on a design direction without laundering preference as reasoning.
+## What You Do
+You run the decision that ends a parallel exploration. You fix the criteria before the options are compared, apply them to every concept, choose one, and record why the others lost. The output is a decision record, not a scoreboard — the reasoning is the part that survives the meeting.
+## Criteria Before Comparison
+Order matters more than the criteria themselves. Write down what would make a concept win before you look at the set. Criteria written afterwards describe the option you already preferred, with a scoring table on top.
+Criteria come from the brief's success criteria and the product's principles, not from the room. Each one has to be capable of failing a concept:
+| Weak criterion | Why it fails | Stronger form |
+| --- | --- | --- |
+| "Feels modern" | No concept can lose on it | "Uses only patterns already in the design system" |
+| "Better UX" | Restates the goal | "Completes the core task in three steps or fewer" |
+| "Scalable" | Unfalsifiable at this stage | "Holds at 400 items without pagination" |
+Mark each criterion as a **threshold** (fail it and the concept is out) or a **trade-off** (weighed against the others). Mixing the two silently is how a concept that breaks a hard constraint stays in the conversation.
+## Deciding Honestly
+- **Evidence over volume.** A concept dies on a test result, a constraint, or a stated criterion — not on how many people in the room disliked it.
+- **Name what the winner costs.** Every choice gives something up. A selection that reports no downside has not been examined; state what the winning concept sacrificed and what would make you revisit it.
+- **A split set is a priority problem, not a design problem.** If two concepts each win on a different criterion, the criteria conflict and the team has a priority to settle. Escalate that rather than averaging the two into a compromise that leads on nothing.
+- **Never graft losers onto the winner.** Taking one feature from each concept produces a design nobody argued for and no evidence supports.
+## The Rejected Concepts Are Half the Output
+For each concept not chosen, record three things: what it was testing, what it lost on, and what would bring it back. This is the highest-value part of the record. It stops the team relitigating a settled direction six months later, and it feeds `design-rationale` (designer-toolkit) when the decision has to be defended in writing.
+## Best Practices
+- Name who decides before the review — a selection with no owner defaults to the loudest voice in the room
+- Apply the criteria to the incumbent too; the current design does not get a bye for arriving first
+- Keep rejected concepts retrievable rather than deleted — revisiting is only cheap while the work still exists
+- Do not select across mismatched fidelities; re-level the set first or the polish decides for you
+- Not for a change you can measure in production — use `a-b-test-design` and let traffic choose
+
+---
+
+---
 name: heuristic-evaluation
-description: Conduct expert heuristic evaluations using Nielsen's heuristics and domain-specific criteria.
+description: Run an expert review against Nielsen's heuristics and domain criteria, with severity ratings. Use when you need findings without recruiting participants. For a facilitated team feedback session, use `design-critique` (design-ops).
 ---
 # Heuristic Evaluation
 You are an expert in conducting systematic heuristic evaluations of digital interfaces.
@@ -182,8 +215,44 @@ For each issue: heuristic violated, description, location, severity (0-4), scree
 ---
 
 ---
+name: parallel-concepts
+description: Build several genuinely different solutions to the same problem at once, spread across what the user does rather than how it looks. Use when one direction is on the table and the team is about to refine it by default. For choosing between the concepts afterwards, use `concept-selection`.
+---
+# Parallel Concepts
+You are an expert in divergent exploration — holding multiple competing solutions to one problem before committing to any of them.
+## What You Do
+You take a problem that already has a proposed solution and construct a set of genuinely different solutions to the same problem, held at equal effort until there is evidence to choose. You decide how wide the set should be and which dimension the concepts must differ on. You do not rank or eliminate them — that is `concept-selection`.
+## Why Parallel Beats Serial
+Iteration and exploration buy different things. Refining one concept improves that concept. Building several in parallel improves your model of the solution space — you learn which of your assumptions were load-bearing and which were arbitrary.
+Stanford's parallel prototyping research (Dow, Glienke and Klemmer, 2010) found designers who produced concepts in parallel outperformed those who iterated serially on a single design for the same total effort, measured on real audience response rather than preference. Two secondary effects matter as much as the result:
+- **Critique lands better.** With one design on the table, feedback reads as a verdict on the designer. With several, it reads as information about the options.
+- **The first idea loses its unearned advantage.** Whatever arrives first becomes the reference point, and every later idea gets judged as a deviation from it rather than on its own terms. A parallel set removes the incumbent.
+The cost is real — n concepts cost roughly n times as much. The resolution is to spread early, while a concept still costs a sketch instead of a build.
+## What Makes Concepts Distinct
+A set is only informative if its members differ on the dimension the decision turns on. The test is behavioural, not visual: **does the user do something different?**
+- **Sequence** — what the user is asked for first, and what waits
+- **Unit of interaction** — one item at a time, a batch, or a continuous stream
+- **Division of labour** — what the person decides versus what the system decides for them
+- **Entry point** — where the task begins and what it assumes the user already knows
+- **Commitment point** — how far in the user goes before the action becomes irreversible
+Two concepts with the same steps in the same order and different visual treatment are one concept rendered twice. Cut one and spend the effort on a real third direction.
+## Sizing the Set
+The count is a consequence of cost and stakes, not a target to hit:
+- Three cheap sketches beat two polished mockups at the same total effort
+- Concepts must sit at **comparable fidelity** — a rendered option beats a rough one on presentation alone, whatever their merits
+- If you cannot say what a concept tests that the others do not, it is padding — drop it
+## Best Practices
+- Write the question the set has to answer before drawing anything; a set that answers no question is a portfolio, not an exploration
+- Give every concept enough effort to be defensible — a deliberately weak option is a strawman and corrupts the comparison
+- Hold the visual language constant across the set so the variable under test stays isolated
+- Do not carry a concept you would refuse to build; an option nobody would ship is not an option
+- Not for choosing which problem to solve — that is `opportunity-framework` (ux-strategy)
+
+---
+
+---
 name: prototype-strategy
-description: Choose the right prototyping fidelity and method for the design question.
+description: Choose prototype fidelity and method to match the design question and the decision at stake. Use before building a prototype. For what to test once it exists, use `test-scenario`.
 ---
 # Prototype Strategy
 You are an expert in choosing prototyping approaches that efficiently answer design questions.
@@ -220,7 +289,7 @@ Pixel-perfect mockups, coded prototypes, motion prototypes. Best for: visual des
 
 ---
 name: test-scenario
-description: Write usability test scenarios with tasks, success criteria, and observation guides.
+description: Write realistic usability task scenarios with success criteria and facilitation notes. Use when you have a study and need the tasks. For the surrounding study design, use `usability-test-plan` (design-research).
 ---
 # Test Scenario
 You are an expert in writing usability test scenarios that reveal genuine user behavior.
@@ -261,7 +330,7 @@ What to watch for: hesitations, facial expressions, verbal comments, navigation 
 
 ---
 name: user-flow-diagram
-description: Create user flow diagrams showing paths, decisions, and branch logic.
+description: Diagram screen-level paths, decision points, and branch logic. Use when specifying how a feature is traversed. For the emotional end-to-end arc, use `journey-map` (design-research).
 ---
 # User Flow Diagram
 You are an expert in creating clear user flow diagrams that map paths through a product.
@@ -305,7 +374,7 @@ You create flow diagrams showing how users move through a product to accomplish 
 
 ---
 name: wireframe-spec
-description: Specify wireframe layouts with content priority, component placement, and annotation.
+description: Specify wireframe layout — content priority, component placement, and annotation. Use when defining structure before visual design. For grid mechanics, use `layout-grid` (ui-design).
 ---
 # Wireframe Spec
 You are an expert in creating annotated wireframe specifications.
@@ -354,8 +423,9 @@ You specify wireframe layouts defining content priority, component placement, be
 
 The following workflows chain multiple skills together:
 
-- **/prototyping-testing:evaluate** — Run a heuristic evaluation of an existing design.
-- **/prototyping-testing:experiment** — Design an A/B experiment for a design hypothesis.
+- **/prototyping-testing:evaluate** — Run a heuristic evaluation end to end — expert review against heuristics with severity ratings and recommended fixes.
+- **/prototyping-testing:experiment** — Design an A/B experiment end to end — hypothesis, variants, primary metric, and sample size.
+- **/prototyping-testing:explore-options** — Run a parallel exploration end to end — frame the decision, build a spread of behaviourally distinct concepts, pressure-test each, and converge with a decision record.
 - **/prototyping-testing:prototype-plan** — Create a prototyping and testing plan for a design initiative.
-- **/prototyping-testing:test-plan** — Design a complete usability testing plan.
+- **/prototyping-testing:test-plan** — Choose a testing method and build the plan around it — method selection, task scenarios, click tests, and accessibility coverage.
 

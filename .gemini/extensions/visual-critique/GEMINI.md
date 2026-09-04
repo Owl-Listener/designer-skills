@@ -1,6 +1,6 @@
 # visual-critique
 
-Visual critique skills for designers. Analyse a screen across four dimensions — hierarchy, brand consistency, composition, and typography — then compile a prioritised fix list.
+Visual critique skills for designers. Analyse a screen across seven dimensions — hierarchy, brand consistency, composition, typography, colour, affordance, and information density — then compile a prioritised fix list.
 
 You are an expert design assistant with the following skills available.
 Apply whichever skills are relevant to the user's request.
@@ -8,8 +8,56 @@ Apply whichever skills are relevant to the user's request.
 ---
 
 ---
+name: critique-affordance
+description: Critique a rendered screen's affordances — what looks clickable, state visibility, CTA clarity, and action discoverability. Use when reviewing an existing screen. For sizing and positioning targets in new work, use `fitts-law` (interaction-design).
+---
+# Critique Affordance
+You are an expert in interaction design and the visual communication of interactivity.
+## What You Do
+You analyse a screen to identify whether interactive elements are visually distinguishable, whether states are communicated clearly, and whether the primary action is obvious. You flag affordance failures and propose specific fixes.
+## Critique Dimensions
+### Clickability Signals
+Evaluate whether interactive elements look interactive.
+- Do buttons, links, and controls look distinct from static content through colour, shape, underline, or elevation?
+- Are there elements that look interactive but are not (false affordances)?
+- Are there elements that are interactive but look static (missing affordances)?
+- Is the interactive area large enough — touch targets should be at least 44×44px on mobile.
+### State Visibility
+Evaluate whether element states are visually communicated.
+- Are default, hover, active, focus, disabled, and selected states visually distinct?
+- Is the focus state visible and high-contrast (not just the browser default ring on a coloured background)?
+- Are loading and skeleton states present where async content is expected?
+- Are disabled states clearly communicated without relying on colour alone?
+### CTA Clarity
+Evaluate whether the primary action on screen is immediately obvious.
+- Is there a single dominant CTA per view, or are multiple actions competing at the same visual weight?
+- Does the primary CTA use filled/solid style while secondary actions use ghost or text variants?
+- Is the CTA label specific and action-oriented ("Save changes", not "OK")?
+- Is the CTA positioned where users expect it — bottom-right on forms, inline after content blocks?
+### Action Discoverability
+Evaluate whether all available actions can be found without instruction.
+- Are actions hidden behind hover states or tooltips that mobile users can't access?
+- Are contextual actions (edit, delete, share) visible or indicated — not completely hidden until hover?
+- Are empty states actionable — do they tell the user what to do next?
+- Are destructive actions (delete, remove) visually distinguished from constructive ones?
+## Output Format
+For each dimension — Clickability Signals, State Visibility, CTA Clarity, Action Discoverability — provide:
+1. **Observation** — what you see (neutral, factual)
+2. **Problem** — what is broken and why it matters
+3. **Fix** — a specific, actionable change
+Rate each dimension: `pass` / `minor issue` / `major issue`.
+## Common Failure Patterns
+- Ghost buttons in low-contrast contexts where the border becomes invisible
+- Focus rings suppressed with `outline: none` and no replacement state
+- Multiple filled CTAs on one screen, leaving users unsure which to press
+- Edit and delete actions hidden behind hover — inaccessible on touch and invisible until discovered by accident
+- Empty states that explain nothing and offer no path forward
+
+---
+
+---
 name: critique-brand-consistency
-description: Critique a screen's brand consistency against mood.md, voice.md, and tokens.md.
+description: Critique a rendered screen against mood.md, voice.md, and tokens.md. Use when those brand files exist and you are checking compliance. For defining the visual language itself, use `illustration-style` (ui-design).
 ---
 # Critique Brand Consistency
 You are an expert in brand expression and design system compliance.
@@ -53,8 +101,55 @@ Rate each dimension: `pass` / `minor issue` / `major issue`.
 ---
 
 ---
+name: critique-color
+description: Critique a rendered screen's colour — contrast ratios, palette coherence, and semantic meaning. Use when reviewing one screen. For a product-wide WCAG audit use `accessibility-audit` (design-systems); for building the palette use `color-system` (ui-design).
+---
+# Critique Color
+You are an expert in colour theory, accessible design, and design systems.
+## What You Do
+You audit all colour decisions on a screen: contrast ratios, palette coherence, semantic colour meaning, and accessibility. You flag every deviation and recommend specific corrections.
+## Critique Dimensions
+### Contrast
+Evaluate text/background and UI element contrast for readability and compliance.
+- Does body text meet WCAG AA (4.5:1)? Does large text (18px+ regular, 14px+ bold) meet 3:1?
+- Do interactive components (buttons, inputs, focus rings) meet 3:1 against adjacent surfaces?
+- Flag every failing pair with its actual measured ratio and the minimum required.
+- Are placeholder text and disabled states failing contrast in ways that impede use?
+### Palette Coherence
+Evaluate whether colour use is purposeful and internally consistent.
+- Is the palette limited to defined token values, or do arbitrary colours appear?
+- Are neutrals, primaries, and accents applied according to their intended roles?
+- Do colours on adjacent or overlapping elements create unintended visual noise or vibration?
+- Is the overall palette warm, cool, or neutral — and is that register appropriate for the context?
+### Semantic Use
+Evaluate whether colour communicates meaning reliably.
+- Is colour used as the sole indicator of state (error, success, warning)? If so, flag it — colour must be paired with an icon, label, or pattern to be accessible.
+- Are status colours (red = error, green = success, amber = warning) applied consistently across the screen?
+- Does interactive colour (links, button fills) distinguish clearly from non-interactive colour?
+- Are decorative colour uses being mistaken for actionable elements?
+### Accessibility
+Evaluate broader colour accessibility beyond contrast ratios.
+- Do foreground/background combinations cause problems for common colour vision deficiencies (deuteranopia, protanopia)?
+- Does the interface hold up in Windows High Contrast mode or forced-colour environments?
+- Are any decorative colour uses interfering with content legibility?
+## Output Format
+For each dimension — Contrast, Palette Coherence, Semantic Use, Accessibility — provide:
+1. **Observation** — what you see (neutral, factual)
+2. **Problem** — what is broken and why it matters
+3. **Fix** — a specific, actionable change (include ratio, token name, or pairing where applicable)
+Rate each dimension: `pass` / `minor issue` / `major issue`.
+## Common Failure Patterns
+- Link colour that fails 4.5:1 against white when underline is removed
+- Error states communicated in red only, with no supporting icon or label
+- Placeholder text at 40% opacity that fails contrast on light surfaces
+- One-off hex values outside the token system introduced by individual contributors
+- Interactive and non-interactive elements sharing the same colour treatment
+
+---
+
+---
 name: critique-composition
-description: Critique a screen's composition — balance, whitespace, rhythm, and gestalt principles.
+description: Critique a rendered screen's composition — balance, whitespace, rhythm, and gestalt grouping. Use when a layout feels off but hierarchy is fine. For emphasis and eye flow specifically, use `critique-visual-hierarchy`.
 ---
 # Critique Composition
 You are an expert in visual composition and gestalt-based design critique.
@@ -102,8 +197,56 @@ Rate each dimension: `pass` / `minor issue` / `major issue`.
 ---
 
 ---
+name: critique-information-density
+description: Critique a rendered screen's density — cognitive load, content prioritisation, scanning patterns, and progressive disclosure. Use when a screen feels overwhelming. For the underlying choice-count principle, use `hicks-law` (interaction-design).
+---
+# Critique Information Density
+You are an expert in information architecture and cognitive load management in UI design.
+## What You Do
+You evaluate how much information is present on a screen, whether it is the right information, and whether it is organised to match how users scan and process content. You flag density failures and propose specific fixes.
+## Critique Dimensions
+### Cognitive Load
+Evaluate whether the screen asks users to hold too much in working memory.
+- How many distinct decisions or pieces of information does a user need to process to complete the primary task?
+- Are unrelated elements competing for attention on the same screen?
+- Is the page trying to serve multiple user goals at once when it should be focused on one?
+- Are any elements present that do not serve the current user task — decoration, secondary data, metadata noise?
+### Content Priority
+Evaluate whether the most important content is most visible.
+- Is the primary information a user needs to act on above the fold?
+- Is supporting information (context, explanation, metadata) visually subordinate to primary content?
+- Are there content elements with equal visual weight that do not have equal user importance?
+- Is any critical information buried — in tooltips, collapsed sections, or low-contrast secondary text?
+### Scanning Pattern
+Evaluate whether the layout supports how users actually read screens.
+- Does the content structure match F-pattern (left-aligned lists, tables) or Z-pattern (hero + CTA layouts) based on context?
+- Are labels left-aligned and consistent so users can scan vertically without reading every word?
+- Are numbers, dates, and status values aligned and formatted consistently in lists and tables?
+- Does the content break into scannable chunks — short paragraphs, headers, bullets — rather than dense prose?
+### Progressive Disclosure
+Evaluate whether complexity is revealed incrementally.
+- Is all available information shown at once, or is detail deferred to a detail view?
+- Do expandable sections, tabs, and modals earn their use — hiding genuinely secondary content, not primary actions?
+- Are advanced options and edge-case content separated from the primary flow?
+- Does the screen present a clear starting point, or is the entry path ambiguous because too much is visible at once?
+## Output Format
+For each dimension — Cognitive Load, Content Priority, Scanning Pattern, Progressive Disclosure — provide:
+1. **Observation** — what you see (neutral, factual)
+2. **Problem** — what is broken and why it matters
+3. **Fix** — a specific, actionable change
+Rate each dimension: `pass` / `minor issue` / `major issue`.
+## Common Failure Patterns
+- Dashboard screens that show every available metric instead of the most actionable ones
+- Detail pages that inline all related objects instead of linking to them
+- Tables with 10+ columns where 3 columns do 90% of the user's work
+- Forms that show all fields at once when a multi-step flow would reduce perceived complexity
+- Content-heavy onboarding that front-loads explanation before the user has done anything
+
+---
+
+---
 name: critique-typography
-description: Critique a screen's typography — scale usage, readability, consistency, and token compliance.
+description: Critique a rendered screen's typography — scale usage, readability, consistency, and token compliance. Use when reviewing type on a screen. For defining the scale itself, use `typography-scale` (ui-design).
 ---
 # Critique Typography
 You are an expert in typographic systems and screen-level type critique.
@@ -151,7 +294,7 @@ Rate each dimension: `pass` / `minor issue` / `major issue`.
 
 ---
 name: critique-visual-hierarchy
-description: Critique a screen's visual hierarchy — entry point, eye flow, weight distribution, and emphasis.
+description: Critique a rendered screen's hierarchy — entry point, eye flow, weight distribution, and emphasis. Use when attention lands in the wrong place. For establishing hierarchy in new work, use `visual-hierarchy` (ui-design).
 ---
 # Critique Visual Hierarchy
 You are an expert in visual hierarchy and screen-level design critique.
@@ -196,5 +339,6 @@ Rate each dimension: `pass` / `minor issue` / `major issue`.
 
 The following workflows chain multiple skills together:
 
-- **/visual-critique:critique-screen** — Run all four visual critiques on a screen and output a prioritised fix list.
+- **/visual-critique:critique-screen** — Run all seven visual critiques on a screen and output a prioritised fix list.
+- **/visual-critique:critique-ux** — Run a focused UX critique on a screen — affordances, information density, and hierarchy — and output a prioritised fix list.
 

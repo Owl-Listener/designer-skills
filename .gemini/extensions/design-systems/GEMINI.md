@@ -9,7 +9,7 @@ Apply whichever skills are relevant to the user's request.
 
 ---
 name: accessibility-audit
-description: Conduct a comprehensive accessibility audit against WCAG guidelines with severity ratings and remediation steps.
+description: Audit an existing interface against WCAG, producing findings with severity ratings and remediation steps. Use when you have a design or build to assess now. Not for planning future sessions with assistive-technology users — use `accessibility-test-plan` (prototyping-testing).
 ---
 # Accessibility Audit
 You are an expert in digital accessibility, WCAG guidelines, and inclusive design.
@@ -38,7 +38,7 @@ Description, location, WCAG criterion, severity, impact, remediation steps, code
 
 ---
 name: component-spec
-description: Write a detailed component specification including props, states, variants, accessibility requirements, and usage guidelines.
+description: Specify one component — props, states, variants, accessibility, and usage rules. Use when defining a library component. For the reusable doc scaffold use `documentation-template`; for a problem-solution pattern use `pattern-library`.
 ---
 # Component Spec
 You are an expert in writing thorough, implementable component specifications for design systems.
@@ -64,7 +64,7 @@ You create complete component specs covering anatomy, behavior, variants, states
 
 ---
 name: design-system-governance
-description: Define how a design system evolves — contribution models, versioning, change management, and deprecation.
+description: Define how the system evolves — contribution model, versioning, deprecation, and change management. Use when multiple teams contribute. For driving uptake use `design-system-adoption` (designer-toolkit); for design file history use `version-control-strategy` (design-ops).
 ---
 # Design System Governance
 You are an expert in the operational and organizational structures that keep a design system healthy over time.
@@ -145,7 +145,7 @@ Define what a component must have before it can enter the system:
 
 ---
 name: design-token
-description: Define and organize design tokens (color, spacing, typography, elevation) with naming conventions and usage guidance.
+description: Define and organise tokens for colour, spacing, type, and elevation with naming and usage rules. Use when establishing the token layer. For auditing existing usage use `design-token-audit` (designer-toolkit); for multi-brand mapping use `theming-system`.
 ---
 # Design Token
 You are an expert in design token architecture and systematic design foundations.
@@ -175,7 +175,7 @@ Pattern: {category}-{property}-{variant}-{state}
 
 ---
 name: documentation-template
-description: Generate structured documentation templates for components, patterns, or guidelines within a design system.
+description: Generate a reusable documentation scaffold for components, patterns, or guidelines. Use when standardising how the system is documented. For the content of one component's spec, use `component-spec`.
 ---
 # Documentation Template
 You are an expert in creating consistent documentation structures for design systems.
@@ -205,7 +205,7 @@ Purpose, principles, rules/specs, examples, exceptions, resources.
 
 ---
 name: icon-system
-description: Create an icon system specification covering grid, sizing, naming, categories, and implementation guidance.
+description: Specify an icon system — grid, sizing, stroke weight, naming, categories, and implementation. Use when standardising iconography. For broader illustration, use `illustration-style` (ui-design).
 ---
 # Icon System
 You are an expert in designing and maintaining comprehensive icon systems.
@@ -235,7 +235,7 @@ SVG source, sprite sheets, component wrappers, Figma library
 
 ---
 name: localization-design
-description: Design interfaces that adapt gracefully to multiple languages, writing directions, and cultural contexts.
+description: Design for multiple languages, writing directions, and cultural contexts — text expansion, RTL mirroring, and locale formats. Use when shipping beyond one locale. For the words themselves, use `ux-writing` (designer-toolkit).
 ---
 # Localization Design
 You are an expert in designing UI that works across languages, scripts, and cultures without requiring per-locale redesigns.
@@ -310,7 +310,7 @@ Color meaning varies significantly by culture:
 
 ---
 name: motion-system
-description: Define a motion system with duration tokens, easing vocabulary, and reduced-motion handling for consistent animation across a product.
+description: Define motion tokens — durations, easing vocabulary, and reduced-motion handling — for consistency product-wide. Use when standardising motion across a system. For crafting one specific animation, use `animation-principles` (interaction-design).
 ---
 # Motion System
 You are an expert in defining motion as a systematic design token layer, not a collection of one-off animations.
@@ -371,7 +371,7 @@ Every product's motion system should be grounded in 3–5 principles:
 
 ---
 name: naming-convention
-description: Establish a naming convention system for design elements, components, and tokens with clear rules and examples.
+description: Establish naming rules for components, tokens, and layers with patterns and worked examples. Use when names are inconsistent or being set. For what the tokens actually contain, use `design-token`.
 ---
 # Naming Convention
 You are an expert in creating clear, scalable naming systems for design assets, components, and tokens.
@@ -400,7 +400,7 @@ You establish naming conventions that make design systems predictable, searchabl
 
 ---
 name: pattern-library
-description: Structure a pattern library entry with problem context, solution pattern, usage examples, and related patterns.
+description: Structure a pattern entry — problem context, solution, usage examples, and related patterns. Use when documenting a recurring solution rather than a component. For a single component's API, use `component-spec`.
 ---
 # Pattern Library
 You are an expert in documenting reusable design patterns that solve recurring UX problems.
@@ -427,7 +427,7 @@ Navigation, input, display, feedback, onboarding
 
 ---
 name: theming-system
-description: Design a theming architecture that supports brand variants, dark mode, and high-contrast modes with token mapping.
+description: Design theming architecture — brand variants, dark mode, and high-contrast — mapped through token layers. Use when one system must serve multiple themes. For a single palette use `color-system` (ui-design); for dark mode craft use `dark-mode-design` (ui-design).
 ---
 # Theming System
 You are an expert in flexible theming architectures for multi-brand, multi-mode design systems.
@@ -462,6 +462,6 @@ CSS custom properties, token files per theme, Figma variable modes, runtime swit
 The following workflows chain multiple skills together:
 
 - **/design-systems:audit-system** — Run a comprehensive audit of an existing design system for consistency, completeness, and accessibility.
-- **/design-systems:create-component** — Scaffold a full component specification from a name or description.
-- **/design-systems:tokenize** — Extract and organize design tokens from an existing design or stylesheet.
+- **/design-systems:create-component** — Scaffold a full component specification end to end — props, states, variants, accessibility, and documentation.
+- **/design-systems:tokenize** — Extract tokens from an existing design or stylesheet and organise them — naming, structure, and theme mapping.
 

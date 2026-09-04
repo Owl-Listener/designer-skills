@@ -62,7 +62,7 @@ The other four collections each live in their own repo, with their own stars and
 
 ## Design practice (this repo)
 
-Agentic skills, commands, and plugins for design, from research to systems, UI, interaction, and delivery. **107 skills and 32 commands across 9 plugins.**
+Agentic skills, commands, and plugins for design, from research to systems, UI, interaction, and delivery. **109 skills and 33 commands across 9 plugins.**
 
 ### Plugins
 
@@ -73,7 +73,7 @@ Agentic skills, commands, and plugins for design, from research to systems, UI, 
 | ux-strategy | 12 | 3 | Shape product direction: competitive analysis, design principles, experience mapping, information architecture, content strategy, and service blueprints. |
 | ui-design | 19 | 5 | Craft polished interfaces: layout grids, color systems, typography, responsive design, data viz, Gestalt/perceptual principles, and platform conventions. |
 | interaction-design | 22 | 5 | Design meaningful interactions: micro-animations, state machines, gestures, feedback, cognitive laws, forms, onboarding, navigation, search, and conversational UX. |
-| prototyping-testing | 8 | 4 | Validate designs: prototyping strategies, usability testing, heuristic evaluation, and A/B experiments. |
+| prototyping-testing | 10 | 5 | Validate designs: prototyping strategies, usability testing, heuristic evaluation, and A/B experiments. |
 | design-ops | 9 | 3 | Streamline operations: critique frameworks, handoff specs, sprint planning, team workflows, design debt, and impact reporting. |
 | designer-toolkit | 7 | 3 | Essential utilities: design rationale, presentations, case studies, UX writing, system adoption, and design negotiation. |
 | visual-critique | 7 | 2 | Visual critique: hierarchy, brand consistency, composition, typography, colour, affordance, and information density. |
@@ -108,6 +108,7 @@ These nine plugins ship from **this** repo — none of them has a separate repo,
 | `/interaction-design:map-states` | interaction-design | Model a component's states and transitions end to end — states, events, guards, and edge cases. |
 | `/prototyping-testing:evaluate` | prototyping-testing | Run a heuristic evaluation end to end — expert review against heuristics with severity ratings and recommended fixes. |
 | `/prototyping-testing:experiment` | prototyping-testing | Design an A/B experiment end to end — hypothesis, variants, primary metric, and sample size. |
+| `/prototyping-testing:explore-options` | prototyping-testing | Run a parallel exploration end to end — frame the decision, build a spread of behaviourally distinct concepts, pressure-test each, and converge with a decision record. |
 | `/prototyping-testing:prototype-plan` | prototyping-testing | Create a prototyping and testing plan for a design initiative. |
 | `/prototyping-testing:test-plan` | prototyping-testing | Choose a testing method and build the plan around it — method selection, task scenarios, click tests, and accessibility coverage. |
 | `/ui-design:color-palette` | ui-design | Run the full colour workflow — tonal scales, semantic mapping, contrast checks, dark mode, and chart colours — and output a documented palette. |

@@ -8,8 +8,95 @@ Apply whichever skills are relevant to the user's request.
 ---
 
 ---
+name: business-design
+description: Read financials, map competitive landscapes, and argue design decisions in the language of value. Use when defending design to commercial stakeholders. For the live negotiation itself, use `design-negotiation` (designer-toolkit).
+---
+# Business Design
+
+You help designers navigate the business layer of product work — not to make design subservient to business goals, but to make design legible to the people who set them.
+
+The gap is usually language, not intent. A designer who can read a P&L and explain their work in terms of value is not compromising their craft — they're protecting it.
+
+## What You Do
+
+You translate between design thinking and business thinking. You help a designer understand where their work sits in the commercial picture, how to read a room when strategy is being set, and how to make a case that holds up when challenged by a PM or CFO who leads with ROI.
+
+## Reading a P&L as a Designer
+
+Design decisions affect both sides of the ledger.
+
+**Revenue drivers:**
+- Conversion rate — the purchase or signup flow is a design surface
+- Retention — the continued-use loop is a design problem
+- Average order value — cross-sell and discovery UX directly moves this
+- Referral and word of mouth — product delight drives organic acquisition
+
+**Cost drivers:**
+- Support volume — confusing flows generate tickets; clarity reduces cost
+- Onboarding failure — users who don't activate cost acquisition spend with no return
+- Churn — usually a product experience problem before it's a pricing one
+
+When a design decision is challenged, the first question is: which line does it move?
+
+## Competitive Landscape Mapping
+
+Competitive analysis from a design lens asks different questions than a feature comparison matrix.
+
+**What to map:**
+- Interaction model — how does the product ask users to think about their work?
+- Emotional register — clinical, warm, playful, professional?
+- Table-stakes UX — what does every product in this space do, and how well?
+- Gaps — what problem is consistently handled poorly, even by the best?
+- Aspiration benchmarks — what products outside this category set the bar for the experience you're after?
+
+**Output:** A map that locates your product not on feature parity, but on experience quality and differentiation.
+
+## Defending Design in Business Language
+
+The test: can you answer "why does this matter to the business?" without reaching for abstract UX principles?
+
+**Frame the decision as a bet:**
+"We're betting that reducing friction at this step will increase completion rate, which moves [metric]. The cost of not doing it is [quantified abandonment]."
+
+**Anchor to existing data:**
+User research, analytics, support tickets, NPS qualitative comments — translate these into risk or opportunity language.
+
+**Show the counterfactual:**
+"If we don't address this, we're accepting [outcome]. Here's the signal that's already visible."
+
+**Separate taste from evidence:**
+When you're making a judgment call rather than an evidence-based decision, name it: "This is a craft decision — the evidence supports improving this area; the specific approach is a judgment call based on [principle / precedent / testing]."
+
+## Aligning Design Work to KPIs
+
+Before starting any significant design effort, map it to at least one metric:
+
+| Design work | What it moves |
+|---|---|
+| Onboarding flow redesign | Activation rate, time-to-value |
+| Error state improvement | Support ticket volume, retry rate |
+| Navigation restructure | Task completion, session depth |
+| Empty state design | Feature discovery, secondary activation |
+| Search and filter UX | Conversion, bounce from search |
+
+If you can't name a metric, either the work is too small to track or the framing is too vague — sharpen one of them.
+
+## Best Practices
+
+- Know the one metric your product team is optimizing for this quarter; design to that
+- Read the product roadmap as a financial bet, not a feature list
+- In strategy conversations, ask "what does success look like in 90 days?" before offering design solutions
+- Don't translate design into business language at the last minute — build it into how you frame work from the start
+
+## References
+
+Alen Faljic, [Mini Design MBA / d.MBA](https://d.mba) — the strategic thinking framework that underpins this skill.
+
+---
+
+---
 name: competitive-analysis
-description: Conduct a structured competitive analysis comparing UX patterns, features, strengths, and gaps across rival products.
+description: Compare UX patterns, features, strengths, and gaps across rival products. Use when you need to know what others actually do. For deliberately adopting their conventions, use `jakobs-law` (interaction-design).
 ---
 # Competitive Analysis
 You are an expert in evaluating competitive landscapes from a UX and design perspective.
@@ -38,7 +125,7 @@ Summary overview, comparison matrix, competitor profiles, opportunity map, annot
 
 ---
 name: content-strategy
-description: Define what content a product needs, how it should be structured, and who owns it.
+description: Define what content a product needs, how it is structured, and who owns it. Use when content itself is the problem. For the words in the interface use `ux-writing` (designer-toolkit); for structural hierarchy use `information-architecture`.
 ---
 # Content Strategy
 You are an expert in planning and governing the content that makes a product useful and trustworthy.
@@ -92,7 +179,7 @@ You define what content a product needs, where it lives, who creates and maintai
 
 ---
 name: design-brief
-description: Write a comprehensive design brief that defines the problem space, constraints, audience, and success criteria.
+description: Write a project brief — problem space, constraints, audience, and success criteria. Use at kickoff for one specific project. For long-horizon aspiration use `north-star-vision`; for reusable decision rules use `design-principles`.
 ---
 # Design Brief
 You are an expert in writing design briefs that set teams up for focused, effective work.
@@ -117,7 +204,7 @@ You create briefs defining problem, audience, constraints, and success criteria.
 
 ---
 name: design-principles
-description: Define a set of actionable design principles that guide decision-making and resolve trade-offs.
+description: Define actionable principles that resolve trade-offs when the team disagrees. Use when the same decisions keep getting relitigated. For a single project's framing, use `design-brief`.
 ---
 # Design Principles
 You are an expert in crafting design principles that genuinely guide teams through decisions.
@@ -149,7 +236,7 @@ For each: title (3-6 words), statement, rationale, application example, counter-
 
 ---
 name: experience-map
-description: Create a holistic experience map showing the full ecosystem of user touchpoints, channels, and relationships.
+description: Map the full ecosystem of touchpoints, channels, and relationships across a service. Use when the experience spans more than one product. For one persona's linear journey use `journey-map` (design-research); for backstage operations use `service-blueprint`.
 ---
 # Experience Map
 You are an expert in mapping complex, multi-channel user experiences at a systems level.
@@ -179,7 +266,7 @@ New products, omnichannel evaluation, ecosystem gap analysis, cross-team alignme
 
 ---
 name: information-architecture
-description: Design the structure, hierarchy, and navigation model for a product's content and features.
+description: Design content structure, hierarchy, labelling, and the navigation model. Use when organising what exists. For the UI that exposes it use `navigation-patterns` (interaction-design); for user-generated grouping evidence use `card-sort-analysis` (design-research).
 ---
 # Information Architecture
 You are an expert in organizing information so users can find what they need and understand where they are.
@@ -231,7 +318,7 @@ You design the underlying structure of a product — how content and features ar
 
 ---
 name: metrics-definition
-description: Define UX metrics and KPIs that connect design decisions to measurable business and user outcomes.
+description: Define UX metrics and KPIs that connect design decisions to measurable outcomes. Use when choosing what to measure. For presenting the results afterwards, use `design-impact-reporting` (design-ops).
 ---
 # Metrics Definition
 You are an expert in defining meaningful UX metrics that demonstrate design impact.
@@ -261,7 +348,7 @@ Name, definition, method, data source, target, frequency, owner.
 
 ---
 name: north-star-vision
-description: Articulate a compelling north-star product vision that aligns teams and inspires strategic design decisions.
+description: Articulate a long-horizon product vision that aligns teams and anchors strategy. Use when direction is contested or absent. For near-term project scope, use `design-brief`.
 ---
 # North Star Vision
 You are an expert in articulating inspiring product visions that unite teams and guide direction.
@@ -288,7 +375,7 @@ Research synthesis, aspiration workshop, narrative writing, validation, communic
 
 ---
 name: opportunity-framework
-description: Identify, evaluate, and prioritize design opportunities using impact-effort frameworks and strategic criteria.
+description: Identify, score, and prioritise design opportunities against impact and effort. Use when there are more ideas than capacity. For framing the one you choose, use `design-brief`.
 ---
 # Opportunity Framework
 You are an expert in identifying, evaluating, and prioritizing design opportunities.
@@ -317,7 +404,7 @@ Ranked list with rationale, theme groupings, dependencies, confidence levels.
 
 ---
 name: service-blueprint
-description: Map the end-to-end service delivery system including frontstage actions, backstage processes, and supporting infrastructure.
+description: Map service delivery across frontstage actions, backstage processes, and supporting systems. Use when staff and operations are part of the experience. For the customer-visible layer only, use `experience-map`.
 ---
 # Service Blueprint
 You are an expert in service design and systems-level experience mapping.
@@ -373,7 +460,7 @@ Use journey maps to understand the experience; use blueprints to design and fix 
 
 ---
 name: stakeholder-alignment
-description: Create stakeholder alignment artifacts including responsibility matrices, decision frameworks, and communication plans.
+description: Build alignment artifacts — responsibility matrices, decision rights, and communication plans. Use when unclear ownership stalls decisions. For persuading in the moment, use `design-negotiation` (designer-toolkit).
 ---
 # Stakeholder Alignment
 You are an expert in navigating stakeholder landscapes and creating alignment around design decisions.
@@ -400,7 +487,7 @@ Stakeholders designing solutions, conflicting priorities, late-stage scope chang
 
 The following workflows chain multiple skills together:
 
-- **/ux-strategy:benchmark** — Run a competitive benchmarking analysis across a set of products.
+- **/ux-strategy:benchmark** — Run a competitive benchmark across a set of products — pattern comparison, gap analysis, and opportunity callouts.
 - **/ux-strategy:frame-problem** — Structure an ambiguous design challenge into a clear problem definition with constraints and criteria.
 - **/ux-strategy:strategize** — Develop a complete UX strategy for a product or feature area.
 

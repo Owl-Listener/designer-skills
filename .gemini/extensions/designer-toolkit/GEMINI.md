@@ -9,7 +9,7 @@ Apply whichever skills are relevant to the user's request.
 
 ---
 name: case-study
-description: Craft portfolio-ready case studies that tell the story of a design project.
+description: Craft a portfolio case study with narrative arc, process evidence, and outcomes. Use when telling a project's story to an external audience. For an internal stakeholder deck, use `presentation-deck`.
 ---
 # Case Study
 You are an expert in crafting compelling design case studies for portfolios and presentations.
@@ -69,7 +69,7 @@ You structure case studies that tell the story of a design project, demonstratin
 
 ---
 name: design-negotiation
-description: Advocate for design quality, scope, and time with cross-functional partners and leadership using evidence and shared goals.
+description: Advocate for design quality, scope, and timeline with partners and leadership using evidence and shared goals. Use in the conversation itself. For the commercial vocabulary behind it, use `business-design` (ux-strategy).
 ---
 # Design Negotiation
 You are an expert in advocating for design quality and investment in cross-functional environments.
@@ -141,7 +141,7 @@ Negotiation outcomes depend heavily on the relationships and credibility you've 
 
 ---
 name: design-rationale
-description: Write clear design rationale connecting decisions to user needs, business goals, and principles.
+description: Write rationale connecting decisions to user needs, business goals, and principles. Use when a decision needs defending in writing. For a live conversation, use `design-negotiation`.
 ---
 # Design Rationale
 You are an expert in articulating the reasoning behind design decisions.
@@ -185,7 +185,7 @@ How will you know if this decision was right? What metrics or feedback will conf
 
 ---
 name: design-system-adoption
-description: Create adoption strategies and materials to drive design system usage across teams.
+description: Create adoption strategy and enablement materials to drive design system usage. Use when the system exists but teams ignore it. For contribution and versioning rules, use `design-system-governance` (design-systems).
 ---
 # Design System Adoption
 You are an expert in driving design system adoption across design and engineering teams.
@@ -241,7 +241,7 @@ You create strategies and materials that help teams adopt and consistently use a
 
 ---
 name: design-token-audit
-description: Audit design token usage across a product for consistency and coverage.
+description: Audit token usage across a product for coverage, drift, and hard-coded values. Use when tokens exist and you suspect they are being bypassed. For defining tokens in the first place, use `design-token` (design-systems).
 ---
 # Design Token Audit
 You are an expert in auditing design token adoption and consistency across products.
@@ -284,7 +284,7 @@ You audit how design tokens are used (or not used) in a product, identifying inc
 
 ---
 name: presentation-deck
-description: Structure compelling design presentations for stakeholders, reviews, and showcases.
+description: Structure a design presentation for a specific audience and decision. Use when presenting internally. For a portfolio narrative use `case-study`; for the written argument use `design-rationale`.
 ---
 # Presentation Deck
 You are an expert in structuring design presentations that communicate clearly and persuade effectively.
@@ -328,7 +328,7 @@ Goal: Demonstrate capability. Structure: challenge, approach, key decisions, out
 
 ---
 name: ux-writing
-description: Write effective UI copy including microcopy, error messages, empty states, and CTAs.
+description: Write interface copy — microcopy, error messages, empty states, and CTAs. Use when the words are the deliverable. For content structure and ownership, use `content-strategy` (ux-strategy).
 ---
 # UX Writing
 You are an expert in writing clear, helpful interface copy that guides users and reinforces the product voice.
@@ -387,7 +387,7 @@ You write UI copy that helps users accomplish tasks, understand status, and feel
 
 The following workflows chain multiple skills together:
 
-- **/designer-toolkit:build-presentation** — Structure a design presentation for a specific audience.
-- **/designer-toolkit:write-case-study** — Create a portfolio case study from a project summary.
-- **/designer-toolkit:write-rationale** — Write design rationale for a set of design decisions.
+- **/designer-toolkit:build-presentation** — Build a design presentation end to end — audience framing, narrative structure, and supporting rationale.
+- **/designer-toolkit:write-case-study** — Build a portfolio case study end to end — project framing, process narrative, outcomes, and visuals.
+- **/designer-toolkit:write-rationale** — Write design rationale for a set of decisions, linking each to user needs, business goals, and principles.
 
