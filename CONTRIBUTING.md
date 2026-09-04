@@ -87,9 +87,9 @@ bash   scripts/build-gemini.sh
 python3 scripts/check-marketplace.py
 ```
 
-`lint-frontmatter.py` reports frontmatter errors with file and line references.
+`lint-frontmatter.py` reports frontmatter errors with file and line references. It parses with a real YAML parser, so it sees your frontmatter the way a runtime does: an unquoted `argument-hint: [like this]` is a *list* in YAML, not a string, which is what silently broke four skills on Copilot CLI in #27. **Quote any value containing brackets, a colon, or a bare `yes`/`no`.** Needs PyYAML (`pip install pyyaml`).
 
-`check-runtimes.py` parses the same frontmatter with a real YAML parser and fails when a file would mean something different to a runtime than it does to the linter — an unquoted `argument-hint: [like this]` is a *list* in YAML, which is what silently broke four skills on Copilot CLI in #27. Quote any value containing brackets, a colon, or a bare `yes`/`no`. Needs PyYAML (`pip install pyyaml`).
+`check-runtimes.py` asks the separate question of whether each runtime can actually load what we ship — the frontmatter contract plus each plugin's Gemini extension manifest and context file.
 
 `check-marketplace.py` confirms every plugin in `marketplace.json` still resolves — local sources to a real directory, remote ones to a clonable URL. Add `--network` to also check the remote repos are reachable.
 
