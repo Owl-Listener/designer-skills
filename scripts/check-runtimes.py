@@ -14,23 +14,26 @@ Copilot CLI >= 1.0.65 validates the field as a string, rejected the skill, and
 the command silently vanished from its menu. Four skills shipped that way until
 an outside contributor debugged it (#28).
 
-scripts/lint-frontmatter.py cannot catch this. It parses frontmatter by hand,
-splitting each line on the first ":", so the broken form reaches it as the
-string "[product or feature to research]" and passes its bracket check. Every
-real runtime sees a list. That gap is the bug.
+scripts/lint-frontmatter.py once parsed frontmatter by hand, splitting each
+line on the first ":", so the broken form reached it as the string
+"[product or feature to research]" and passed its bracket check while every
+real runtime saw a list. That gap is why this script was written, and it is
+now closed at the source: the linter parses with PyYAML too, so the two can no
+longer disagree about what a file says.
 
-So this script asks a different question from the linter's "does this follow
-our house rules?" — it asks "does this file mean the same thing to a strict
-parser as it does to us?" It checks:
+What remains here is the question the linter does not ask — not "is this file
+correct?" but "will each runtime actually load it?" It checks:
 
   - the frontmatter block exists and parses as a YAML mapping
   - every field value is a plain string, not a value YAML silently coerced
     into a list, bool, number, null, or nested mapping
-  - the repo's own hand-rolled parse agrees with a real YAML parse; where they
-    disagree, the linter is validating something the runtime will never see
   - required fields are present for each file kind
   - every local plugin ships a valid Gemini extension manifest and a non-empty
     context file
+
+The first three overlap with the linter by design. They are cheap, and they
+state the runtime contract in one place rather than leaving it implicit in
+another script's house rules.
 
 Run it:
 
@@ -100,16 +103,6 @@ def _frontmatter_block(path: Path) -> str | None:
     return m.group(1) if m else None
 
 
-def _hand_parse(block: str) -> dict[str, str]:
-    """Reproduce scripts/lint-frontmatter.py's parser, to compare against YAML."""
-    fields: dict[str, str] = {}
-    for raw_line in block.splitlines():
-        if ":" in raw_line:
-            key, _, value = raw_line.partition(":")
-            fields[key.strip()] = value.strip()
-    return fields
-
-
 def _line_of_key(path: Path, key: str) -> int | None:
     for i, line in enumerate(path.read_text(encoding="utf-8").splitlines(), start=1):
         if re.match(rf"^{re.escape(key)}\s*:", line):
@@ -136,30 +129,14 @@ def check_file(path: Path, kind: str, explain: bool) -> None:
                       f"{type(parsed).__name__}", 1)
         return
 
-    hand = _hand_parse(block)
-
     for key, value in parsed.items():
-        line = _line_of_key(path, str(key))
-
-        # 1. The #27 class: YAML coerced the value into something else.
+        # The #27 class: YAML coerced the value into something else.
         if not isinstance(value, str):
             reason = _COERCION.get(type(value), f"a {type(value).__name__}")
-            _report(path, f"`{key}` is not a string — YAML reads it as {reason}", line)
-            continue
+            _report(path, f"`{key}` is not a string — YAML reads it as {reason}",
+                    _line_of_key(path, str(key)))
 
-        # 2. The linter and a real parser disagree about what this value is.
-        #    When they do, the linter is checking something no runtime sees.
-        hand_value = hand.get(str(key), "")
-        if hand_value.strip('"').strip("'") != value:
-            _report(
-                path,
-                f"`{key}` parses differently for the linter and for a runtime — "
-                f"lint-frontmatter.py sees {hand_value!r} but a YAML parser sees "
-                f"{value!r}; quote the value so both agree",
-                line,
-            )
-
-    # 3. Required fields, checked against the real parse rather than the hand one.
+    # Required fields.
     for field in REQUIRED[kind]:
         if field not in parsed:
             _report(path, f"required field `{field}` is missing", 1)
@@ -233,9 +210,8 @@ def main() -> None:
         sys.exit(1)
 
     print(
-        f"OK — {len(skills)} skills and {len(commands)} commands parse "
-        "identically for a strict YAML runtime and for this repo's linter; "
-        "all Gemini extensions are loadable.",
+        f"OK — {len(skills)} skills and {len(commands)} commands load cleanly "
+        "under a strict YAML runtime; all Gemini extensions are loadable.",
         flush=True,
     )
 
