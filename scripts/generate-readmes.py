@@ -124,7 +124,15 @@ def _update_root_readme(counts: dict[str, tuple[int, int]]) -> bool:
     n_plugins = len(counts)
 
     # Collection summary line: "**N skills and N commands across N plugins.**"
-    # The all-collections line includes "in five collections" — leave it alone.
+    #
+    # The all-collections line ("... in five collections") is left alone: it
+    # spans five repositories and cannot be derived from this checkout. It is
+    # maintained by hand and has drifted before, so recompute it by resolving
+    # every source in .claude-plugin/marketplace.json to a directory — local
+    # "./path" here, git-subdir sources in a clone of the named repo — and
+    # counting skills/*/SKILL.md and commands/*.md under each. Count the 33
+    # plugin directories, never raw SKILL.md files: ai-design-skills mirrors
+    # its 44 skills into three trees, so a naive find would treble them.
     text = re.sub(
         r"\*\*\d+ skills and \d+ commands across \d+ plugins\.\*\*",
         f"**{total_s} skills and {total_c} commands across {n_plugins} plugins.**",
