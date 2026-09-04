@@ -230,7 +230,7 @@ Open an issue. If something isn't working the way you expected, or if a skill ou
 
 ## Contributing
 
-Each collection takes contributions in its own repo. Add a skill, ship its plugin manifest in the same commit, and open a PR. 
+Contribute to a collection in the repo that hosts it. The nine design-practice plugins live here, so skills and fixes for them — `ux-strategy` included — are PRs against this repo. The other four collections take contributions in their own repos, linked in the table above. Add a skill, ship its plugin manifest in the same commit, and open a PR.
 PRs for new skills or structural changes without a corresponding open issue will be closed without review.
 
 ## Community Integrations
