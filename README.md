@@ -2,7 +2,7 @@
 
 Design skills for the agent era, written so an AI agent can actually use them.
 
-**241 skills and 91 commands across 33 plugins, in five collections**, for [Claude Code](https://docs.anthropic.com/en/docs/claude-code) and [Gemini CLI](https://github.com/google-gemini/gemini-cli).
+**273 skills and 76 commands across 33 plugins, in five collections**, for [Claude Code](https://docs.anthropic.com/en/docs/claude-code) and [Gemini CLI](https://github.com/google-gemini/gemini-cli).
 
 **Not sure which skill you need? Start with the [skill index](./INDEX.md)** — every skill in this repo arranged by the situation you're in, plus the pairs most often mistaken for each other.
 
