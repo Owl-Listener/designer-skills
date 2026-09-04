@@ -46,13 +46,13 @@
     },
     {
       "name": "design-ops",
-      "description": "Design operations skills: handoff specs, design critique facilitation, design sprint planning, asset management, and design debt audits.",
+      "description": "Design operations skills: handoff specs, design critique facilitation, design sprint planning, team workflows, QA checklists, and design debt audits.",
       "source": "./design-ops",
       "category": "design"
     },
     {
       "name": "designer-toolkit",
-      "description": "Designer utility skills: portfolio review, resume building, case study structure, design presentations, stakeholder communication, and design briefs.",
+      "description": "Designer utility skills: design rationale, case study structure, design presentations, UX writing, design system adoption, and design negotiation — plus the /start-here router.",
       "source": "./designer-toolkit",
       "category": "design"
     },
