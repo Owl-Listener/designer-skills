@@ -12,8 +12,14 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Install check dependencies
+        run: python3 -m pip install --quiet pyyaml
+
       - name: Check SKILL.md and command frontmatter
         run: python3 scripts/lint-frontmatter.py
+
+      - name: Check skills load in every runtime that reads them
+        run: python3 scripts/check-runtimes.py
 
       - name: Check README counts and tables are up to date
         run: |
