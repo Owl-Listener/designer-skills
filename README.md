@@ -56,7 +56,7 @@ cp -r /tmp/designer-skills/.gemini/extensions/. .gemini/extensions/
 | [Design leadership](https://github.com/Owl-Listener/design-leadership-skills) | 6 | Leading design: people, teams, strategy, org influence, operating cadence, leadership craft. |
 | [Inclusive design](https://github.com/Owl-Listener/inclusive-design-skills) | 6 | Accessible by default: cognitive accessibility, inclusive interaction, accessible content, inclusive personas, adaptive interfaces, accessibility decisions. |
 
-Each collection also lives in its own repo, with its own stars and full detail. This repo is the front door, and the home of the design-practice collection below.
+The other four collections each live in their own repo, with their own stars and full detail, and this marketplace pulls their plugins in for you — so the one install above covers all five. This repo is the front door, and the home of the design-practice collection below.
 
 ---
 
@@ -77,6 +77,12 @@ Agentic skills, commands, and plugins for design, from research to systems, UI, 
 | design-ops | 9 | 3 | Streamline operations: critique frameworks, handoff specs, sprint planning, team workflows, design debt, and impact reporting. |
 | designer-toolkit | 7 | 3 | Essential utilities: design rationale, presentations, case studies, UX writing, system adoption, and design negotiation. |
 | visual-critique | 7 | 2 | Visual critique: hierarchy, brand consistency, composition, typography, colour, affordance, and information density. |
+
+These nine plugins ship from **this** repo — none of them has a separate repo, and there is nothing to clone. After adding the marketplace, install one by name:
+
+```
+/plugin install ux-strategy@designer-skills
+```
 
 ### All commands
 

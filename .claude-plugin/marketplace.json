@@ -2,7 +2,7 @@
   "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
   "name": "designer-skills",
   "version": "2.0.0",
-  "description": "The Designer Skills suite: agentic skills, commands, and plugins for design in the agent era \u2014 design practice, AI product design, UX program management, design leadership, and inclusive design. One install surfaces every collection; each lives in its own repo.",
+  "description": "The Designer Skills suite: agentic skills, commands, and plugins for design in the agent era \u2014 design practice, AI product design, UX program management, design leadership, and inclusive design. One install surfaces every collection: the design-practice plugins ship from this repo, and the other four collections are pulled in from their own repos.",
   "owner": {
     "name": "MC Dean",
     "url": "https://marieclairedean.substack.com/"
