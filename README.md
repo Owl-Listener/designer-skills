@@ -22,6 +22,8 @@ This just tells Claude where the skills live. Nothing installs yet.
 
 **3. Pick what you want.** Type `/plugin` and press enter, then open the **Discover** tab. You'll see all the collections. Move with the arrow keys, press space to tick the ones you want, and enter to install. That's it.
 
+**4. Don't know which skill you need?** Type `/designer-toolkit:start-here` and say what you're working on. It names the stage you're at, gives you one command to run now and the two that follow it, and tells you what you can skip. Use it whenever you're unsure where a piece of work begins.
+
 ### I only want the design skills, not everything
 
 Same three steps. On the Discover list in step 3, just tick the design ones, design-research, design-systems, ui-design, interaction-design, and so on, and leave the rest. Install as few or as many as you like, and come back for more any time.
@@ -62,7 +64,7 @@ The other four collections each live in their own repo, with their own stars and
 
 ## Design practice (this repo)
 
-Agentic skills, commands, and plugins for design, from research to systems, UI, interaction, and delivery. **109 skills and 33 commands across 9 plugins.**
+Agentic skills, commands, and plugins for design, from research to systems, UI, interaction, and delivery. **109 skills and 34 commands across 9 plugins.**
 
 ### Plugins
 
@@ -75,7 +77,7 @@ Agentic skills, commands, and plugins for design, from research to systems, UI, 
 | interaction-design | 22 | 5 | Design meaningful interactions: micro-animations, state machines, gestures, feedback, cognitive laws, forms, onboarding, navigation, search, and conversational UX. |
 | prototyping-testing | 10 | 5 | Validate designs: prototyping strategies, usability testing, heuristic evaluation, and A/B experiments. |
 | design-ops | 9 | 3 | Streamline operations: critique frameworks, handoff specs, sprint planning, team workflows, design debt, and impact reporting. |
-| designer-toolkit | 7 | 3 | Essential utilities: design rationale, presentations, case studies, UX writing, system adoption, and design negotiation. |
+| designer-toolkit | 7 | 4 | Essential utilities: design rationale, presentations, case studies, UX writing, system adoption, and design negotiation. |
 | visual-critique | 7 | 2 | Visual critique: hierarchy, brand consistency, composition, typography, colour, affordance, and information density. |
 
 These nine plugins ship from **this** repo — none of them has a separate repo, and there is nothing to clone. After adding the marketplace, install one by name:
@@ -99,6 +101,7 @@ These nine plugins ship from **this** repo — none of them has a separate repo,
 | `/design-systems:create-component` | design-systems | Scaffold a full component specification end to end — props, states, variants, accessibility, and documentation. |
 | `/design-systems:tokenize` | design-systems | Extract tokens from an existing design or stylesheet and organise them — naming, structure, and theme mapping. |
 | `/designer-toolkit:build-presentation` | designer-toolkit | Build a design presentation end to end — audience framing, narrative structure, and supporting rationale. |
+| `/designer-toolkit:start-here` | designer-toolkit | Find where to start in the collection — name what you're working on and get routed to one command, the two that follow it, and the stages you can skip. |
 | `/designer-toolkit:write-case-study` | designer-toolkit | Build a portfolio case study end to end — project framing, process narrative, outcomes, and visuals. |
 | `/designer-toolkit:write-rationale` | designer-toolkit | Write design rationale for a set of decisions, linking each to user needs, business goals, and principles. |
 | `/interaction-design:design-form` | interaction-design | Design a form end to end — structure, decision points, chunking, validation, errors, and completion. |
@@ -202,14 +205,17 @@ The two collections are designed to work alongside each other.
 
 ## Recommended install for most designers
 
-If you're not sure where to start, install these four and you'll have coverage across the full design cycle:
+If you're not sure where to start, install these five and you'll have coverage across the full design cycle, plus the router that tells you where to begin:
 
 ```
 /plugin install design-research@designer-skills
 /plugin install ux-strategy@designer-skills
 /plugin install ui-design@designer-skills
 /plugin install design-ops@designer-skills
+/plugin install designer-toolkit@designer-skills
 ```
+
+`designer-toolkit` is the one carrying `/start-here`, so install it even if you want nothing else from it.
 
 Add others as you need them. The plugins are lightweight — installing more doesn't slow things down.
 

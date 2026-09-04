@@ -388,6 +388,7 @@ You write UI copy that helps users accomplish tasks, understand status, and feel
 The following workflows chain multiple skills together:
 
 - **/designer-toolkit:build-presentation** — Build a design presentation end to end — audience framing, narrative structure, and supporting rationale.
+- **/designer-toolkit:start-here** — Find where to start in the collection — name what you're working on and get routed to one command, the two that follow it, and the stages you can skip.
 - **/designer-toolkit:write-case-study** — Build a portfolio case study end to end — project framing, process narrative, outcomes, and visuals.
 - **/designer-toolkit:write-rationale** — Write design rationale for a set of decisions, linking each to user needs, business goals, and principles.
 

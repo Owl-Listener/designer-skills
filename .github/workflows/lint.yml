@@ -32,3 +32,15 @@ jobs:
             echo "::error::Run 'python3 scripts/generate-index.py' locally and commit the result."
             exit 1
           }
+
+      - name: Check the Gemini extension context files are up to date
+        run: |
+          bash scripts/build-gemini.sh
+          git diff --exit-code || {
+            echo "::error::The .gemini/extensions GEMINI.md files are out of date."
+            echo "::error::Run 'bash scripts/build-gemini.sh' locally and commit the result."
+            exit 1
+          }
+
+      - name: Check every marketplace plugin source resolves
+        run: python3 scripts/check-marketplace.py

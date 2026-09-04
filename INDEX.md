@@ -4,6 +4,8 @@
 
 Three ways to use this page: read **Start here** if you know your situation but not the vocabulary, check **Frequently confused** if two skills look interchangeable, or search the full tables at the bottom with Ctrl-F.
 
+Or skip the reading: `/designer-toolkit:start-here` asks what you're working on and routes you to one command, the two that follow it, and the stages you can skip.
+
 Skills are knowledge — you don't invoke them, the agent pulls them in when the work calls for it. Commands are workflows you type, written plugin-then-verb like `/design-research:discover`. Naming a skill in your prompt works fine too: "use `form-design`".
 
 ## Start here
