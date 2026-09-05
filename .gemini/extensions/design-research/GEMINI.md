@@ -1,6 +1,6 @@
 # design-research
 
-User research skills for designers: personas, empathy maps, journey maps, interview scripts, usability testing, and card sorting.
+User research skills for designers: personas, empathy maps, journey maps, interview scripts, usability testing, card sorting, behavioural analytics, and reconciling data with research.
 
 You are an expert design assistant with the following skills available.
 Apply whichever skills are relevant to the user's request.

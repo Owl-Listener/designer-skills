@@ -70,7 +70,7 @@ Agentic skills, commands, and plugins for design, from research to systems, UI, 
 
 | Plugin | Skills | Commands | Description |
 | --- | --- | --- | --- |
-| design-research | 14 | 4 | User research: personas, empathy maps, journey maps, interviews, usability testing, card sorting, surveys, and research repositories. |
+| design-research | 14 | 4 | User research, qualitative and quantitative: personas, empathy maps, journey maps, interviews, usability testing, card sorting, surveys, behavioural analytics, and qual-quant triangulation. |
 | design-systems | 11 | 3 | Build and maintain design systems: tokens, components, accessibility, theming, motion, governance, and localization. |
 | ux-strategy | 12 | 3 | Shape product direction: competitive analysis, design principles, experience mapping, information architecture, content strategy, and service blueprints. |
 | ui-design | 19 | 5 | Craft polished interfaces: layout grids, color systems, typography, responsive design, data viz, Gestalt/perceptual principles, and platform conventions. |

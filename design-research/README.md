@@ -1,6 +1,6 @@
 # design-research
 
-User research skills for designers: personas, empathy maps, journey maps, interview scripts, usability testing, and card sorting.
+User research skills for designers: personas, empathy maps, journey maps, interview scripts, usability testing, card sorting, behavioural analytics, and reconciling data with research.
 
 ## Skills (14)
 - **affinity-diagram** — Cluster many qualitative data points into themes and insight statements. Use when synthesising across multiple sessions or sources. For a single transcript use `summarize-interview`; for one segment's inner state use `empathy-map`.
