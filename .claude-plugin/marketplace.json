@@ -10,7 +10,7 @@
   "plugins": [
     {
       "name": "design-research",
-      "description": "User research skills for designers: personas, empathy maps, journey maps, interview scripts, usability testing, and card sorting.",
+      "description": "User research skills for designers: personas, empathy maps, journey maps, interview scripts, usability testing, card sorting, behavioural analytics, and reconciling data with research.",
       "source": "./design-research",
       "category": "design"
     },
