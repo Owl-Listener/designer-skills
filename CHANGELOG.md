@@ -4,6 +4,15 @@ All notable changes to this collection are documented here.
 
 ---
 
+## Unreleased
+
+### Added
+
+- Cursor plugin support for the nine design-practice plugins in this repo. A root `.cursor-plugin/marketplace.json` lists them, and each plugin directory has `.cursor-plugin/plugin.json` beside the existing Claude manifest. Claude Code and Gemini CLI packaging is unchanged. The other four collections stay in their own repositories and are not registered as Cursor marketplace sources.
+- Command frontmatter now includes `name` (the command filename) so Cursor can load every command. Skill frontmatter already had `name` and `description`.
+
+---
+
 ## [1.0.1] — 2026-07-12
 
 ### Fixed

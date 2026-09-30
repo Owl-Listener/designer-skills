@@ -1,4 +1,5 @@
 ---
+name: setup-workflow
 description: Set up a team's operating rhythm end to end — rituals, task flow, tooling, review gates, and version control.
 argument-hint: "[team size and context, e.g., '4-person design team in a startup' or 'design system team']"
 ---

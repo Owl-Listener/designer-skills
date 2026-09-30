@@ -12,7 +12,7 @@ Designer Skills Collection is maintained by MC Dean. Contributions are welcome �
 - Keep PRs focused — one change per PR.
 - Follow existing patterns: **skills are nouns** (domain knowledge), **commands are verbs** (workflows).
 - Every skill needs frontmatter with `name` and `description`.
-- Every command needs `description` and `argument-hint`.
+- Every command needs `name` (matching the filename), `description`, and `argument-hint`. Cursor uses `name` and `description` to load the command.
 - Skill name must match its directory name.
 - Every skill description must say **when to use it** and, where a near-neighbour exists, **where the boundary is**.
 - No cross-plugin references in commands.
@@ -91,13 +91,17 @@ python3 scripts/check-marketplace.py
 
 `check-runtimes.py` asks the separate question of whether each runtime can actually load what we ship — the frontmatter contract plus each plugin's Gemini extension manifest and context file.
 
-`check-marketplace.py` confirms every plugin in `marketplace.json` still resolves — local sources to a real directory, remote ones to a clonable URL. Add `--network` to also check the remote repos are reachable.
+`check-marketplace.py` confirms every plugin in `.claude-plugin/marketplace.json` still resolves — local sources to a real directory, remote ones to a clonable URL — and that `.cursor-plugin/marketplace.json` lists exactly the local plugins, each with a `.cursor-plugin/plugin.json`. Add `--network` to also check the remote Claude repos are reachable.
 
 `generate-readmes.py` rebuilds all plugin README skill/command lists and the root README table from the actual files on disk — so counts stay in sync automatically.
 
 `generate-index.py` rebuilds the tables in [`INDEX.md`](./INDEX.md) from each skill's `description`. Your skill appears there automatically once it has a `Use when ...` clause — there is no separate list to add yourself to.
 
 Commit whatever the generators change. CI runs all three and fails if any produces an error or leaves a generated file out of date.
+
+## Cursor plugin manifests
+
+Cursor reads the same `skills/` and `commands/` files. Each plugin also has `.cursor-plugin/plugin.json`, and the repo root has `.cursor-plugin/marketplace.json` for the nine design-practice plugins. When you change a plugin's name, description, or keywords, update the Cursor manifest in the same commit as `.claude-plugin/plugin.json`. Leave both in place. The Cursor marketplace lists only plugins that ship from this repo. The other collections stay in their own repositories.
 
 ## Editing INDEX.md
 

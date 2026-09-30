@@ -1,0 +1,20 @@
+{
+  "name": "designer-toolkit",
+  "version": "1.0.0",
+  "description": "Essential designer utilities for writing rationale, building presentations, crafting case studies, UX writing, and driving adoption.",
+  "author": {
+    "name": "MC Dean",
+    "url": "https://marieclairedean.substack.com/"
+  },
+  "homepage": "https://github.com/Owl-Listener/designer-skills",
+  "repository": "https://github.com/Owl-Listener/designer-skills",
+  "license": "MIT",
+  "keywords": [
+    "designer-toolkit",
+    "rationale",
+    "presentation",
+    "case-study",
+    "ux-writing",
+    "adoption"
+  ]
+}

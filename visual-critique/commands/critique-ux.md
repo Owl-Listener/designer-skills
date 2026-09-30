@@ -1,4 +1,5 @@
 ---
+name: critique-ux
 description: Run a focused UX critique on a screen — affordances, information density, and hierarchy — and output a prioritised fix list.
 argument-hint: "[screen name, Figma URL, or image — e.g., 'checkout step 3' or a screenshot]"
 ---

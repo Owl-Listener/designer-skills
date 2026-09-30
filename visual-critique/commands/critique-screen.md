@@ -1,4 +1,5 @@
 ---
+name: critique-screen
 description: Run all seven visual critiques on a screen and output a prioritised fix list.
 argument-hint: "[screen name, Figma URL, or image — e.g., 'onboarding step 2' or a screenshot]"
 ---

@@ -17,6 +17,6 @@ Closes #
 
 - [ ] Every `SKILL.md` has `name` and `description` in its frontmatter
 - [ ] Each skill's `name` value matches its directory name exactly
-- [ ] Every command file has `description` and `argument-hint` in its frontmatter
+- [ ] Every command file has `name`, `description`, and `argument-hint` in its frontmatter
 - [ ] No command references skills from another plugin
 - [ ] This PR contains one focused change

@@ -1,4 +1,5 @@
 ---
+name: error-flow
 description: Design an error flow end to end — prevention, detection, messaging, and recovery paths.
 argument-hint: "[feature name, e.g., 'payment processing' or 'file upload']"
 ---

@@ -1,4 +1,5 @@
 ---
+name: audit-system
 description: Run a comprehensive audit of an existing design system for consistency, completeness, and accessibility.
 argument-hint: "[design system name or description of what to audit]"
 ---

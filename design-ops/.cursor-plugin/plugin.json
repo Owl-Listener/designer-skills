@@ -1,0 +1,20 @@
+{
+  "name": "design-ops",
+  "version": "1.0.0",
+  "description": "Streamline design operations with critique frameworks, handoff specs, sprint planning, review processes, and team workflows.",
+  "author": {
+    "name": "MC Dean",
+    "url": "https://marieclairedean.substack.com/"
+  },
+  "homepage": "https://github.com/Owl-Listener/designer-skills",
+  "repository": "https://github.com/Owl-Listener/designer-skills",
+  "license": "MIT",
+  "keywords": [
+    "design-ops",
+    "critique",
+    "handoff",
+    "sprint",
+    "workflow",
+    "review"
+  ]
+}

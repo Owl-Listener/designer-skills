@@ -1,0 +1,146 @@
+{
+  "name": "designer-skills",
+  "owner": {
+    "name": "MC Dean",
+    "url": "https://marieclairedean.substack.com/"
+  },
+  "metadata": {
+    "description": "Design-practice skills for Cursor: research, design systems, UX strategy, UI, interaction design, prototyping and testing, design ops, the designer's toolkit, and visual critique. These nine plugins ship from this repository. The AI product design, UX program management, design leadership, and inclusive design collections live in their own repositories.",
+    "version": "2.0.0"
+  },
+  "plugins": [
+    {
+      "name": "design-research",
+      "source": "design-research",
+      "description": "User research skills for designers: personas, empathy maps, journey maps, interview scripts, usability testing, card sorting, behavioural analytics, and reconciling data with research.",
+      "version": "1.0.0",
+      "category": "design",
+      "keywords": [
+        "design",
+        "research",
+        "personas",
+        "journey-maps",
+        "usability-testing"
+      ]
+    },
+    {
+      "name": "design-systems",
+      "source": "design-systems",
+      "description": "Design system skills: component specs, design tokens, naming conventions, spacing and grid systems, accessibility standards, and documentation.",
+      "version": "1.0.0",
+      "category": "design",
+      "keywords": [
+        "design-systems",
+        "tokens",
+        "components",
+        "accessibility",
+        "theming"
+      ]
+    },
+    {
+      "name": "ux-strategy",
+      "source": "ux-strategy",
+      "description": "UX strategy skills: information architecture, content strategy, navigation patterns, user flows, task analysis, and competitive UX audits.",
+      "version": "1.0.0",
+      "category": "design",
+      "keywords": [
+        "ux-strategy",
+        "competitive-analysis",
+        "design-principles",
+        "vision",
+        "alignment"
+      ]
+    },
+    {
+      "name": "ui-design",
+      "source": "ui-design",
+      "description": "UI design skills: color palettes, typography systems, layout grids, responsive breakpoints, dark mode specs, visual hierarchy, and brand alignment.",
+      "version": "1.0.0",
+      "category": "design",
+      "keywords": [
+        "ui-design",
+        "layout",
+        "color",
+        "typography",
+        "responsive",
+        "visual-hierarchy"
+      ]
+    },
+    {
+      "name": "interaction-design",
+      "source": "interaction-design",
+      "description": "Interaction design skills: micro-interactions, animation principles, state machines, gesture patterns, error handling UX, and feedback patterns.",
+      "version": "1.0.0",
+      "category": "design",
+      "keywords": [
+        "interaction-design",
+        "animation",
+        "micro-interactions",
+        "gestures",
+        "state-machines"
+      ]
+    },
+    {
+      "name": "prototyping-testing",
+      "source": "prototyping-testing",
+      "description": "Prototyping and testing skills: wireframe specs, usability heuristics, heuristic evaluations, accessibility audits, A/B test design, and benchmark analysis.",
+      "version": "1.0.0",
+      "category": "design",
+      "keywords": [
+        "prototyping",
+        "usability-testing",
+        "heuristic-evaluation",
+        "a-b-testing",
+        "wireframes"
+      ]
+    },
+    {
+      "name": "design-ops",
+      "source": "design-ops",
+      "description": "Design operations skills: handoff specs, design critique facilitation, design sprint planning, team workflows, QA checklists, and design debt audits.",
+      "version": "1.0.0",
+      "category": "design",
+      "keywords": [
+        "design-ops",
+        "critique",
+        "handoff",
+        "sprint",
+        "workflow",
+        "review"
+      ]
+    },
+    {
+      "name": "designer-toolkit",
+      "source": "designer-toolkit",
+      "description": "Designer utility skills: design rationale, case study structure, design presentations, UX writing, design system adoption, and design negotiation — plus the /start-here router.",
+      "version": "1.0.0",
+      "category": "design",
+      "keywords": [
+        "designer-toolkit",
+        "rationale",
+        "presentation",
+        "case-study",
+        "ux-writing",
+        "adoption"
+      ]
+    },
+    {
+      "name": "visual-critique",
+      "source": "visual-critique",
+      "description": "Visual critique skills: hierarchy analysis, brand consistency checks against mood/voice/tokens, composition evaluation, and typography audits — with a /critique-screen command that compiles a prioritised fix list.",
+      "version": "1.1.0",
+      "category": "design",
+      "keywords": [
+        "critique",
+        "visual-hierarchy",
+        "brand",
+        "composition",
+        "typography",
+        "colour",
+        "affordance",
+        "information-density",
+        "review"
+      ]
+    }
+  ]
+}

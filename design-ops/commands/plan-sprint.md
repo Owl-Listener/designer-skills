@@ -1,4 +1,5 @@
 ---
+name: plan-sprint
 description: Run a design sprint end to end — challenge framing, schedule, exercises, and prototype test plan.
 argument-hint: "[challenge or problem area for the sprint]"
 ---

@@ -2,7 +2,7 @@
 
 Design skills for the agent era, written so an AI agent can actually use them.
 
-**273 skills and 76 commands across 33 plugins, in five collections**, for [Claude Code](https://docs.anthropic.com/en/docs/claude-code) and [Gemini CLI](https://github.com/google-gemini/gemini-cli).
+**273 skills and 76 commands across 33 plugins, in five collections**, for [Claude Code](https://docs.anthropic.com/en/docs/claude-code) and [Gemini CLI](https://github.com/google-gemini/gemini-cli). The nine design-practice plugins in this repo also install in [Cursor](https://cursor.com/docs/plugins).
 
 **Not sure which skill you need? Start with the [skill index](./INDEX.md)** — every skill in this repo arranged by the situation you're in, plus the pairs most often mistaken for each other.
 
@@ -48,6 +48,32 @@ mkdir -p .gemini/extensions
 cp -r /tmp/designer-skills/.gemini/extensions/. .gemini/extensions/
 ```
 
+### Prefer Cursor?
+
+This repository is a Cursor multi-plugin marketplace for the nine design-practice plugins that ship here: design-research, design-systems, ux-strategy, ui-design, interaction-design, prototyping-testing, design-ops, designer-toolkit, and visual-critique. Claude Code and Gemini CLI packaging stays in place beside it. The other four collections live in their own repositories (linked in the table below) and are not part of this Cursor marketplace.
+
+**Team or Enterprise.** An admin imports the repository:
+
+1. Open the [Cursor dashboard](https://cursor.com/dashboard) and go to **Plugins & MCPs**.
+2. Under **Team Marketplaces**, choose **Add Marketplace**, then **Import from Repo**.
+3. Paste `https://github.com/Urriel/designer-skills`.
+4. Confirm the import lists those nine plugins, set marketplace access, and save.
+5. Optionally turn on **Auto Refresh**. That needs the Cursor GitHub App installed on this repository.
+
+Teammates open **Customize** in the sidebar and install the plugins they want. Skills can be invoked with `/skill-name` (for example `/user-persona`). Commands from each plugin's `commands/` folder are available as agent commands; their names match the filenames (`start-here`, `critique-screen`, `handoff`).
+
+**On your own machine.** Copy each plugin directory — the folder that contains `.cursor-plugin/plugin.json` — into Cursor's local plugin directory:
+
+```
+git clone https://github.com/Urriel/designer-skills.git /tmp/designer-skills
+mkdir -p ~/.cursor/plugins/local
+cp -R /tmp/designer-skills/designer-toolkit ~/.cursor/plugins/local/designer-toolkit
+```
+
+Repeat the copy for each plugin you want. Then run **Developer: Reload Window** and open **Customize** to confirm the skills and commands loaded. On Enterprise, an admin has to allow local plugin imports under **Dashboard → Settings → Security & Identity → Marketplace and Plugins**. Cursor loads a symlink only when the target stays inside `~/.cursor/plugins/local`.
+
+This repository is not on the public Cursor Marketplace yet. Listing is a separate submission at [cursor.com/marketplace/publish](https://cursor.com/marketplace/publish).
+
 ## The five collections
 
 | Collection | Plugins | What it covers |
@@ -58,7 +84,7 @@ cp -r /tmp/designer-skills/.gemini/extensions/. .gemini/extensions/
 | [Design leadership](https://github.com/Owl-Listener/design-leadership-skills) | 6 | Leading design: people, teams, strategy, org influence, operating cadence, leadership craft. |
 | [Inclusive design](https://github.com/Owl-Listener/inclusive-design-skills) | 6 | Accessible by default: cognitive accessibility, inclusive interaction, accessible content, inclusive personas, adaptive interfaces, accessibility decisions. |
 
-The other four collections each live in their own repo, with their own stars and full detail, and this marketplace pulls their plugins in for you — so the one install above covers all five. This repo is the front door, and the home of the design-practice collection below.
+The other four collections each live in their own repo, with their own stars and full detail, and the Claude Code marketplace pulls their plugins in for you — so the one Claude install above covers all five. This repo is the front door, and the home of the design-practice collection below. The Cursor marketplace in this repo registers only those nine local plugins.
 
 ---
 

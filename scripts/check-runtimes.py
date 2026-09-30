@@ -64,11 +64,12 @@ except ImportError:  # pragma: no cover - environment problem, not a repo proble
 ROOT = Path(__file__).resolve().parent.parent
 IN_CI = "GITHUB_ACTIONS" in os.environ
 
-# Fields each kind of file must carry, per the Agent Skills frontmatter contract
-# documented for Claude Code and VS Code. All of them are strings.
+# Fields each kind of file must carry. Skills follow the Agent Skills contract
+# used by Claude Code and VS Code. Commands also need `name` so Cursor can load
+# them. All of them are strings.
 REQUIRED = {
     "skill": ("name", "description"),
-    "command": ("description", "argument-hint"),
+    "command": ("name", "description", "argument-hint"),
 }
 
 # What a non-string value means for a strict runtime, in plain terms.

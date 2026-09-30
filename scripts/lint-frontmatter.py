@@ -19,6 +19,7 @@ Checks applied to every */skills/*/SKILL.md:
 
 Checks applied to every */commands/*.md:
   - frontmatter block present
+  - `name` field present, kebab-case, and equal to the command filename
   - `description` field present and non-empty
   - `argument-hint` field present and non-empty
   - `argument-hint` is a bracketed placeholder, e.g. "[what to pass]"
@@ -188,8 +189,22 @@ def lint_commands() -> None:
         if fm is None:
             continue
 
+        name = _string_field(cmd_md, fm, "name")
         desc = _string_field(cmd_md, fm, "description")
         arg_hint = _string_field(cmd_md, fm, "argument-hint")
+
+        if not name:
+            _report(cmd_md, "required field `name` is missing or empty",
+                    line=_line_of_key(cmd_md, "name") or 2)
+        elif name != cmd_md.stem:
+            _report(cmd_md,
+                    f"`name: {name}` must match the command filename `{cmd_md.stem}`",
+                    line=_line_of_key(cmd_md, "name"))
+        elif not re.fullmatch(r"[a-z][a-z0-9-]*", name):
+            _report(cmd_md,
+                    f"`name: {name}` must be kebab-case "
+                    "(lowercase letters, digits, and hyphens only)",
+                    line=_line_of_key(cmd_md, "name"))
 
         if not desc:
             _report(cmd_md, "required field `description` is missing or empty",

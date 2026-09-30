@@ -1,4 +1,5 @@
 ---
+name: prototype-plan
 description: Create a prototyping and testing plan for a design initiative.
 argument-hint: "[feature or initiative to prototype and test]"
 ---

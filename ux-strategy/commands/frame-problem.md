@@ -1,4 +1,5 @@
 ---
+name: frame-problem
 description: Structure an ambiguous design challenge into a clear problem definition with constraints and criteria.
 argument-hint: "[description of the ambiguous design challenge]"
 ---

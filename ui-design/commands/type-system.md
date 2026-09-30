@@ -1,4 +1,5 @@
 ---
+name: type-system
 description: Build a typography system end to end — scale, weights, line heights, measure, and responsive behaviour.
 argument-hint: "[font names or requirements, e.g., 'Inter for UI, Merriweather for editorial']"
 ---

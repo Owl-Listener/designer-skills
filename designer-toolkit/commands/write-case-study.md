@@ -1,4 +1,5 @@
 ---
+name: write-case-study
 description: Build a portfolio case study end to end — project framing, process narrative, outcomes, and visuals.
 argument-hint: "[project name or brief description of the work]"
 ---

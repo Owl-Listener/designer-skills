@@ -1,4 +1,5 @@
 ---
+name: test-plan
 description: Run the full usability study workflow — research questions, participant criteria, tasks, metrics, and facilitation guide.
 argument-hint: "[product, feature, or prototype to test]"
 ---

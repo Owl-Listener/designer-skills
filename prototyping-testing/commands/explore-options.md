@@ -1,4 +1,5 @@
 ---
+name: explore-options
 description: Run a parallel exploration end to end — frame the decision, build a spread of behaviourally distinct concepts, pressure-test each, and converge with a decision record.
 argument-hint: "[design problem or the concept already on the table, e.g., 'notification settings' or 'the current checkout step 2']"
 ---

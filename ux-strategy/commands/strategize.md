@@ -1,4 +1,5 @@
 ---
+name: strategize
 description: Develop a complete UX strategy for a product or feature area.
 argument-hint: "[product name or feature area to strategize]"
 ---

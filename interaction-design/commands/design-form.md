@@ -1,4 +1,5 @@
 ---
+name: design-form
 description: Design a form end to end — structure, decision points, chunking, validation, errors, and completion.
 argument-hint: "[form name or context, e.g., 'checkout form' or 'account registration']"
 ---

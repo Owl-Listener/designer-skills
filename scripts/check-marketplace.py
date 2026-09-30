@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
-"""Check that every plugin in .claude-plugin/marketplace.json actually resolves.
+"""Check that the Claude and Cursor marketplace manifests resolve.
+
+Claude (`.claude-plugin/marketplace.json`):
 
 The marketplace mixes two kinds of source, and they fail in different ways:
 
@@ -21,6 +23,12 @@ Checks:
   - git-subdir sources carry a clonable https URL and a non-empty subdirectory path
   - every local plugin directory in the repo has a marketplace entry
 
+Cursor (`.cursor-plugin/marketplace.json`):
+  - `name` and `owner.name` are present, and plugin names are kebab-case
+  - every entry's `source` is a relative path to a directory with
+    `.cursor-plugin/plugin.json` whose `name` matches
+  - the entry list is exactly the local plugins (no remote git-subdir sources)
+
 With --network, remote repos are additionally checked for reachability with
 `git ls-remote`. That is off by default so CI does not depend on other repos
 staying up; run it locally, or in a scheduled job, to catch a repo that was
@@ -39,7 +47,10 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 MANIFEST = ROOT / ".claude-plugin" / "marketplace.json"
+CURSOR_MANIFEST = ROOT / ".cursor-plugin" / "marketplace.json"
 IN_CI = "GITHUB_ACTIONS" in os.environ
+_PLUGIN_NAME = re.compile(r"^[a-z0-9](?:[a-z0-9.-]*[a-z0-9])?$")
+_MARKET_NAME = re.compile(r"^[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$")
 
 # A plugin directory is any top-level dir holding .claude-plugin/plugin.json.
 def _local_plugin_dirs() -> set[str]:
@@ -130,6 +141,105 @@ def _check_reachable(name: str, url: str) -> None:
         )
 
 
+def _cursor_source_rel(source: str) -> str:
+    return source[2:] if source.startswith("./") else source
+
+
+def _check_cursor_marketplace() -> int:
+    """The Cursor marketplace lists only the local plugins, by relative path."""
+    label = ".cursor-plugin/marketplace.json"
+    if not CURSOR_MANIFEST.is_file():
+        _report(f"{label} is missing")
+        return 0
+
+    try:
+        data = json.loads(CURSOR_MANIFEST.read_text(encoding="utf-8"))
+    except json.JSONDecodeError as exc:
+        _report(f"{label} is not valid JSON — {exc}")
+        return 0
+
+    market_name = data.get("name", "")
+    if not isinstance(market_name, str) or not _MARKET_NAME.fullmatch(market_name):
+        _report(f'{label} "name" must be lowercase kebab-case')
+
+    owner = data.get("owner")
+    if not isinstance(owner, dict) or not str(owner.get("name", "")).strip():
+        _report(f'{label} "owner.name" is required')
+
+    plugins = data.get("plugins")
+    if not isinstance(plugins, list) or not plugins:
+        _report(f"{label} lists no plugins")
+        return 0
+
+    seen: set[str] = set()
+    registered: set[str] = set()
+    for entry in plugins:
+        name = entry.get("name", "") if isinstance(entry, dict) else ""
+        if not name:
+            _report(f"{label} entry has no `name`: {entry!r}")
+            continue
+        if not _PLUGIN_NAME.fullmatch(name):
+            _report(f'{label} plugin name "{name}" must be lowercase kebab-case')
+        if name in seen:
+            _report("appears more than once in the Cursor marketplace", name)
+        seen.add(name)
+
+        source = entry.get("source")
+        if isinstance(source, dict):
+            _report(
+                "Cursor marketplace source must be a relative path in this repo. "
+                "Remote git-subdir entries are not registered here.",
+                name,
+            )
+            continue
+        if not isinstance(source, str) or not source:
+            _report("Cursor marketplace entry has no string `source`", name)
+            continue
+        rel = _cursor_source_rel(source)
+        if Path(rel).is_absolute() or ".." in Path(rel).parts or not rel:
+            _report(f'`source` is not a safe relative path: "{source}"', name)
+            continue
+
+        plugin_dir = ROOT / rel
+        if not plugin_dir.is_dir():
+            _report(f'source "{source}" does not exist in this repo', name)
+            continue
+
+        manifest = plugin_dir / ".cursor-plugin" / "plugin.json"
+        if not manifest.is_file():
+            _report(f'source "{source}" has no .cursor-plugin/plugin.json', name)
+            continue
+        try:
+            declared = json.loads(manifest.read_text(encoding="utf-8")).get("name", "")
+        except json.JSONDecodeError as exc:
+            _report(f"{manifest.relative_to(ROOT)} is not valid JSON — {exc}", name)
+            continue
+        if not isinstance(declared, str) or not _PLUGIN_NAME.fullmatch(declared):
+            _report(
+                f'{manifest.relative_to(ROOT)} `name` must be lowercase kebab-case',
+                name,
+            )
+        elif declared != name:
+            _report(
+                f'marketplace calls it "{name}" but {manifest.relative_to(ROOT)} '
+                f'declares `name: "{declared}"`',
+                name,
+            )
+        registered.add(rel)
+
+    local = _local_plugin_dirs()
+    for missing in sorted(local - registered):
+        _report(
+            f"`{missing}/` is a local plugin with no Cursor marketplace entry"
+        )
+    for extra in sorted(registered - local):
+        _report(
+            f'`{extra}/` is in the Cursor marketplace but has no '
+            ".claude-plugin/plugin.json"
+        )
+    return len(plugins)
+
+
 def main() -> None:
     check_network = "--network" in sys.argv
 
@@ -189,6 +299,8 @@ def main() -> None:
         for name, url in remote_urls:
             _check_reachable(name, url)
 
+    cursor_n = _check_cursor_marketplace()
+
     local_n = len(registered_local)
     remote_n = len(remote_urls)
 
@@ -202,8 +314,9 @@ def main() -> None:
 
     suffix = " (remotes reached)" if check_network else ""
     print(
-        f"OK — all {len(plugins)} marketplace entries resolve: "
-        f"{local_n} local, {remote_n} remote{suffix}.",
+        f"OK — Claude marketplace: all {len(plugins)} entries resolve "
+        f"({local_n} local, {remote_n} remote{suffix}). "
+        f"Cursor marketplace: {cursor_n} local plugins.",
         flush=True,
     )
 

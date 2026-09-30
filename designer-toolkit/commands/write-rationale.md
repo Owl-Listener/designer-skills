@@ -1,4 +1,5 @@
 ---
+name: write-rationale
 description: Write design rationale for a set of decisions, linking each to user needs, business goals, and principles.
 argument-hint: "[design decision or feature to write rationale for]"
 ---

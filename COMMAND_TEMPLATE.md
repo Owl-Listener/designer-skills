@@ -4,6 +4,7 @@
   Delete all HTML comments before opening your PR.
 
   Rules enforced by the linter (scripts/lint-frontmatter.py):
+  - `name` must match the filename (without `.md`) and be kebab-case
   - `description` must be present and non-empty
   - `argument-hint` must be present and use bracketed placeholder format:
     "[what the user passes, e.g., 'example value']"
@@ -14,6 +15,7 @@
   - One command per PR (open an issue first for new commands)
 -->
 ---
+name: <command-name>
 # Describe the pipeline, not the topic: name the stages and the artifact, so this
 # never reads as a restatement of the skill it wraps. See CONTRIBUTING.md.
 description: <Run/Build/Audit ...> end to end — <stage>, <stage>, and <stage>.

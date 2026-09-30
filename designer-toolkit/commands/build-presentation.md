@@ -1,4 +1,5 @@
 ---
+name: build-presentation
 description: Build a design presentation end to end — audience framing, narrative structure, and supporting rationale.
 argument-hint: "[topic and audience, e.g., 'design system update for engineering leads']"
 ---

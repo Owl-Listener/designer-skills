@@ -1,4 +1,5 @@
 ---
+name: test-plan
 description: Choose a testing method and build the plan around it — method selection, task scenarios, click tests, and accessibility coverage.
 argument-hint: "[product, feature, or prototype to test]"
 ---

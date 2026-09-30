@@ -1,4 +1,5 @@
 ---
+name: create-component
 description: Scaffold a full component specification end to end — props, states, variants, accessibility, and documentation.
 argument-hint: "[component name, e.g., 'date picker' or 'notification banner']"
 ---

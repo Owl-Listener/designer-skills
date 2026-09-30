@@ -1,4 +1,5 @@
 ---
+name: handoff
 description: Run the full handoff workflow — specs, measurements, assets, states, and a QA checklist — and output a developer-ready package.
 argument-hint: "[screen, feature, or component to hand off]"
 ---

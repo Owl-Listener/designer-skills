@@ -1,4 +1,5 @@
 ---
+name: start-here
 description: Find where to start in the collection — name what you're working on and get routed to one command, the two that follow it, and the stages you can skip.
 argument-hint: "[what you're working on, e.g., 'a checkout redesign' or 'nothing yet, just installed']"
 ---

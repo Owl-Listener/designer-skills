@@ -1,4 +1,5 @@
 ---
+name: design-interaction
 description: Design a complete interaction flow for a feature or component.
 argument-hint: "[feature or component, e.g., 'add to cart flow' or 'drag-to-reorder list']"
 ---

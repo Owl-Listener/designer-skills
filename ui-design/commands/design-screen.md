@@ -1,4 +1,5 @@
 ---
+name: design-screen
 description: Design a complete screen layout from a description or requirements.
 argument-hint: "[screen description, e.g., 'user profile settings page' or 'e-commerce product listing']"
 ---

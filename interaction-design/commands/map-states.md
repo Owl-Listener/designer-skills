@@ -1,4 +1,5 @@
 ---
+name: map-states
 description: Model a component's states and transitions end to end — states, events, guards, and edge cases.
 argument-hint: "[component name, e.g., 'media player' or 'multi-step checkout']"
 ---

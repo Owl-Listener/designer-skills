@@ -1,0 +1,19 @@
+{
+  "name": "design-research",
+  "version": "1.0.0",
+  "description": "User research skills for designers: personas, empathy maps, journey maps, interview scripts, usability testing, and card sorting.",
+  "author": {
+    "name": "MC Dean",
+    "url": "https://marieclairedean.substack.com/"
+  },
+  "homepage": "https://marieclairedean.substack.com/",
+  "repository": "https://github.com/Owl-Listener/designer-skills",
+  "license": "MIT",
+  "keywords": [
+    "design",
+    "research",
+    "personas",
+    "journey-maps",
+    "usability-testing"
+  ]
+}

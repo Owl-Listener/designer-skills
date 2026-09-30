@@ -1,4 +1,5 @@
 ---
+name: synthesize
 description: Synthesize research data into affinity diagrams, themes, and actionable insights.
 argument-hint: "[research data, interview notes, or observation notes to synthesize]"
 ---

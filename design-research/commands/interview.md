@@ -1,4 +1,5 @@
 ---
+name: interview
 description: Prepare an interview script or summarize an interview transcript into structured insights.
 argument-hint: "[research goals for script, OR paste/attach transcript to summarize]"
 ---
