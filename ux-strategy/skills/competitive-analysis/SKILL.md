@@ -17,10 +17,19 @@ Information architecture, interaction patterns, visual design, content strategy,
 For each key task: support level, steps required, UX quality (1-5), unique approaches.
 ### 4. Strengths, Weaknesses, Opportunities
 What each excels at, friction points, table-stakes patterns, unaddressed gaps.
+## Evidence Capture
+Rate each competitor on what its pages show today. Pages change without notice, so every rating that rests on a page should point to a capture someone else can check.
+- For each public page you rate (home, pricing, features, signup), save the page text and a full-page screenshot with its URL and capture date
+- If Firecrawl is set up, one call per page returns both. CLI: `firecrawl scrape <url> --format markdown --full-page-screenshot --max-age 0 --json`
+- Over [MCP](https://docs.firecrawl.dev/mcp-server?utm_source=designer-skills&utm_medium=integration): `firecrawl_scrape` with formats `markdown` and `screenshot`, `screenshotOptions: {fullPage: true}`, and `maxAge: 0`
+- A max age of 0 fetches the page fresh, so the capture date is real. Download the screenshot straight away; its link expires after 24 hours
+- Without Firecrawl, take full-page screenshots in a browser and copy the page text by hand
+- Flows that need an account or a payment can't be captured from a URL, so walk them yourself and screenshot each step
 ## Deliverable
-Summary overview, comparison matrix, competitor profiles, opportunity map, annotated references.
+Summary overview, comparison matrix, competitor profiles, opportunity map, annotated references (the dated captures behind each score).
 ## Best Practices
 - Focus on UX quality, not just feature presence
+- Do not rate from memory or an undated screenshot; nobody can recheck that score after a redesign
 - Analyze full journeys, not isolated screens
 - Update regularly as competitors evolve
 - Include aspirational examples from outside the category
