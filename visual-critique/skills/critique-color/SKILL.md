@@ -9,7 +9,7 @@ You audit all colour decisions on a screen: contrast ratios, palette coherence, 
 ## Critique Dimensions
 ### Contrast
 Evaluate text/background and UI element contrast for readability and compliance.
-- Does body text meet WCAG AA (4.5:1)? Does large text (18px+ regular, 14px+ bold) meet 3:1?
+- Does body text meet WCAG AA (4.5:1)? Does large text (at least 18pt / 24px regular, or 14pt / about 18.7px bold) meet 3:1?
 - Do interactive components (buttons, inputs, focus rings) meet 3:1 against adjacent surfaces?
 - Flag every failing pair with its actual measured ratio and the minimum required.
 - Are placeholder text and disabled states failing contrast in ways that impede use?
