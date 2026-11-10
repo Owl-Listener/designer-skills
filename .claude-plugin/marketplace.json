@@ -16,19 +16,19 @@
     },
     {
       "name": "design-systems",
-      "description": "Design system skills: component specs, design tokens, naming conventions, spacing and grid systems, accessibility standards, and documentation.",
+      "description": "Design system skills: component specs, design tokens, naming conventions, theming, icon and motion systems, accessibility audits, governance, and documentation.",
       "source": "./design-systems",
       "category": "design"
     },
     {
       "name": "ux-strategy",
-      "description": "UX strategy skills: information architecture, content strategy, navigation patterns, user flows, task analysis, and competitive UX audits.",
+      "description": "UX strategy skills: competitive analysis, design principles, experience maps, information architecture, content strategy, service blueprints, success metrics, and stakeholder alignment.",
       "source": "./ux-strategy",
       "category": "design"
     },
     {
       "name": "ui-design",
-      "description": "UI design skills: color palettes, typography systems, layout grids, responsive breakpoints, dark mode specs, visual hierarchy, and brand alignment.",
+      "description": "UI design skills: color systems, typography scales, layout grids, spacing systems, responsive design, dark mode, visual hierarchy, data visualization, and Gestalt principles.",
       "source": "./ui-design",
       "category": "design"
     },
@@ -40,7 +40,7 @@
     },
     {
       "name": "prototyping-testing",
-      "description": "Prototyping and testing skills: wireframe specs, usability heuristics, heuristic evaluations, accessibility audits, A/B test design, and benchmark analysis.",
+      "description": "Prototyping and testing skills: wireframe specs, prototype strategy, heuristic evaluations, accessibility test plans, A/B test design, click tests, and parallel concept exploration.",
       "source": "./prototyping-testing",
       "category": "design"
     },
@@ -58,7 +58,7 @@
     },
     {
       "name": "visual-critique",
-      "description": "Visual critique skills: hierarchy analysis, brand consistency checks against mood/voice/tokens, composition evaluation, and typography audits \u2014 with a /critique-screen command that compiles a prioritised fix list.",
+      "description": "Visual critique skills: hierarchy analysis, brand consistency checks against mood/voice/tokens, composition evaluation, typography audits, colour, affordance, and information density \u2014 with a /critique-screen command that compiles a prioritised fix list.",
       "source": "./visual-critique",
       "category": "design"
     },
