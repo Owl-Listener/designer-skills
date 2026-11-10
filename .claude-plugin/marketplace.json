@@ -58,7 +58,7 @@
     },
     {
       "name": "visual-critique",
-      "description": "Visual critique skills: hierarchy, brand consistency against mood/voice/tokens, composition, typography, colour, affordance, and information density \u2014 with a /critique-screen command that compiles a prioritised fix list.",
+      "description": "Visual critique skills: hierarchy analysis, brand consistency checks against mood/voice/tokens, composition evaluation, typography audits, colour, affordance, and information density \u2014 with a /critique-screen command that compiles a prioritised fix list.",
       "source": "./visual-critique",
       "category": "design"
     },
