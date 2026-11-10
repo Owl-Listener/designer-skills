@@ -1,6 +1,6 @@
 {
   "name": "design-systems",
   "version": "1.0.0",
-  "description": "Design system skills: component specs, design tokens, naming conventions, spacing and grid systems, accessibility, motion, governance, localization, and documentation.",
+  "description": "Design system skills: component specs, design tokens, naming conventions, theming, icon systems, accessibility, motion, governance, localization, and documentation.",
   "contextFileName": "GEMINI.md"
 }
