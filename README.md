@@ -2,7 +2,7 @@
 
 Design skills for the agent era, written so an AI agent can actually use them.
 
-**273 skills and 76 commands across 33 plugins, in five collections**, for [Claude Code](https://docs.anthropic.com/en/docs/claude-code) and [Gemini CLI](https://github.com/google-gemini/gemini-cli).
+**282 skills and 80 commands across 36 plugins, in six collections**, for [Claude Code](https://docs.anthropic.com/en/docs/claude-code) and [Gemini CLI](https://github.com/google-gemini/gemini-cli).
 
 **Not sure which skill you need? Start with the [skill index](./INDEX.md)** — every skill in this repo arranged by the situation you're in, plus the pairs most often mistaken for each other.
 
@@ -48,7 +48,7 @@ mkdir -p .gemini/extensions
 cp -r /tmp/designer-skills/.gemini/extensions/. .gemini/extensions/
 ```
 
-## The five collections
+## The six collections
 
 | Collection | Plugins | What it covers |
 | --- | --- | --- |
@@ -57,8 +57,9 @@ cp -r /tmp/designer-skills/.gemini/extensions/. .gemini/extensions/
 | [UX program management](https://github.com/Owl-Listener/ux-pgm-skills) | 6 | Running design programs: planning, stakeholder comms, delivery, alignment, measurement, process design. |
 | [Design leadership](https://github.com/Owl-Listener/design-leadership-skills) | 6 | Leading design: people, teams, strategy, org influence, operating cadence, leadership craft. |
 | [Inclusive design](https://github.com/Owl-Listener/inclusive-design-skills) | 6 | Accessible by default: cognitive accessibility, inclusive interaction, accessible content, inclusive personas, adaptive interfaces, accessibility decisions. |
+| [Design careers](https://github.com/Owl-Listener/design-career-skills) | 3 | For designers between jobs: building a portfolio from memory, preparing for the search, and moving toward AI product design. |
 
-The other four collections each live in their own repo, with their own stars and full detail, and this marketplace pulls their plugins in for you — so the one install above covers all five. This repo is the front door, and the home of the design-practice collection below.
+The other five collections each live in their own repo, with their own stars and full detail, and this marketplace pulls their plugins in for you — so the one install above covers all six. This repo is the front door, and the home of the design-practice collection below.
 
 ---
 
