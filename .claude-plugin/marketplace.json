@@ -2,7 +2,7 @@
   "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
   "name": "designer-skills",
   "version": "2.0.0",
-  "description": "The Designer Skills suite: agentic skills, commands, and plugins for design in the agent era \u2014 design practice, AI product design, UX program management, design leadership, and inclusive design. One install surfaces every collection: the design-practice plugins ship from this repo, and the other four collections are pulled in from their own repos.",
+  "description": "The Designer Skills suite: agentic skills, commands, and plugins for design in the agent era \u2014 design practice, AI product design, UX program management, design leadership, inclusive design, and design careers. One install surfaces every collection: the design-practice plugins ship from this repo, and the other five collections are pulled in from their own repos.",
   "owner": {
     "name": "MC Dean",
     "url": "https://marieclairedean.substack.com/"
@@ -301,6 +301,36 @@
         "path": "accessibility-decisions"
       },
       "category": "accessibility"
+    },
+    {
+      "name": "portfolio-builder",
+      "description": "Turn past design work into a portfolio that shows decisions: work inventory, decision records, and confidentiality-safe storytelling.",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/Owl-Listener/design-career-skills.git",
+        "path": "portfolio-builder"
+      },
+      "category": "career"
+    },
+    {
+      "name": "job-search",
+      "description": "Prepare for a design job search: portfolio critique from the hiring side, interview practice, and talking about a redundancy.",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/Owl-Listener/design-career-skills.git",
+        "path": "job-search"
+      },
+      "category": "career"
+    },
+    {
+      "name": "ai-design-bridge",
+      "description": "Move toward AI product design: skills self-assessment, a learning path, and a first self-built tool.",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/Owl-Listener/design-career-skills.git",
+        "path": "ai-design-bridge"
+      },
+      "category": "career"
     }
   ]
 }
